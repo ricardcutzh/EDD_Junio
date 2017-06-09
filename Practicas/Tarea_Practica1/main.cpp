@@ -15,24 +15,7 @@ ListaDobleCircular *lista;
 int main()
 {
     lista = new ListaDobleCircular();
-   /* string cadena1 = "bgual";
-    string cadena2 = "frbol";
-    int comp = cadena1.compare(cadena2);
-    if(comp == 0)
-    {
-        cout<< "son iguales \n";
-    }
-    if(comp >0)
-    {
-        cout<< cadena1 << " Es mayor a " << cadena2 << endl;
-    }
-    if(comp < 0)
-    {
-        cout<< cadena1 << " Es menor a " << cadena2 << endl;
-    }*/
-
     inicio();
-    //cout << PATH <<endl;
     return 0;
 }
 
@@ -41,6 +24,7 @@ void inicio()
 {
     int opcion = 0;
     string filename;
+    string elim;
     while((opcion = menu_opciones())!=4)
     {
         switch (opcion) {
@@ -51,17 +35,36 @@ void inicio()
             cin >> filename;
             cout << "-------------------------------" << endl;
             leerFile(filename);
+            cout << "| Archivo Leido Correctamente" << endl;
+            cout << "| Total de Palabras en Lista: " << lista->elementos << endl;
             system("pause");
             system("cls");
             break;
         case 2:
-            cout << "Has escogido Desplegar la Lista..." << endl;
+            cout << "| Desplegando Lista:  |" << endl;
             lista->p_imprimir();
+            cout << "| Fin Lista           |" << endl;
             system("pause");
             system("cls");
             break;
         case 3:
-            cout << "Has escogido Eliminar de la Lista..."<< endl;
+            cout << "-----------------------------------" << endl;
+            cout << "Ingresa la Palabra a Eliminar: ";
+            cin >> elim;
+            cout << "-------------------------------" << endl;
+            lista->p_eliminar(elim);
+            if(lista->eliminado)
+            {
+                cout << "-----------------------------------" << endl;
+                cout << "Elemento Eliminado.."<< endl;
+                cout << "-------------------------------" << endl;
+            }
+            else
+            {
+                cout << "-----------------------------------" << endl;
+                cout << "No se elimino la palabra: "<< elim<<endl;
+                cout << "-------------------------------" << endl;
+            }
             system("pause");
             system("cls");
             break;
@@ -85,6 +88,7 @@ int menu_opciones()
     printf("| 1. Leer archivo                    |\n");
     printf("| 2. Desplegar Listado de Palabras   |\n");
     printf("| 3. Eliminar una palabra            |\n");
+    printf("| 4. Salir                           |\n");
     printf("|------------------------------------|\n");
     printf("| Opcion: ");
     scanf("%d", &opcion);

@@ -9,6 +9,7 @@ public:
     ListaDobleCircular();
     Nodo *primero;
     int elementos;
+    bool eliminado;
     void p_insertar(Nodo *nuevo);
     void p_imprimir();
     void p_eliminar(std::string pal);

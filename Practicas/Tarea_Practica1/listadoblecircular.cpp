@@ -1,6 +1,7 @@
 #include "listadoblecircular.h"
 #include <string>
 #include<iostream>
+#include<stdlib.h>
 using namespace std;
 
 ListaDobleCircular::ListaDobleCircular()
@@ -106,4 +107,38 @@ void ListaDobleCircular::imprimirLista(Nodo *siguiente)
         imprimirLista(siguiente->siguiente);
     }
     //CUALQUIER OTRO CASO SE ROMPE LA RECURSIVIDAD...
+}
+
+void ListaDobleCircular::p_eliminar(std:: string palabra)
+{
+    this->eliminado = false;
+    if(estaVacia())
+    {
+        cout << "| No hay elementos para eliminar |"<< endl;
+    }
+    else
+    {
+        eliminar(this->primero->siguiente, palabra);//PRIMERA LLAMADA AL METODO RECURSIVO
+    }
+}
+
+void ListaDobleCircular::eliminar(Nodo *aux, string pal)
+{
+    string cad1 = aux->palabra;
+    int comp = cad1.compare(pal);
+    if(comp == 0)//SI COINCIDEN ELIMINO...
+    {
+        Nodo *temp = aux;
+        aux->anterior->siguiente = aux->siguiente;
+        aux->siguiente->anterior = aux->anterior;
+        this->elementos--;
+        free(temp);
+        temp = NULL;
+        this->eliminado = true;//VERIFICO QUE LA PALABRA FUE ELIMINADA CORRECTAMENTE
+        eliminar(aux->siguiente, pal);
+    }
+    else if(aux->siguiente != this->primero)
+    {
+        eliminar(aux->siguiente, pal);//EN CASO DE QUE NO ENCUENTRE ME MUEVO AL SIGUIENTE SI NO ES IGUAL A PRIMERO
+    }
 }
