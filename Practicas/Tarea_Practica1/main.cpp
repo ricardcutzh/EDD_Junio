@@ -1,15 +1,38 @@
 #include <iostream>
+#include<fstream>
 #include<string>
 #include<stdlib.h>
 #include<stdio.h>
 #include"varios.h"
+#include"nodo.h"
+#include"listadoblecircular.h"
+#include<cstring>
+#define PATH "C:\\TareaP1\\"
 
 using namespace std;
 
-
+ListaDobleCircular *lista;
 int main()
 {
+    lista = new ListaDobleCircular();
+   /* string cadena1 = "bgual";
+    string cadena2 = "frbol";
+    int comp = cadena1.compare(cadena2);
+    if(comp == 0)
+    {
+        cout<< "son iguales \n";
+    }
+    if(comp >0)
+    {
+        cout<< cadena1 << " Es mayor a " << cadena2 << endl;
+    }
+    if(comp < 0)
+    {
+        cout<< cadena1 << " Es menor a " << cadena2 << endl;
+    }*/
+
     inicio();
+    //cout << PATH <<endl;
     return 0;
 }
 
@@ -17,17 +40,23 @@ int main()
 void inicio()
 {
     int opcion = 0;
-    int valor = 0;
+    string filename;
     while((opcion = menu_opciones())!=4)
     {
         switch (opcion) {
         case 1:
-            cout << "Has escogido leer un archivo..." << endl;
+
+            cout << "-----------------------------------" << endl;
+            cout << "Ingresa el nombre del archivo: ";
+            cin >> filename;
+            cout << "-------------------------------" << endl;
+            leerFile(filename);
             system("pause");
             system("cls");
             break;
         case 2:
             cout << "Has escogido Desplegar la Lista..." << endl;
+            lista->p_imprimir();
             system("pause");
             system("cls");
             break;
@@ -62,3 +91,23 @@ int menu_opciones()
     return opcion;
 }
 
+//Lectura del Archivo de Texto definido en el PATH | inserta en la lista doble
+void leerFile(string nombre)
+{
+    ifstream arch(PATH+nombre);
+    if(!arch.is_open())
+    {
+        cout << "Ocurrio un error al leer el archivo: " << nombre << endl;
+    }
+    else
+    {
+        string palabra;
+        while(arch.good())
+        {
+            getline(arch, palabra, '_');
+            Nodo *nuevo = new Nodo(palabra);
+            lista->p_insertar(nuevo);
+        }
+    }
+    arch.close();
+}
