@@ -1,0 +1,13 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\nodocancion.o
+./release\listacanciones.o
+./release\cancion.o
+./release\nodotop.o
+./release\top.o
+./release\album.o
+./release\nodoalbum.o
+./release\listaalbumes.o
+./release\moc_mainwindow.o
+);
