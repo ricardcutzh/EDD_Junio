@@ -33,7 +33,10 @@ SOURCES += \
     top.cpp \
     album.cpp \
     nodoalbum.cpp \
-    listaalbumes.cpp
+    listaalbumes.cpp \
+    artista.cpp \
+    nodoartista.cpp \
+    listaartistas.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -44,7 +47,10 @@ HEADERS += \
     top.h \
     album.h \
     nodoalbum.h \
-    listaalbumes.h
+    listaalbumes.h \
+    artista.h \
+    nodoartista.h \
+    listaartistas.h
 
 FORMS += \
         mainwindow.ui

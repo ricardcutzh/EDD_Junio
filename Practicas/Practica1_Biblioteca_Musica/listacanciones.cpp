@@ -119,13 +119,20 @@ int ListaCanciones::count()
 //GENERA LA VALORACIÓN DEL ALBUM DE CANCIONES
 float ListaCanciones::valoracionAlbum()
 {
-    float promedio = 0;
-    float acumulado = 0;
-    NodoCancion *aux = this->first;
-    while (aux!=NULL) {
-       acumulado = acumulado + aux->song->valoracion;
-       aux = aux->next;
+    if(!estaVacia())
+    {
+        float promedio = 0;
+        float acumulado = 0;
+        NodoCancion *aux = this->first;
+        while (aux!=NULL) {
+           acumulado = acumulado + aux->song->valoracion;
+           aux = aux->next;
+        }
+        promedio = acumulado / this->elementos;
+        return promedio;
     }
-    promedio = acumulado / this->elementos;
-    return promedio;
+    else
+    {
+        return 0;
+    }
 }

@@ -13,7 +13,7 @@ public:
     bool eliminar(std::string nombre);
     bool yaExisteAlbum(std::string nombre);
     NodoAlbum *buscaAlbum(std::string nombre);
-    int valoracionArtista();
+    float valoracionArtista();
     int count();
 private:
     bool estaVacia();
