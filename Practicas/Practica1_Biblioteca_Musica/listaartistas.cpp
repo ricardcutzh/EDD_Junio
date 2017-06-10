@@ -2,7 +2,7 @@
 
 ListaArtistas::ListaArtistas()
 {
-    this->primero = new NodoAlbum();//CABEZA QUE VA A SOSTENER MI LISTA (ROOT)
+    this->primero = new NodoArtista();//CABEZA QUE VA A SOSTENER MI LISTA (ROOT)
     this->elementos = 0;
 }
 
@@ -20,3 +20,104 @@ bool ListaArtistas::estaVacia()
 }
 
 //METODOS PUBLICOS:
+
+//METODO QUE SE ENCARGA DE INSERTAR EN LA LISTA UN NUEVO ARTISTA Y UN LISTADO DE ALBUMS
+void ListaArtistas::insertar_artista(Artista *newArtist, ListaAlbumes *albums)
+{
+    NodoArtista *nuevo = new NodoArtista(newArtist, albums);
+    if(estaVacia())//SI LA LISTA ESTA VACÍA
+    {
+        this->primero->siguiente = nuevo;//LO INSERTO JUSTO DESPUES DE MI "RAÍZ"
+        nuevo->anterior = this->primero;
+        nuevo->siguiente = this->primero;
+        this->primero->anterior = nuevo;
+        this->elementos++;//AUMENTO EL CONTADOR
+    }
+    else
+    {//EN CASO DE QUE NO ESTE VACÍA
+        NodoArtista *temp = this->primero->siguiente;
+        while(temp->siguiente!=this->primero)//RECORRO LA LISTA
+        {
+            temp = temp->siguiente;
+        }
+        //AL LLEGAR AL FINAL... LO INSERTO
+        temp->siguiente->anterior = nuevo;
+        nuevo->siguiente = temp->siguiente;
+        temp->siguiente = nuevo;
+        nuevo->anterior = temp;
+        this->elementos++;//AUMENTO EL CONTADOR
+    }
+}
+
+//METODO QUE VERIFICA SI YA EXISTE UN ARTISTA EN LA LISTA
+bool ListaArtistas::yaExisteArtista(std::string nombre)
+{
+    if(!estaVacia())
+    {
+        NodoArtista *temp = this->primero->siguiente;
+        std::string compara;
+        while(temp!=this->primero)
+        {
+            compara = temp->artista->nombre;
+            if(nombre.compare(compara)==0)
+            {
+                return true;
+            }
+            temp = temp->siguiente;
+        }
+        return false;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+//METODO QUE SE ENCARGA DE BUSCAR UNA REFERENCIA A UN ARTISTA
+NodoArtista* ListaArtistas::buscaArtista(std::string nombre)
+{
+    if(yaExisteArtista(nombre))//SI EL ARTISTA EXISTE ENTONCES PODRE BUSCAR SU REFERENCIA
+    {
+        NodoArtista *temp = this->primero->siguiente;//VARIABLE TEMPORAL PARA PODER MOVERME
+        std::string compara;//VARIABLE AUXILIAR PARA COMPARAR LOS NOMBRES EN ARTISTAS
+        while(temp!=this->primero)//MIENTRAS NO LLEGUE A LA CABEZA DE LA LISTA
+        {
+            compara = temp->artista->nombre;
+            if(nombre.compare(compara)==0)//¿SON IGUALES?
+            {
+                return temp;//SI LO ES ENTONCES DEVUELVEME LA REFERENCIA A ESTE NODO
+            }
+            temp = temp->siguiente;//SI NO ENTONCES CONTINUA AL SIGUIENTE
+        }
+    }
+    else//EN CASO DE QUE SE QUIERA BUSCAR UN ARTISTA QUE NO ESTE
+    {
+        //DEVUELVO LA REFERENCIA NULA
+        return NULL;
+    }
+}
+
+//METODO QUE ME RETORNA EL NUMERO DE ELEMENTOS EN LA LISTA
+int ListaArtistas::count()
+{
+    return this->elementos;
+}
+
+//METODO PARA ELIMINAR DE UNA LISTA
+bool ListaArtistas::eliminar_artista(std::string nombre)
+{
+    if(yaExisteArtista(nombre))//SI EXISTE EL ARTISTA QUE QUIERO ELIMINAR...
+    {
+        NodoArtista *elim = buscaArtista(nombre);//BUSCO LA REFERENCIA A ESE ARTISTA
+        elim->anterior->siguiente = elim->siguiente;//RECONECTO EL PUNTERO SIGUIENTE DEL ANTERIOR
+        elim->siguiente->anterior = elim->anterior;//RECONECTO EL PUNTERO ANTERIOR DEL SIGUIENTE
+        free(elim);//LIBERO LA MEMORIA
+        elim = NULL;//POR SEGURIDAD..
+        this->elementos--;//DECREMENTO EL NUMERO DE ELEMENTOS EN LA LISTA
+    }
+    else
+    {
+        //SI NO EXISTE ENTONCES NO ELIMINO NADA...
+        return false;
+    }
+}

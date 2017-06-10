@@ -9,5 +9,8 @@ INPUT(
 ./debug\album.o
 ./debug\nodoalbum.o
 ./debug\listaalbumes.o
+./debug\artista.o
+./debug\nodoartista.o
+./debug\listaartistas.o
 ./debug\moc_mainwindow.o
 );

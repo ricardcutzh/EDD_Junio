@@ -7,7 +7,7 @@ class Artista
 public:
     std::string nombre;
     float valoracion;
-    Artista();
+    Artista(std::string nombre);
 };
 
 #endif // ARTISTA_H

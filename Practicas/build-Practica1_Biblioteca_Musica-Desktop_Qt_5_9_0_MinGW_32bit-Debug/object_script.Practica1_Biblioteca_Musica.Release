@@ -9,5 +9,8 @@ INPUT(
 ./release\album.o
 ./release\nodoalbum.o
 ./release\listaalbumes.o
+./release\artista.o
+./release\nodoartista.o
+./release\listaartistas.o
 ./release\moc_mainwindow.o
 );

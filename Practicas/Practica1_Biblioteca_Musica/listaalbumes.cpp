@@ -87,7 +87,7 @@ bool ListaAlbumes::yaExisteAlbum(std::string nombre)
         while(temp!=NULL)
         {
             compara = temp->album->nombre;
-            if(compara.compare(temp)==0)
+            if(compara.compare(compara)==0)
             {
                 return true;
             }
