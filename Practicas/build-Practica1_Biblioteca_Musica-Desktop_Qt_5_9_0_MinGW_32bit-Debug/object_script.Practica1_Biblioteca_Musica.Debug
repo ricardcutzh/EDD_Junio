@@ -12,5 +12,6 @@ INPUT(
 ./debug\artista.o
 ./debug\nodoartista.o
 ./debug\listaartistas.o
+./debug\qrc_recursos.o
 ./debug\moc_mainwindow.o
 );

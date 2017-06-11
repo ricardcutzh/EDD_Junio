@@ -12,5 +12,6 @@ INPUT(
 ./release\artista.o
 ./release\nodoartista.o
 ./release\listaartistas.o
+./release\qrc_recursos.o
 ./release\moc_mainwindow.o
 );

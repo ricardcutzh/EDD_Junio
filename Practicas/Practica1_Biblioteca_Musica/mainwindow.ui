@@ -1,24 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow" >
-  <property name="geometry" >
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>727</width>
+    <height>471</height>
    </rect>
   </property>
-  <property name="windowTitle" >
-   <string>MainWindow</string>
+  <property name="windowTitle">
+   <string>Reproductor Audio</string>
   </property>
-  <widget class="QMenuBar" name="menuBar" />
-  <widget class="QToolBar" name="mainToolBar" />
-  <widget class="QWidget" name="centralWidget" />
-  <widget class="QStatusBar" name="statusBar" />
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>727</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionAbrir_Biblioteca"/>
+   </widget>
+   <widget class="QMenu" name="menuReproducci_n">
+    <property name="title">
+     <string>Reproducción</string>
+    </property>
+    <addaction name="actionPlay"/>
+    <addaction name="actionPause"/>
+    <addaction name="actionNext"/>
+    <addaction name="actionPrevious"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuReproducci_n"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionAbrir_Biblioteca"/>
+   <addaction name="separator"/>
+   <addaction name="actionPrevious"/>
+   <addaction name="actionPause"/>
+   <addaction name="actionNext"/>
+   <addaction name="actionPlay"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAbrir_Biblioteca">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/rec/imgs/1497179937_editor-folder-add-glyph.png</normaloff>:/rec/imgs/1497179937_editor-folder-add-glyph.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir Biblioteca</string>
+   </property>
+  </action>
+  <action name="actionPlay">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/rec/imgs/1497179559_play-circle-fill.ico</normaloff>:/rec/imgs/1497179559_play-circle-fill.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Play</string>
+   </property>
+  </action>
+  <action name="actionPause">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/rec/imgs/1497179537_pause-circle-fill.ico</normaloff>:/rec/imgs/1497179537_pause-circle-fill.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Pause</string>
+   </property>
+  </action>
+  <action name="actionNext">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/rec/imgs/1497179516_204_CircledNext.ico</normaloff>:/rec/imgs/1497179516_204_CircledNext.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Next</string>
+   </property>
+  </action>
+  <action name="actionPrevious">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/rec/imgs/1497179494_203_CircledBack.ico</normaloff>:/rec/imgs/1497179494_203_CircledBack.ico</iconset>
+   </property>
+   <property name="text">
+    <string>Previous</string>
+   </property>
+  </action>
  </widget>
- <layoutDefault spacing="6" margin="11" />
- <pixmapfunction></pixmapfunction>
- <resources/>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="recursos.qrc"/>
+ </resources>
  <connections/>
 </ui>

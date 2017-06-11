@@ -50,7 +50,11 @@ HEADERS += \
     listaalbumes.h \
     artista.h \
     nodoartista.h \
-    listaartistas.h
+    listaartistas.h \
+    funciones.h
 
 FORMS += \
         mainwindow.ui
+
+RESOURCES += \
+    recursos.qrc

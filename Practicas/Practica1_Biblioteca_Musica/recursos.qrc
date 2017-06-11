@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/rec">
+        <file>imgs/1497179494_203_CircledBack.ico</file>
+        <file>imgs/1497179516_204_CircledNext.ico</file>
+        <file>imgs/1497179537_pause-circle-fill.ico</file>
+        <file>imgs/1497179559_play-circle-fill.ico</file>
+        <file>imgs/1497179937_editor-folder-add-glyph.png</file>
+    </qresource>
+</RCC>
