@@ -1,0 +1,34 @@
+digraph G {
+node [shape=box];
+"Art: As I Lay Dying"->"Art: Underoath";
+"Art: Underoath"->"Art: As I Lay Dying";
+"Art: Underoath"->"Alb: Lost In The Sound Of Separation";
+"Art: Underoath"->"Art: As I Lay Dying";
+subgraph cluster_0{
+rank=same;
+label="Albums";
+"Alb: Lost In The Sound Of Separation"->"Can: Breathing In A New Mentality";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Breathing In A New Mentality";
+};
+"Alb: Lost In The Sound Of Separation";
+{rank=same;"Alb: Lost In The Sound Of Separation";};
+};
+"Art: As I Lay Dying"->"Alb: An Ocean Between Us";
+"Art: As I Lay Dying"->"Art: Underoath";
+subgraph cluster_1{
+rank=same;
+label="Albums";
+"Alb: An Ocean Between Us"->"Can: Nothing Left";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Nothing Left";
+};
+"Alb: An Ocean Between Us";
+{rank=same;"Alb: An Ocean Between Us";};
+};
+{rank=same;"Art: Underoath";"Art: As I Lay Dying";};
+}

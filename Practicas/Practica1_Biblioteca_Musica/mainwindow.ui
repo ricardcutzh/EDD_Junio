@@ -6,20 +6,248 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>727</width>
-    <height>471</height>
+    <width>856</width>
+    <height>503</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Reproductor Audio</string>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QScrollArea" name="scrollArea">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>50</y>
+      <width>421</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="widgetResizable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="scrollAreaWidgetContents_2">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>419</width>
+       <height>369</height>
+      </rect>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>50</y>
+      <width>391</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Eliminar Canción de Biblioteca</string>
+    </property>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Canción: </string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="SongToDelete">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>20</y>
+       <width>321</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>50</y>
+       <width>131</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Eliminar</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>150</y>
+      <width>391</width>
+      <height>271</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Reproducción De Playlists</string>
+    </property>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>70</y>
+       <width>47</width>
+       <height>13</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Canción:</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>111</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Crear Nueva</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>70</y>
+       <width>311</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>100</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Agregar</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>150</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Tipo de Reproducción</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>180</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Pila</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_2">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>200</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Cola</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_3">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>220</y>
+       <width>161</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Lista Doble Enlazada Circular</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>210</x>
+       <y>210</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Play</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>251</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>22</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Reportes:</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::PlainText</enum>
+    </property>
+   </widget>
+   <zorder>pic</zorder>
+   <zorder>scrollArea</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>label</zorder>
+  </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>727</width>
+     <width>856</width>
      <height>21</height>
     </rect>
    </property>
@@ -28,6 +256,8 @@
      <string>Archivo</string>
     </property>
     <addaction name="actionAbrir_Biblioteca"/>
+    <addaction name="actionVer_Biblioteca"/>
+    <addaction name="actionNueva_Biblioteca"/>
    </widget>
    <widget class="QMenu" name="menuReproducci_n">
     <property name="title">
@@ -38,8 +268,19 @@
     <addaction name="actionNext"/>
     <addaction name="actionPrevious"/>
    </widget>
+   <widget class="QMenu" name="menuTops">
+    <property name="title">
+     <string>Tops</string>
+    </property>
+    <addaction name="actionTop_5_Songs"/>
+    <addaction name="separator"/>
+    <addaction name="actionTop_5_Albums"/>
+    <addaction name="separator"/>
+    <addaction name="actionTop_5_Artists"/>
+   </widget>
    <addaction name="menuArchivo"/>
    <addaction name="menuReproducci_n"/>
+   <addaction name="menuTops"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -54,6 +295,8 @@
    <addaction name="actionPause"/>
    <addaction name="actionNext"/>
    <addaction name="actionPlay"/>
+   <addaction name="separator"/>
+   <addaction name="actionVer_Biblioteca"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionAbrir_Biblioteca">
@@ -99,6 +342,39 @@
    </property>
    <property name="text">
     <string>Previous</string>
+   </property>
+  </action>
+  <action name="actionVer_Biblioteca">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/rec/imgs/1497267961_icon-image.png</normaloff>:/rec/imgs/1497267961_icon-image.png</iconset>
+   </property>
+   <property name="text">
+    <string>Ver Biblioteca</string>
+   </property>
+  </action>
+  <action name="actionNueva_Biblioteca">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/rec/imgs/1497344676_delete.png</normaloff>:/rec/imgs/1497344676_delete.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nueva Biblioteca</string>
+   </property>
+  </action>
+  <action name="actionTop_5_Songs">
+   <property name="text">
+    <string>Top 5 Songs</string>
+   </property>
+  </action>
+  <action name="actionTop_5_Albums">
+   <property name="text">
+    <string>Top 5 Albums</string>
+   </property>
+  </action>
+  <action name="actionTop_5_Artists">
+   <property name="text">
+    <string>Top 5 Artists</string>
    </property>
   </action>
  </widget>

@@ -87,7 +87,7 @@ bool ListaAlbumes::yaExisteAlbum(std::string nombre)
         while(temp!=NULL)
         {
             compara = temp->album->nombre;
-            if(compara.compare(compara)==0)
+            if(compara.compare(nombre)==0)
             {
                 return true;
             }
@@ -108,6 +108,7 @@ NodoAlbum* ListaAlbumes::buscaAlbum(std::string nombre)
     NodoAlbum *retorno = this->primero->siguiente;
     while(retorno!=NULL)
     {
+        comp = retorno->album->nombre;
         if(comp.compare(nombre)==0)
         {
             return retorno;
@@ -143,4 +144,61 @@ float ListaAlbumes::valoracionArtista()
     {
         return 0;
     }
+}
+
+void ListaAlbumes::escribirAlbumes(std::ofstream &archivo)
+{
+    if(!estaVacia())
+    {
+        int contador = 0;
+        /*archivo << "subgraph cluster{" << std::endl;
+        archivo << "rank=same;" << std::endl;
+        archivo << "label=\"Albums\";" << std::endl;*/
+        NodoAlbum *aux = this->primero->siguiente;
+        while(aux!=NULL)
+        {
+            //UNIRLO CON SU PRIMERA CANCION
+            archivo<< "\"Alb: " << aux->album->nombre << "\"->\"Can: " << aux->songs->first->song->nombre << "\";" << std::endl;
+
+            //ENLAZO SUS CANCIONES
+            archivo <<"subgraph cluster_"<< contador << "{" <<std::endl;
+            archivo <<"rank=same;"<<std::endl;
+            archivo <<"label=\"Canciones\";"<< std::endl;
+            aux->songs->escribeLista(archivo);
+            archivo <<"};" <<std::endl;
+
+            //ENLAZO CON SU ANTERIOR SI NO
+            if((aux->anterior!=NULL) && (aux->anterior!=this->primero))
+            {
+                archivo<< "\"Alb: " << aux->album->nombre << "\"->\"Alb: " << aux->anterior->album->nombre << "\";" << std::endl;
+            }
+            else//SINO SOLO IMPRIMO EL ACTUAL
+            {
+                archivo<< "\"Alb: " << aux->album->nombre << "\";" << std::endl;
+            }
+            if(aux->siguiente!=NULL)//SI SU SIGUIENTE ES DIFERENTE DE NULL LO IMPRIMO
+            {
+                archivo<< "\"Alb: " << aux->album->nombre << "\"->\"Alb: " << aux->siguiente->album->nombre << "\";" << std::endl;
+            }
+            contador++;
+            aux = aux->siguiente;
+        }
+        //DARLE LA MISMA ALTURA A LOS ALBUMS
+        sameRank(archivo);
+
+        //TERMINAR DE ESCRIBIR EL CLUSTER
+        //archivo << "};"<<std::endl;
+    }
+}
+
+void ListaAlbumes::sameRank(std::ofstream &archivo)
+{
+    NodoAlbum *temp = this->primero->siguiente;
+    archivo<< "{rank=same;";
+    while(temp!=NULL)
+    {
+        archivo<< "\"Alb: " << temp->album->nombre << "\";";
+        temp = temp->siguiente;
+    }
+    archivo << "};"<< std::endl;
 }

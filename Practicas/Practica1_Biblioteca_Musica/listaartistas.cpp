@@ -121,3 +121,56 @@ bool ListaArtistas::eliminar_artista(std::string nombre)
         return false;
     }
 }
+
+//ESCRIBE LA LISTA DE ARTISTAS EN EL ARCHIVO
+void ListaArtistas::escribeArtistas(std::ofstream &archivo)
+{
+    if(!estaVacia())
+    {
+        int contador = 0;
+        archivo << "digraph G {" << std::endl;
+        archivo << "node [shape=box];" << std::endl;
+
+        //PARA CONECTARLO CIRCULARMENTE
+        archivo << "\"Art: "<< this->primero->anterior->artista->nombre << "\"->\"Art: " << this->primero->siguiente->artista->nombre << "\";" << std::endl;
+        archivo << "\"Art: "<< this->primero->siguiente->artista->nombre << "\"->\"Art: " << this->primero->anterior->artista->nombre << "\";" << std::endl;
+        NodoArtista *aux = this->primero->siguiente;
+        while(aux!=this->primero)
+        {
+            //ENLAZO CADA ARTISTA CON SU PRIMER ALBUM EN LISTA
+            archivo << "\"Art: "<< aux->artista->nombre << "\"->\"Alb: " << aux->albumes->primero->siguiente->album->nombre << "\";"<<std::endl;
+            if(aux->anterior!=this->primero)
+            {
+                archivo << "\"Art: " << aux->artista->nombre << "\"->\"Art: " << aux->anterior->artista->nombre << "\";" << std::endl;
+            }
+            if(aux->siguiente!=this->primero)
+            {
+                archivo << "\"Art: " << aux->artista->nombre << "\"->\"Art: " << aux->siguiente->artista->nombre << "\";" << std::endl;
+            }
+            //ESCRIBO LA LISTA DE ALBUMS DEL ARTISTA
+            archivo << "subgraph cluster_" << contador << "{" << std::endl;
+            archivo << "rank=same;" << std::endl;
+            archivo << "label=\"Albums\";" << std::endl;
+            aux->albumes->escribirAlbumes(archivo);
+            archivo << "};"<<std::endl;
+
+            //ME MUEVO AL SIGUIENTE
+            contador++;
+            aux = aux->siguiente;
+        }
+        sameRank(archivo);
+        archivo << "}" << std::endl;
+    }
+}
+
+void ListaArtistas::sameRank(std::ofstream &archivo)
+{
+    archivo << "{rank=same;";
+    NodoArtista *aux = this->primero->siguiente;
+    while(aux!=this->primero)
+    {
+        archivo << "\"Art: " << aux->artista->nombre << "\";";
+        aux = aux->siguiente;
+    }
+    archivo << "};" << std::endl;
+}

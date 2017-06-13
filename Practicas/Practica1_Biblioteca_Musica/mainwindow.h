@@ -18,6 +18,10 @@ public:
 private slots:
     void on_actionAbrir_Biblioteca_triggered();
 
+    void on_actionVer_Biblioteca_triggered();
+
+    void on_actionNueva_Biblioteca_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

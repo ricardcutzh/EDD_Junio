@@ -136,3 +136,27 @@ float ListaCanciones::valoracionAlbum()
         return 0;
     }
 }
+
+void ListaCanciones::escribeLista(std::ofstream &archivo)
+{
+    if(!estaVacia())
+    {
+        /*archivo <<"subgraph cluster{"<<std::endl;
+        archivo <<"rank=same;"<<std::endl;
+        archivo <<"label=\"Canciones\";"<< std::endl;*/
+        NodoCancion *temp = this->first;
+        while(temp!=NULL)
+        {
+            if(temp->next!=NULL)
+            {
+                archivo << "\"Can: " << temp->song->nombre << "\"->" << "\"Can: " << temp->next->song->nombre << "\";" << std::endl;
+            }
+            else
+            {
+                archivo << "\"Can: " << temp->song->nombre << "\";" << std::endl;
+            }
+            temp = temp->next;
+        }
+        //archivo <<"};" <<std::endl;
+    }
+}

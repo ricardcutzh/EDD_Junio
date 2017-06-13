@@ -2,6 +2,7 @@
 #define LISTACANCIONES_H
 #include "nodocancion.h"
 #include "cancion.h"
+#include <fstream>
 
 
 class ListaCanciones
@@ -15,6 +16,7 @@ public:
     bool eliminar_cancion(std::string nombre);
     int count();
     float valoracionAlbum();
+    void escribeLista(std::ofstream &archivo);
 private:
     int elementos;
     bool estaVacia();

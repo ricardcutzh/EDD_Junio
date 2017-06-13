@@ -36,7 +36,8 @@ SOURCES += \
     listaalbumes.cpp \
     artista.cpp \
     nodoartista.cpp \
-    listaartistas.cpp
+    listaartistas.cpp \
+    funciones.cpp
 
 HEADERS += \
         mainwindow.h \
