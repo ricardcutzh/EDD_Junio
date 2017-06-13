@@ -22,6 +22,12 @@ private slots:
 
     void on_actionNueva_Biblioteca_triggered();
 
+    void on_actionTop_5_Artists_triggered();
+
+    void on_actionTop_5_Albums_triggered();
+
+    void on_actionTop_5_Songs_triggered();
+
 private:
     Ui::MainWindow *ui;
 };

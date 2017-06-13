@@ -1,5 +1,11 @@
 #include<funciones.h>
 ListaArtistas *listaArtistas;//LISTA DE ARTISTAS
+
+//DECLARACIÓN DE LOS TOPS
+Top *topSongs;
+Top *topAlbums;
+Top *topArtists;
+
 //LEER ARCHIVOS PARA CARGAR LA BIBLIOTECA
 bool leerArchivoEntrada(string ruta)
 {
@@ -109,14 +115,69 @@ bool escribeBiblioteca()
     else
     {
         listaArtistas->escribeArtistas(archivo);
-        return true;
         archivo.close();
+        return true;
+    }
+}
+
+//SE ENCARGA DE GENERAR EL GRAFO DE LOS TOPS ALBUMS
+bool escribeTopArtistas()
+{
+    std::ofstream archivo;
+    archivo.open("topArtist.dot", ios::out);
+    if(archivo.fail())
+    {
+        return false;
+    }
+    else
+    {
+        topArtists->escribirDotTop(archivo);
+        archivo.close();
+        return true;
+    }
+}
+
+bool escribeTopAlbums()
+{
+    std::ofstream archivo;
+    archivo.open("topAlbums.dot", ios::out);
+    if(archivo.fail())
+    {
+        return false;
+    }
+    else
+    {
+        topAlbums->escribirDotTop(archivo);
+        archivo.close();
+        return true;
+    }
+}
+
+bool escribeTopSongs()
+{
+    std::ofstream archivo;
+    archivo.open("topSongs.dot", ios::out);
+    if(archivo.fail())
+    {
+        return false;
+    }
+    else
+    {
+        topSongs->escribirDotTop(archivo);
+        archivo.close();
+        return true;
     }
 }
 
 //LIBERA LA LISTA DE MOMORIA
 void liberarLista()
 {
+    topSongs=0;
+    free(topSongs);
+    topAlbums = 0;
+    free(topAlbums);
+    topArtists = 0;
+    free(topArtists);
     listaArtistas = 0;
     free(listaArtistas);
 }
@@ -125,4 +186,56 @@ void liberarLista()
 void crearNuevaLista()
 {
     listaArtistas = new ListaArtistas();
+    topSongs = new Top("Songs");
+    topAlbums = new Top("Albums");
+    topArtists = new Top("Artists");
+}
+
+//VA AGREGAR A LOS TOPS DE ARTISTAS:
+void agregaTops()
+{
+    if(listaArtistas->count()>0)
+    {
+        NodoArtista *aux = listaArtistas->primero->siguiente;
+        while(aux!=listaArtistas->primero)
+        {
+            recorreAlbumes(aux);
+            aux->artista->valoracion = aux->albumes->valoracionArtista();
+            NodoTop *nuevo = new NodoTop(aux->artista->nombre, aux->artista->valoracion);
+            topArtists->add(nuevo);
+            aux = aux->siguiente;
+        }
+    }
+}
+
+//AGREGA A LOS TOPS DE ALBUMES
+void recorreAlbumes(NodoArtista *art)
+{
+    if(art->albumes->count()>0)
+    {
+        NodoAlbum *aux = art->albumes->primero->siguiente;
+        while(aux!=NULL)
+        {
+            recorreCanciones(aux);
+            aux->album->valoracion = aux->songs->valoracionAlbum();
+            NodoTop *nuevo = new NodoTop(aux->album->nombre, aux->album->valoracion);
+            topAlbums->add(nuevo);
+            aux = aux->siguiente;
+        }
+    }
+}
+
+//AGREGA A LOS TOPS DE CANCIONES
+void recorreCanciones(NodoAlbum *alb)
+{
+    if(alb->songs->count()>0)
+    {
+        NodoCancion *aux = alb->songs->first;
+        while(aux!=NULL)
+        {
+            NodoTop *nuevo = new NodoTop(aux->song->nombre, aux->song->valoracion);
+            topSongs->add(nuevo);
+            aux = aux->next;
+        }
+    }
 }

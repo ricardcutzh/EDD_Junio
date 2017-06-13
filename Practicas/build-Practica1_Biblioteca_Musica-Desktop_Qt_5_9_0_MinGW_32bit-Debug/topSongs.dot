@@ -1,0 +1,9 @@
+digraph top{
+node [shape=box];
+label="Top 5Songs";
+"Nombre: Nothing Left | Val: 5"->"Nombre: Separation | Val: 5";
+"Nombre: Separation | Val: 5"->"Nombre: Electric Eye | Val: 5";
+"Nombre: Electric Eye | Val: 5"->"Nombre: Fire It Up | Val: 4";
+"Nombre: Fire It Up | Val: 4"->"Nombre: Breathing In A New Mentality | Val: 3";
+"Nombre: Breathing In A New Mentality | Val: 3";
+}

@@ -1,0 +1,9 @@
+digraph top{
+node [shape=box];
+label="Top 5Albums";
+"Nombre: An Ocean Between Us | Val: 5"->"Nombre: Decas | Val: 5";
+"Nombre: Decas | Val: 5"->"Nombre: Welcome To The Masquerade | Val: 4";
+"Nombre: Welcome To The Masquerade | Val: 4"->"Nombre: Lost In The Sound Of Separation | Val: 3";
+"Nombre: Lost In The Sound Of Separation | Val: 3"->"Nombre: Define The Great Line | Val: 3";
+"Nombre: Define The Great Line | Val: 3";
+}

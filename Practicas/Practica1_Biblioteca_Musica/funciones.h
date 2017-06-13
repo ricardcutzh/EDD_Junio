@@ -25,7 +25,13 @@ using namespace std;
 void inserta_datos(std::string arti, std::string album, std::string cancion ,std::string valoracion, std::string path);
 void liberarLista();
 void crearNuevaLista();
+void agregaTops();
+void recorreAlbumes(NodoArtista *art);
+void recorreCanciones(NodoAlbum *alb);
 //FUNCIONES
 bool leerArchivoEntrada(std::string ruta);
 bool escribeBiblioteca();
+bool escribeTopArtistas();
+bool escribeTopAlbums();
+bool escribeTopSongs();
 #endif // FUNCIONES_H

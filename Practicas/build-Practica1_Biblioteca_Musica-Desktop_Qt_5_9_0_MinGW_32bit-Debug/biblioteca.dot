@@ -1,7 +1,7 @@
 digraph G {
 node [shape=box];
-"Art: As I Lay Dying"->"Art: Underoath";
-"Art: Underoath"->"Art: As I Lay Dying";
+"Art: BTMH"->"Art: Underoath";
+"Art: Underoath"->"Art: BTMH";
 "Art: Underoath"->"Alb: Lost In The Sound Of Separation";
 "Art: Underoath"->"Art: As I Lay Dying";
 subgraph cluster_0{
@@ -11,13 +11,23 @@ label="Albums";
 subgraph cluster_0{
 rank=same;
 label="Canciones";
-"Can: Breathing In A New Mentality";
+"Can: Breathing In A New Mentality"->"Can: Desperate Times Desperate Measures";
+"Can: Desperate Times Desperate Measures";
 };
 "Alb: Lost In The Sound Of Separation";
-{rank=same;"Alb: Lost In The Sound Of Separation";};
+"Alb: Lost In The Sound Of Separation"->"Alb: Define The Great Line";
+"Alb: Define The Great Line"->"Can: In Regards To Myself";
+subgraph cluster_1{
+rank=same;
+label="Canciones";
+"Can: In Regards To Myself";
+};
+"Alb: Define The Great Line"->"Alb: Lost In The Sound Of Separation";
+{rank=same;"Alb: Lost In The Sound Of Separation";"Alb: Define The Great Line";};
 };
 "Art: As I Lay Dying"->"Alb: An Ocean Between Us";
 "Art: As I Lay Dying"->"Art: Underoath";
+"Art: As I Lay Dying"->"Art: TFK";
 subgraph cluster_1{
 rank=same;
 label="Albums";
@@ -25,10 +35,78 @@ label="Albums";
 subgraph cluster_0{
 rank=same;
 label="Canciones";
-"Can: Nothing Left";
+"Can: Nothing Left"->"Can: Separation";
+"Can: Separation";
 };
 "Alb: An Ocean Between Us";
-{rank=same;"Alb: An Ocean Between Us";};
+"Alb: An Ocean Between Us"->"Alb: Decas";
+"Alb: Decas"->"Can: Electric Eye";
+subgraph cluster_1{
+rank=same;
+label="Canciones";
+"Can: Electric Eye";
 };
-{rank=same;"Art: Underoath";"Art: As I Lay Dying";};
+"Alb: Decas"->"Alb: An Ocean Between Us";
+{rank=same;"Alb: An Ocean Between Us";"Alb: Decas";};
+};
+"Art: TFK"->"Alb: Welcome To The Masquerade";
+"Art: TFK"->"Art: As I Lay Dying";
+"Art: TFK"->"Art: POD";
+subgraph cluster_2{
+rank=same;
+label="Albums";
+"Alb: Welcome To The Masquerade"->"Can: Fire It Up";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Fire It Up";
+};
+"Alb: Welcome To The Masquerade";
+{rank=same;"Alb: Welcome To The Masquerade";};
+};
+"Art: POD"->"Alb: POD";
+"Art: POD"->"Art: TFK";
+"Art: POD"->"Art: Hawk Nelson";
+subgraph cluster_3{
+rank=same;
+label="Albums";
+"Alb: POD"->"Can: SONG1";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: SONG1";
+};
+"Alb: POD";
+{rank=same;"Alb: POD";};
+};
+"Art: Hawk Nelson"->"Alb: Albumx";
+"Art: Hawk Nelson"->"Art: POD";
+"Art: Hawk Nelson"->"Art: BTMH";
+subgraph cluster_4{
+rank=same;
+label="Albums";
+"Alb: Albumx"->"Can: Songnu";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Songnu";
+};
+"Alb: Albumx";
+{rank=same;"Alb: Albumx";};
+};
+"Art: BTMH"->"Alb: HappySong";
+"Art: BTMH"->"Art: Hawk Nelson";
+subgraph cluster_5{
+rank=same;
+label="Albums";
+"Alb: HappySong"->"Can: Happy";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Happy";
+};
+"Alb: HappySong";
+{rank=same;"Alb: HappySong";};
+};
+{rank=same;"Art: Underoath";"Art: As I Lay Dying";"Art: TFK";"Art: POD";"Art: Hawk Nelson";"Art: BTMH";};
 }

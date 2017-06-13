@@ -1,0 +1,9 @@
+digraph top{
+node [shape=box];
+label="Top 5Artists";
+"Nombre: As I Lay Dying | Val: 5"->"Nombre: TFK | Val: 4";
+"Nombre: TFK | Val: 4"->"Nombre: Underoath | Val: 3";
+"Nombre: Underoath | Val: 3"->"Nombre: POD | Val: 2";
+"Nombre: POD | Val: 2"->"Nombre: Hawk Nelson | Val: 1";
+"Nombre: Hawk Nelson | Val: 1";
+}
