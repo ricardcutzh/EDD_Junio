@@ -28,10 +28,13 @@ void crearNuevaLista();
 void agregaTops();
 void recorreAlbumes(NodoArtista *art);
 void recorreCanciones(NodoAlbum *alb);
+void vaciaTops();
+void iniciaTops();
 //FUNCIONES
 bool leerArchivoEntrada(std::string ruta);
 bool escribeBiblioteca();
 bool escribeTopArtistas();
 bool escribeTopAlbums();
 bool escribeTopSongs();
+bool eliminaCancion(std::string entrada);
 #endif // FUNCIONES_H

@@ -28,6 +28,8 @@ private slots:
 
     void on_actionTop_5_Songs_triggered();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

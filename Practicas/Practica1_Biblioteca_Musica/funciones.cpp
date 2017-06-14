@@ -1,4 +1,5 @@
 #include<funciones.h>
+#include<sstream>
 ListaArtistas *listaArtistas;//LISTA DE ARTISTAS
 
 //DECLARACIÓN DE LOS TOPS
@@ -238,4 +239,72 @@ void recorreCanciones(NodoAlbum *alb)
             aux = aux->next;
         }
     }
+}
+
+//ELIMINACIÓN DE CANCIONES EXISTENTES EN LA BIBLIOTECA
+bool eliminaCancion(string entrada)
+{
+    std::string artista;//DONDE ALMACENO EL ARTISTA
+    std::string album;//DONDE ALMACENO EL ALBUM
+    std::string cancion;//DONDE ALMACENO LA CANCION
+    std::stringstream spl(entrada);//LO CONVIERTO A UN STREAM PARA PODER LEER EL STRING
+    std::getline(spl, artista, '_');//OBTENGO EL ARTISTA
+    std::getline(spl, album, '_');//OBTENGO EL ALBUM
+    std::getline(spl, cancion, '_');//OBTENGO LA CANCION
+    //AHORA ME PREGUNTO: ¿EXISTE EL ARTISTA EN LA LISTA?:
+    if(listaArtistas->yaExisteArtista(artista))
+    {
+        //TRAIGO LA REFERENCIA AL NODO DONDE ESTA EL ARTISTA
+        NodoArtista *auxArt = listaArtistas->buscaArtista(artista);
+
+        //¿EXISTE EL ALBUM?
+        if(auxArt->albumes->yaExisteAlbum(album))
+        {
+            //TRAIGO LA REFERENCIA AL NODO DEL ALBUM
+            NodoAlbum *auxAlbum = auxArt->albumes->buscaAlbum(album);
+            if(auxAlbum->songs->eliminar_cancion(cancion))
+            {
+                if(auxAlbum->songs->count()==0)
+                {
+                    auxArt->albumes->eliminar(album);
+                    if(auxArt->albumes->count()==0)
+                    {
+                        listaArtistas->eliminar_artista(artista);
+                    }
+                }
+                return true;
+            }
+            else//SI ALGO SALE MAL EN LA ELIMINACIÓN RETORNO FALSO...
+            {
+                return false;
+            }
+        }
+        else//SI NO EXISTE EL ALBUM NO ELIMINO...
+        {
+            return false;
+        }
+    }//SI NO EXISTE ARTISTA NO ELIMINO...
+    else
+    {
+        return false;
+    }
+}
+
+//VACIA LOS TOPS PARA VOLVER A LLENARLOS CON LA NUEVA INFORMACIÓN
+void vaciaTops()
+{
+    topSongs=0;
+    free(topSongs);
+    topAlbums = 0;
+    free(topAlbums);
+    topArtists = 0;
+    free(topArtists);
+}
+
+//INICIALIZA LOS TOPS PARA VOLVER A RECORRER Y SABER CUALES SON LOS TOP CANCIONES
+void iniciaTops()
+{
+    topSongs = new Top("Songs");
+    topAlbums = new Top("Albums");
+    topArtists = new Top("Artists");
 }

@@ -70,7 +70,7 @@ void MainWindow::on_actionVer_Biblioteca_triggered()
             //AGREGO AL LAYOUT
             lay->addWidget(lab);
             ui->scrollAreaWidgetContents_2->setLayout(lay);
-
+            yaImg = true;
         }
         else
         {
@@ -97,6 +97,7 @@ void MainWindow::on_actionNueva_Biblioteca_triggered()
     QMessageBox::information(this, "Creación de Nueva Biblioteca","Biblioteca Creada: Puede Cargar un nuevo archivo");
 }
 
+//MUESTRA EL REPORTE DE TOP 5 ARTISTAS
 void MainWindow::on_actionTop_5_Artists_triggered()
 {
     lay->removeWidget(d);
@@ -126,6 +127,7 @@ void MainWindow::on_actionTop_5_Artists_triggered()
     this->repaint();
 }
 
+//MUESTRA EL REPORTE DE TOP 5 ALBUNES
 void MainWindow::on_actionTop_5_Albums_triggered()
 {
     lay->removeWidget(d);
@@ -154,6 +156,7 @@ void MainWindow::on_actionTop_5_Albums_triggered()
     }
 }
 
+//MUESTRA EL REPORTE DE TOP 5 CANCIONES
 void MainWindow::on_actionTop_5_Songs_triggered()
 {
     lay->removeWidget(d);
@@ -179,5 +182,33 @@ void MainWindow::on_actionTop_5_Songs_triggered()
         {
             QMessageBox::warning(this, "Error...","No se creo correctamente");
         }
+    }
+}
+
+//BOTON PARA ELIMINAR
+void MainWindow::on_pushButton_clicked()
+{
+    //OBTENGO EL TEXTO DE LA ENTRADA A ELIMINAR
+    std::string cancionElim = ui->SongToDelete->text().toStdString();
+    if(cancionElim.compare("")!=0)//SI LA ENTRADA NO ESTA VACÍA
+    {
+        if(eliminaCancion(cancionElim))
+        {
+            QMessageBox::information(this,"Información","Se eliminó la canción");
+            ui->SongToDelete->setText("");
+
+            //LIBERO LA LISTA DE TOPS Y LLENO CON LA NUEVA INFORMACIÓN QUE OBTENGO
+            vaciaTops();
+            iniciaTops();
+            agregaTops();
+        }
+        else{
+            QMessageBox::warning(this, "Error","No se logró eliminar la canción");
+        }
+
+    }
+    else//SI LA ENTRADA ESTA VACÍA
+    {
+        QMessageBox::warning(this, "Error","Favor ingrese una canción");
     }
 }
