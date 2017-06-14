@@ -160,7 +160,7 @@
       <string>Tipo de Reproducción</string>
      </property>
     </widget>
-    <widget class="QRadioButton" name="radioButton">
+    <widget class="QRadioButton" name="Pil">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -173,7 +173,7 @@
       <string>Pila</string>
      </property>
     </widget>
-    <widget class="QRadioButton" name="radioButton_2">
+    <widget class="QRadioButton" name="col">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -186,7 +186,7 @@
       <string>Cola</string>
      </property>
     </widget>
-    <widget class="QRadioButton" name="radioButton_3">
+    <widget class="QRadioButton" name="lista">
      <property name="geometry">
       <rect>
        <x>20</x>
@@ -197,6 +197,9 @@
      </property>
      <property name="text">
       <string>Lista Doble Enlazada Circular</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_4">
@@ -236,11 +239,6 @@
      <enum>Qt::PlainText</enum>
     </property>
    </widget>
-   <zorder>pic</zorder>
-   <zorder>scrollArea</zorder>
-   <zorder>groupBox</zorder>
-   <zorder>groupBox_2</zorder>
-   <zorder>label</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

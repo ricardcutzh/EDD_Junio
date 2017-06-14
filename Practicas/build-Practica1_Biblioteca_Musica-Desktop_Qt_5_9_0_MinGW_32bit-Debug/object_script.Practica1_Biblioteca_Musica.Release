@@ -13,6 +13,8 @@ INPUT(
 ./release\nodoartista.o
 ./release\listaartistas.o
 ./release\funciones.o
+./release\listadereproduccion.o
+./release\nodorep.o
 ./release\qrc_recursos.o
 ./release\moc_mainwindow.o
 );

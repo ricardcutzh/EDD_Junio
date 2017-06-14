@@ -212,3 +212,31 @@ void MainWindow::on_pushButton_clicked()
         QMessageBox::warning(this, "Error","Favor ingrese una canción");
     }
 }
+
+//CREA UNA LISTA DE REPRODUCCIÓN
+void MainWindow::on_pushButton_2_clicked()
+{
+    if(yaAbri)
+    {
+        if(ui->lista->isChecked())
+        {
+            vaciaPlaylist();
+            iniciaPlaylist("LDE");
+        }
+        if(ui->Pil->isChecked())
+        {
+            vaciaPlaylist();
+            iniciaPlaylist("STACK");
+        }
+        if(ui->col->isChecked())
+        {
+            vaciaPlaylist();
+            iniciaPlaylist("QUEUE");
+        }
+        QMessageBox::information(this, "Nueva Playlist", "Ya puede cargar canciones a la misma!");
+    }
+    else
+    {
+        QMessageBox::information(this, "Aviso", "Cargue una biblioteca primero");
+    }
+}

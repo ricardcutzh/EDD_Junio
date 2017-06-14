@@ -37,7 +37,9 @@ SOURCES += \
     artista.cpp \
     nodoartista.cpp \
     listaartistas.cpp \
-    funciones.cpp
+    funciones.cpp \
+    listadereproduccion.cpp \
+    nodorep.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -52,7 +54,9 @@ HEADERS += \
     artista.h \
     nodoartista.h \
     listaartistas.h \
-    funciones.h
+    funciones.h \
+    listadereproduccion.h \
+    nodorep.h
 
 FORMS += \
         mainwindow.ui

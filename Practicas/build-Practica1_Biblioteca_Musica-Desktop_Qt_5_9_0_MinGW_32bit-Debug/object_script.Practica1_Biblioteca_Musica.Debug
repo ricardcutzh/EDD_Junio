@@ -13,6 +13,8 @@ INPUT(
 ./debug\nodoartista.o
 ./debug\listaartistas.o
 ./debug\funciones.o
+./debug\listadereproduccion.o
+./debug\nodorep.o
 ./debug\qrc_recursos.o
 ./debug\moc_mainwindow.o
 );

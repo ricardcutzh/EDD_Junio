@@ -15,6 +15,8 @@
 #include <top.h>
 #include <string>
 #include <fstream>
+#include <nodorep.h>
+#include <listadereproduccion.h>
 using namespace std;
 
 //ARCHIVO DE CABECERA DONDE DEFINIRE LAS FUNCIONES A IMPLEMENTAR EN LA INTERFAZ GRAFICA
@@ -30,6 +32,8 @@ void recorreAlbumes(NodoArtista *art);
 void recorreCanciones(NodoAlbum *alb);
 void vaciaTops();
 void iniciaTops();
+void vaciaPlaylist();
+void iniciaPlaylist(std::string tipo);
 //FUNCIONES
 bool leerArchivoEntrada(std::string ruta);
 bool escribeBiblioteca();
@@ -37,4 +41,5 @@ bool escribeTopArtistas();
 bool escribeTopAlbums();
 bool escribeTopSongs();
 bool eliminaCancion(std::string entrada);
+NodoCancion *encuentraCancion(std::string entrada);
 #endif // FUNCIONES_H

@@ -7,6 +7,9 @@ Top *topSongs;
 Top *topAlbums;
 Top *topArtists;
 
+//LISTA DE REPRODUCCIÓN
+ListaDeReproduccion *playlist;
+
 //LEER ARCHIVOS PARA CARGAR LA BIBLIOTECA
 bool leerArchivoEntrada(string ruta)
 {
@@ -209,6 +212,19 @@ void agregaTops()
     }
 }
 
+//VACIA PLAYLIST
+void vaciaPlaylist()
+{
+    free(playlist);
+    playlist = 0;
+}
+
+//INICIALIZA LA PLAYLIST
+void iniciaPlaylist(string tipo)
+{
+    playlist = new ListaDeReproduccion(tipo);
+}
+
 //AGREGA A LOS TOPS DE ALBUMES
 void recorreAlbumes(NodoArtista *art)
 {
@@ -307,4 +323,16 @@ void iniciaTops()
     topSongs = new Top("Songs");
     topAlbums = new Top("Albums");
     topArtists = new Top("Artists");
+}
+
+//BUSCAR LA REFERENCIA AL NODO DE CANCIÓN PARA AÑADIR A LA PLAYLIST
+NodoCancion *encuentraCancion(string entrada)
+{
+    std::string artista;//DONDE ALMACENO EL ARTISTA
+    std::string album;//DONDE ALMACENO EL ALBUM
+    std::string cancion;//DONDE ALMACENO LA CANCION
+    std::stringstream spl(entrada);//LO CONVIERTO A UN STREAM PARA PODER LEER EL STRING
+    std::getline(spl, artista, '_');//OBTENGO EL ARTISTA
+    std::getline(spl, album, '_');//OBTENGO EL ALBUM
+    std::getline(spl, cancion, '_');//OBTENGO LA CANCION
 }
