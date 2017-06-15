@@ -124,7 +124,7 @@
       <string>Crear Nueva</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="addSong">
      <property name="geometry">
       <rect>
        <x>70</x>
@@ -237,6 +237,32 @@
     </property>
     <property name="textFormat">
      <enum>Qt::PlainText</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>En Reproducción:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="playingNow">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>20</y>
+      <width>421</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Canción: </string>
     </property>
    </widget>
   </widget>

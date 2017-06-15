@@ -160,3 +160,44 @@ void ListaCanciones::escribeLista(std::ofstream &archivo)
         //archivo <<"};" <<std::endl;
     }
 }
+
+//BUSCA SI EXISTE LA CANCION
+bool ListaCanciones::existeCancion(std::string nombre)
+{
+    if(!estaVacia())
+    {
+        NodoCancion *aux = this->first;
+        while(aux!=NULL)
+        {
+            if(aux->song->nombre.compare(nombre)==0)
+            {
+                return true;
+            }
+            aux = aux->next;
+        }
+        return false;
+    }
+    else
+    {
+        return false;
+    }
+}
+
+//DEVUELVE LA REFERENCIA ALA CANCION
+Cancion *ListaCanciones::buscaLaCancion(std::string nombre)
+{
+    if(!estaVacia())
+    {
+        NodoCancion *aux = this->first;
+        while(aux!=NULL)
+        {
+            if(aux->song->nombre.compare(nombre)==0)
+            {
+                return aux->song;
+            }
+            aux = aux->next;
+        }
+        return NULL;
+    }
+    return NULL;
+}

@@ -24,7 +24,7 @@ void ListaDeReproduccion::addToPlaylist(std::string nombre, std::string path)
     else
     {
         NodoRep *aux = this->raiz->sig;
-        while(aux->sig!=NULL)
+        while(aux->sig!=this->raiz)
         {
             aux = aux->sig;
         }

@@ -17,6 +17,8 @@ public:
     int count();
     float valoracionAlbum();
     void escribeLista(std::ofstream &archivo);
+    bool existeCancion(std::string nombre);
+    Cancion *buscaLaCancion(std::string nombre);
 private:
     int elementos;
     bool estaVacia();

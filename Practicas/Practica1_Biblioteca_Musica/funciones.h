@@ -34,12 +34,17 @@ void vaciaTops();
 void iniciaTops();
 void vaciaPlaylist();
 void iniciaPlaylist(std::string tipo);
+void agregaAPlayList(Cancion *song);
+NodoRep* inicializaApuntador();
 //FUNCIONES
 bool leerArchivoEntrada(std::string ruta);
 bool escribeBiblioteca();
 bool escribeTopArtistas();
 bool escribeTopAlbums();
 bool escribeTopSongs();
+bool escribePlayList();
 bool eliminaCancion(std::string entrada);
-NodoCancion *encuentraCancion(std::string entrada);
+Cancion *encuentraCancion(std::string entrada);
+NodoRep *siguiente();
+NodoRep *anterior();
 #endif // FUNCIONES_H

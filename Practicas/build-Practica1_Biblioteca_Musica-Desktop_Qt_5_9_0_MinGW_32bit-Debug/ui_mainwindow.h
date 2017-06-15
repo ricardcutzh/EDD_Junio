@@ -52,7 +52,7 @@ public:
     QGroupBox *groupBox_2;
     QLabel *label_3;
     QPushButton *pushButton_2;
-    QLineEdit *lineEdit;
+    QLineEdit *addSong;
     QPushButton *pushButton_3;
     QLabel *label_4;
     QRadioButton *Pil;
@@ -60,6 +60,8 @@ public:
     QRadioButton *lista;
     QPushButton *pushButton_4;
     QLabel *label;
+    QLabel *label_5;
+    QLabel *playingNow;
     QMenuBar *menuBar;
     QMenu *menuArchivo;
     QMenu *menuReproducci_n;
@@ -144,9 +146,9 @@ public:
         pushButton_2 = new QPushButton(groupBox_2);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
         pushButton_2->setGeometry(QRect(20, 30, 111, 23));
-        lineEdit = new QLineEdit(groupBox_2);
-        lineEdit->setObjectName(QStringLiteral("lineEdit"));
-        lineEdit->setGeometry(QRect(70, 70, 311, 20));
+        addSong = new QLineEdit(groupBox_2);
+        addSong->setObjectName(QStringLiteral("addSong"));
+        addSong->setGeometry(QRect(70, 70, 311, 20));
         pushButton_3 = new QPushButton(groupBox_2);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
         pushButton_3->setGeometry(QRect(70, 100, 75, 23));
@@ -175,6 +177,12 @@ public:
         font.setWeight(75);
         label->setFont(font);
         label->setTextFormat(Qt::PlainText);
+        label_5 = new QLabel(centralWidget);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(200, 20, 81, 16));
+        playingNow = new QLabel(centralWidget);
+        playingNow->setObjectName(QStringLiteral("playingNow"));
+        playingNow->setGeometry(QRect(300, 20, 421, 16));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -248,6 +256,8 @@ public:
         lista->setText(QApplication::translate("MainWindow", "Lista Doble Enlazada Circular", Q_NULLPTR));
         pushButton_4->setText(QApplication::translate("MainWindow", "Play", Q_NULLPTR));
         label->setText(QApplication::translate("MainWindow", "Reportes:", Q_NULLPTR));
+        label_5->setText(QApplication::translate("MainWindow", "En Reproducci\303\263n:", Q_NULLPTR));
+        playingNow->setText(QApplication::translate("MainWindow", "Canci\303\263n: ", Q_NULLPTR));
         menuArchivo->setTitle(QApplication::translate("MainWindow", "Archivo", Q_NULLPTR));
         menuReproducci_n->setTitle(QApplication::translate("MainWindow", "Reproducci\303\263n", Q_NULLPTR));
         menuTops->setTitle(QApplication::translate("MainWindow", "Tops", Q_NULLPTR));

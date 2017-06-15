@@ -1,0 +1,7 @@
+digraph G{
+node [shape=box];
+"Song: Strange Comfort"->"Song: The Reign";
+"Song: The Reign"->"Song: Strange Comfort";
+"Song: The Reign"->"Song: Strange Comfort";
+"Song: Strange Comfort"->"Song: The Reign";
+}

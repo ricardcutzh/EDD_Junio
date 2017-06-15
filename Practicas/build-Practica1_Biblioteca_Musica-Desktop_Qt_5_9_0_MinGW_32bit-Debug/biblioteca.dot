@@ -1,112 +1,66 @@
 digraph G {
 node [shape=box];
-"Art: BTMH"->"Art: Underoath";
-"Art: Underoath"->"Art: BTMH";
-"Art: Underoath"->"Alb: Lost In The Sound Of Separation";
-"Art: Underoath"->"Art: As I Lay Dying";
+"Art: Blessthefall"->"Art: Angel Vivaldi";
+"Art: Angel Vivaldi"->"Art: Blessthefall";
+"Art: Angel Vivaldi"->"Alb: Varios";
+"Art: Angel Vivaldi"->"Art: Galactic Empire";
 subgraph cluster_0{
 rank=same;
 label="Albums";
-"Alb: Lost In The Sound Of Separation"->"Can: Breathing In A New Mentality";
+"Alb: Varios"->"Can: A Martian Winter";
 subgraph cluster_0{
 rank=same;
 label="Canciones";
-"Can: Breathing In A New Mentality"->"Can: Desperate Times Desperate Measures";
-"Can: Desperate Times Desperate Measures";
+"Can: A Martian Winter"->"Can: A Mercurian Summer";
+"Can: A Mercurian Summer";
 };
-"Alb: Lost In The Sound Of Separation";
-"Alb: Lost In The Sound Of Separation"->"Alb: Define The Great Line";
-"Alb: Define The Great Line"->"Can: In Regards To Myself";
-subgraph cluster_1{
-rank=same;
-label="Canciones";
-"Can: In Regards To Myself";
+"Alb: Varios";
+{rank=same;"Alb: Varios";};
 };
-"Alb: Define The Great Line"->"Alb: Lost In The Sound Of Separation";
-{rank=same;"Alb: Lost In The Sound Of Separation";"Alb: Define The Great Line";};
-};
-"Art: As I Lay Dying"->"Alb: An Ocean Between Us";
-"Art: As I Lay Dying"->"Art: Underoath";
-"Art: As I Lay Dying"->"Art: TFK";
+"Art: Galactic Empire"->"Alb: StarWars";
+"Art: Galactic Empire"->"Art: Angel Vivaldi";
+"Art: Galactic Empire"->"Art: Family Force Five";
 subgraph cluster_1{
 rank=same;
 label="Albums";
-"Alb: An Ocean Between Us"->"Can: Nothing Left";
+"Alb: StarWars"->"Can: The Imperial March";
 subgraph cluster_0{
 rank=same;
 label="Canciones";
-"Can: Nothing Left"->"Can: Separation";
-"Can: Separation";
+"Can: The Imperial March"->"Can: Main Theme";
+"Can: Main Theme";
 };
-"Alb: An Ocean Between Us";
-"Alb: An Ocean Between Us"->"Alb: Decas";
-"Alb: Decas"->"Can: Electric Eye";
-subgraph cluster_1{
-rank=same;
-label="Canciones";
-"Can: Electric Eye";
+"Alb: StarWars";
+{rank=same;"Alb: StarWars";};
 };
-"Alb: Decas"->"Alb: An Ocean Between Us";
-{rank=same;"Alb: An Ocean Between Us";"Alb: Decas";};
-};
-"Art: TFK"->"Alb: Welcome To The Masquerade";
-"Art: TFK"->"Art: As I Lay Dying";
-"Art: TFK"->"Art: POD";
+"Art: Family Force Five"->"Alb: FF5";
+"Art: Family Force Five"->"Art: Galactic Empire";
+"Art: Family Force Five"->"Art: Blessthefall";
 subgraph cluster_2{
 rank=same;
 label="Albums";
-"Alb: Welcome To The Masquerade"->"Can: Fire It Up";
+"Alb: FF5"->"Can: Replace Me";
 subgraph cluster_0{
 rank=same;
 label="Canciones";
-"Can: Fire It Up";
+"Can: Replace Me";
 };
-"Alb: Welcome To The Masquerade";
-{rank=same;"Alb: Welcome To The Masquerade";};
+"Alb: FF5";
+{rank=same;"Alb: FF5";};
 };
-"Art: POD"->"Alb: POD";
-"Art: POD"->"Art: TFK";
-"Art: POD"->"Art: Hawk Nelson";
+"Art: Blessthefall"->"Alb: Awakening";
+"Art: Blessthefall"->"Art: Family Force Five";
 subgraph cluster_3{
 rank=same;
 label="Albums";
-"Alb: POD"->"Can: SONG1";
+"Alb: Awakening"->"Can: The Reign";
 subgraph cluster_0{
 rank=same;
 label="Canciones";
-"Can: SONG1";
+"Can: The Reign";
 };
-"Alb: POD";
-{rank=same;"Alb: POD";};
+"Alb: Awakening";
+{rank=same;"Alb: Awakening";};
 };
-"Art: Hawk Nelson"->"Alb: Albumx";
-"Art: Hawk Nelson"->"Art: POD";
-"Art: Hawk Nelson"->"Art: BTMH";
-subgraph cluster_4{
-rank=same;
-label="Albums";
-"Alb: Albumx"->"Can: Songnu";
-subgraph cluster_0{
-rank=same;
-label="Canciones";
-"Can: Songnu";
-};
-"Alb: Albumx";
-{rank=same;"Alb: Albumx";};
-};
-"Art: BTMH"->"Alb: HappySong";
-"Art: BTMH"->"Art: Hawk Nelson";
-subgraph cluster_5{
-rank=same;
-label="Albums";
-"Alb: HappySong"->"Can: Happy";
-subgraph cluster_0{
-rank=same;
-label="Canciones";
-"Can: Happy";
-};
-"Alb: HappySong";
-{rank=same;"Alb: HappySong";};
-};
-{rank=same;"Art: Underoath";"Art: As I Lay Dying";"Art: TFK";"Art: POD";"Art: Hawk Nelson";"Art: BTMH";};
+{rank=same;"Art: Angel Vivaldi";"Art: Galactic Empire";"Art: Family Force Five";"Art: Blessthefall";};
 }

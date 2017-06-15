@@ -7,11 +7,18 @@
 #include <QPixmap>
 #include <QLabel>
 #include <QBoxLayout>
+#include <nodorep.h>
+#include <QMediaPlayer>
+
 using namespace std;
 QVBoxLayout *lay = new QVBoxLayout();
 QLabel *d;//APUNTADOR AL LABEL QUE ESTARÉ CAMBIANDO CADA VEZ
 bool yaAbri=false;
 bool yaImg = false;
+bool creeNuevaPlayList = false;
+bool enReproduccion = false;
+QMediaPlayer *player;
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -19,6 +26,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
     this->setFixedHeight(this->height());
     this->setFixedWidth(this->width());
+    player = new QMediaPlayer(this);
 }
 
 MainWindow::~MainWindow()
@@ -190,7 +198,7 @@ void MainWindow::on_pushButton_clicked()
 {
     //OBTENGO EL TEXTO DE LA ENTRADA A ELIMINAR
     std::string cancionElim = ui->SongToDelete->text().toStdString();
-    if(cancionElim.compare("")!=0)//SI LA ENTRADA NO ESTA VACÍA
+    if((cancionElim.compare("")!=0)&&yaAbri==true)//SI LA ENTRADA NO ESTA VACÍA
     {
         if(eliminaCancion(cancionElim))
         {
@@ -207,9 +215,9 @@ void MainWindow::on_pushButton_clicked()
         }
 
     }
-    else//SI LA ENTRADA ESTA VACÍA
+    else//SI LA ENTRADA ESTA VACÍA O LA BIBLIOTECA NO SE CARGO
     {
-        QMessageBox::warning(this, "Error","Favor ingrese una canción");
+        QMessageBox::warning(this, "Error","Favor ingrese una canción o Cargue la biblioteca");
     }
 }
 
@@ -222,21 +230,192 @@ void MainWindow::on_pushButton_2_clicked()
         {
             vaciaPlaylist();
             iniciaPlaylist("LDE");
+            creeNuevaPlayList = true;
         }
         if(ui->Pil->isChecked())
         {
             vaciaPlaylist();
             iniciaPlaylist("STACK");
+            creeNuevaPlayList = true;
         }
         if(ui->col->isChecked())
         {
             vaciaPlaylist();
             iniciaPlaylist("QUEUE");
+            creeNuevaPlayList = true;
         }
         QMessageBox::information(this, "Nueva Playlist", "Ya puede cargar canciones a la misma!");
+        if(enReproduccion)
+        {
+            lay->removeWidget(d);
+            delete d;
+            d=0;
+            enReproduccion = false;
+            player->stop();
+            //player = 0;
+        }
     }
     else
     {
         QMessageBox::information(this, "Aviso", "Cargue una biblioteca primero");
+    }
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    if(creeNuevaPlayList)
+    {
+        std::string entrada = ui->addSong->text().toStdString();
+        Cancion *nuevaPl = encuentraCancion(entrada);
+        if(nuevaPl!=NULL)
+        {
+            agregaAPlayList(nuevaPl);
+            QMessageBox::information(this,"Agregada","Canción agregada a la Playlist");
+            ui->addSong->setText("");
+            //NodoRep *aux = inicializaApuntador();
+            //ui->playingNow->setText(QString::fromStdString(aux->nombre));
+        }
+        else
+        {
+            QMessageBox::warning(this, "Ups!", "Canción No existe...");
+        }
+    }
+    else
+    {
+        QMessageBox::warning(this, "Ups!", "Debes crear una playlist primero!");
+    }
+}
+
+void MainWindow::on_pushButton_4_clicked()//PLAY
+{
+    if(creeNuevaPlayList)
+    {
+        //ENCUENTRO LA REFERENCIA
+        NodoRep *aux = inicializaApuntador();
+        //ASIGNO EL NOMBRE EN LABEL PARA VER QUE SE ESTA REPRODUCIENDO
+        ui->playingNow->setText(QString::fromStdString(aux->nombre));
+        //LE ASIGNO EL PATH DE LA CANCIÓN
+        player->setMedia(QUrl::fromLocalFile(QString::fromStdString(aux->path)));
+        qDebug() << player->errorString();
+        //EMPIEZA LA REPRODUCCIÓN
+        player->play();
+        enReproduccion = true;
+        std::cout<<"No hay error"<<std::endl;
+        lay->removeWidget(d);
+        delete d;
+        d=0;
+        if(escribePlayList())
+        {
+            yaImg=true;
+            system("dot -Tpng Playlist.dot -o Playlist.png");
+            QPixmap img("Playlist.png");
+            QLabel *lab = new QLabel();
+            d = lab;
+            lab->setPixmap(img);
+            lab->setFixedSize(img.size());
+            lab->repaint();
+            //AGREGO AL LAYOUT
+            lay->addWidget(lab);
+            ui->scrollAreaWidgetContents_2->setLayout(lay);
+        }
+    }
+}
+
+void MainWindow::on_actionNext_triggered()
+{
+    //AVANZA
+    if(creeNuevaPlayList)
+    {
+        NodoRep *aux = siguiente();
+        if((aux->nombre.compare("root")!=0))
+        {
+            //EL LABEL LO ACTUALIZO
+            ui->playingNow->setText(QString::fromStdString(aux->nombre));
+            player->stop();
+            player->setMedia(QUrl::fromLocalFile(QString::fromStdString(aux->path)));
+            //qDebug() << player->errorString();
+            player->play();
+            //LIMPIO EL AREA DE REPORTES
+            lay->removeWidget(d);
+            delete d;
+            d=0;
+            if(escribePlayList())
+            {
+                yaImg=true;
+                system("dot -Tpng Playlist.dot -o Playlist.png");
+                QPixmap img("Playlist.png");
+                QLabel *lab = new QLabel();
+                d = lab;
+                lab->setPixmap(img);
+                lab->setFixedSize(img.size());
+                lab->repaint();
+                //AGREGO AL LAYOUT
+                lay->addWidget(lab);
+                ui->scrollAreaWidgetContents_2->setLayout(lay);
+            }
+        }
+        else
+        {
+            lay->removeWidget(d);
+            delete d;
+            d=0;
+            creeNuevaPlayList = false;
+            enReproduccion = false;
+            player->stop();
+            QMessageBox::information(this,"Fin","Fin de Playlist!");
+        }
+    }
+}
+
+void MainWindow::on_actionPrevious_triggered()
+{
+    //REGRESA
+    if(creeNuevaPlayList)
+    {
+        NodoRep *ant = anterior();
+        if(ant!=NULL)
+        {
+            ui->playingNow->setText(QString::fromStdString(ant->nombre));
+            player->setMedia(QUrl::fromLocalFile(QString::fromStdString(ant->path)));
+            //qDebug() << player->errorString();
+            player->play();
+            lay->removeWidget(d);
+            delete d;
+            d=0;
+            if(escribePlayList())
+            {
+                yaImg=true;
+                system("dot -Tpng Playlist.dot -o Playlist.png");
+                QPixmap img("Playlist.png");
+                QLabel *lab = new QLabel();
+                d = lab;
+                lab->setPixmap(img);
+                lab->setFixedSize(img.size());
+                lab->repaint();
+                //AGREGO AL LAYOUT
+                lay->addWidget(lab);
+                ui->scrollAreaWidgetContents_2->setLayout(lay);
+            }
+        }
+        else
+        {
+            QMessageBox::information(this,"Fin","No se puede regresar...");
+        }
+    }
+}
+
+void MainWindow::on_actionPlay_triggered()
+{
+    if(enReproduccion)
+    {
+        player->play();
+    }
+}
+
+void MainWindow::on_actionPause_triggered()
+{
+    if(enReproduccion)
+    {
+        player->stop();
     }
 }

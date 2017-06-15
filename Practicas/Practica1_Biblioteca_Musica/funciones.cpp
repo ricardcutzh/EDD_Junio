@@ -9,6 +9,7 @@ Top *topArtists;
 
 //LISTA DE REPRODUCCIÓN
 ListaDeReproduccion *playlist;
+NodoRep *apuntador;
 
 //LEER ARCHIVOS PARA CARGAR LA BIBLIOTECA
 bool leerArchivoEntrada(string ruta)
@@ -173,6 +174,12 @@ bool escribeTopSongs()
     }
 }
 
+//ESCRIBE EL GRAFO PARA LA PLAYLIST
+bool escribePlayList()
+{
+    return playlist->grafica();
+}
+
 //LIBERA LA LISTA DE MOMORIA
 void liberarLista()
 {
@@ -326,7 +333,7 @@ void iniciaTops()
 }
 
 //BUSCAR LA REFERENCIA AL NODO DE CANCIÓN PARA AÑADIR A LA PLAYLIST
-NodoCancion *encuentraCancion(string entrada)
+Cancion *encuentraCancion(string entrada)
 {
     std::string artista;//DONDE ALMACENO EL ARTISTA
     std::string album;//DONDE ALMACENO EL ALBUM
@@ -335,4 +342,120 @@ NodoCancion *encuentraCancion(string entrada)
     std::getline(spl, artista, '_');//OBTENGO EL ARTISTA
     std::getline(spl, album, '_');//OBTENGO EL ALBUM
     std::getline(spl, cancion, '_');//OBTENGO LA CANCION
+    //AHORA PREGUNTO ¿EXISTE EL ARTISTA?
+    if(listaArtistas->yaExisteArtista(artista))
+    {
+        NodoArtista *auxArt = listaArtistas->buscaArtista(artista);
+        //¿EXISTE EL ALBUM?
+        if(auxArt->albumes->yaExisteAlbum(album))
+        {
+            NodoAlbum *auxAlb = auxArt->albumes->buscaAlbum(album);
+            //¿EXISTE LA CANCIÓN EN ESTE ALBUM?
+            if(auxAlb->songs->existeCancion(cancion))
+            {
+                //RETORNO LA REFERENCIA A LA CANCIÓN
+                return auxAlb->songs->buscaLaCancion(cancion);
+            }
+            else
+            {
+                //RETORNO NULL
+                return NULL;
+            }
+        }
+        else
+        {
+            //RETORNA NULL NO EXISTE
+            return NULL;
+        }
+    }
+    else
+    {
+        //RETORNA NULL NO EXISTE
+        return NULL;
+    }
+}
+
+//INICIALIZA EL APUNTADOR
+NodoRep *inicializaApuntador()
+{
+    if(playlist->tipolista.compare("LDE")==0)
+    {
+        return apuntador = playlist->raiz->sig;
+    }
+    if(playlist->tipolista.compare("QUEUE")==0)
+    {
+        return apuntador = playlist->raiz->sig;
+    }
+    if(playlist->tipolista.compare("STACK")==0)
+    {
+        return apuntador = playlist->raiz->ant;
+    }
+}
+
+//RETORNA EL SIGUIENTE DE LA LISTA
+NodoRep *siguiente()
+{
+    if(playlist->tipolista.compare("LDE")==0)
+    {
+        if(apuntador->sig == playlist->raiz)
+        {
+            apuntador = playlist->raiz->sig;
+        }
+        else
+        {
+            apuntador = apuntador->sig;
+        }
+        return apuntador;
+    }
+    if(playlist->tipolista.compare("QUEUE")==0)
+    {
+        if(apuntador!=playlist->raiz)
+        {
+            apuntador = apuntador->sig;
+            playlist->Desencolar();
+            return apuntador;
+        }
+        else{
+            playlist->Desencolar();
+        }
+    }
+    if(playlist->tipolista.compare("STACK")==0)
+    {
+        if(apuntador!=playlist->raiz)
+        {
+            apuntador = apuntador->ant;
+            //std::cout<< apuntador->nombre<<std::endl;
+            playlist->Pop();
+            return apuntador;
+        }
+        else
+        {
+            playlist->Pop();
+        }
+    }
+    return NULL;
+}
+
+//ANTERIOR
+NodoRep *anterior()
+{
+    if(playlist->tipolista.compare("LDE")==0)
+    {
+        if(apuntador->ant == playlist->raiz)
+        {
+            apuntador = playlist->raiz->ant;
+        }
+        else
+        {
+            apuntador = apuntador->ant;
+        }
+        return apuntador;
+    }
+    return NULL;
+}
+
+//AGREGA LA CANCIÓN AL PLAYLIST
+void agregaAPlayList(Cancion *song)
+{
+    playlist->addToPlaylist(song->nombre,song->PATH);
 }
