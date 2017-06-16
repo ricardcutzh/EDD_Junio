@@ -1,7 +1,9 @@
 digraph G{
 node [shape=box];
-"Song: Strange Comfort"->"Song: The Reign";
-"Song: The Reign"->"Song: Strange Comfort";
-"Song: The Reign"->"Song: Strange Comfort";
-"Song: Strange Comfort"->"Song: The Reign";
+"Song: Have Faith Me"->"Song: Comatose";
+"Song: Comatose"->"Song: Have Faith Me";
+"Song: Comatose"->"Song: 40 Days";
+"Song: 40 Days"->"Song: Comatose";
+"Song: 40 Days"->"Song: Have Faith Me";
+"Song: Have Faith Me"->"Song: 40 Days";
 }

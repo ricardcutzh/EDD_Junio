@@ -1,5 +1,9 @@
 digraph top{
 node [shape=box];
 label="Top 5Albums";
-"Nombre: Define The Great Line | Val: 3.2";
+"Nombre: Parachutes | Val: 5"->"Nombre: Comatose | Val: 5";
+"Nombre: Comatose | Val: 5"->"Nombre: All We Know Is Falling | Val: 4.5";
+"Nombre: All We Know Is Falling | Val: 4.5"->"Nombre: Lost In The Sound Of Separation | Val: 4.3";
+"Nombre: Lost In The Sound Of Separation | Val: 4.3"->"Nombre: Awakening | Val: 4.26667";
+"Nombre: Awakening | Val: 4.26667";
 }

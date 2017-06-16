@@ -1,7 +1,7 @@
 digraph G {
 node [shape=box];
-"Art: Blessthefall"->"Art: Angel Vivaldi";
-"Art: Angel Vivaldi"->"Art: Blessthefall";
+"Art: Skillet"->"Art: Angel Vivaldi";
+"Art: Angel Vivaldi"->"Art: Skillet";
 "Art: Angel Vivaldi"->"Alb: Varios";
 "Art: Angel Vivaldi"->"Art: Galactic Empire";
 subgraph cluster_0{
@@ -35,7 +35,7 @@ label="Canciones";
 };
 "Art: Family Force Five"->"Alb: FF5";
 "Art: Family Force Five"->"Art: Galactic Empire";
-"Art: Family Force Five"->"Art: Blessthefall";
+"Art: Family Force Five"->"Art: The Color Morale";
 subgraph cluster_2{
 rank=same;
 label="Albums";
@@ -48,19 +48,204 @@ label="Canciones";
 "Alb: FF5";
 {rank=same;"Alb: FF5";};
 };
-"Art: Blessthefall"->"Alb: Awakening";
-"Art: Blessthefall"->"Art: Family Force Five";
+"Art: The Color Morale"->"Alb: Know Hope";
+"Art: The Color Morale"->"Art: Family Force Five";
+"Art: The Color Morale"->"Art: Blessthefall";
 subgraph cluster_3{
+rank=same;
+label="Albums";
+"Alb: Know Hope"->"Can: Strange Comfort";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Strange Comfort";
+};
+"Alb: Know Hope";
+{rank=same;"Alb: Know Hope";};
+};
+"Art: Blessthefall"->"Alb: Awakening";
+"Art: Blessthefall"->"Art: The Color Morale";
+"Art: Blessthefall"->"Art: MxPx";
+subgraph cluster_4{
 rank=same;
 label="Albums";
 "Alb: Awakening"->"Can: The Reign";
 subgraph cluster_0{
 rank=same;
 label="Canciones";
-"Can: The Reign";
+"Can: The Reign"->"Can: Bottomfeeder";
+"Can: Bottomfeeder"->"Can: 40 Days";
+"Can: 40 Days";
 };
 "Alb: Awakening";
 {rank=same;"Alb: Awakening";};
 };
-{rank=same;"Art: Angel Vivaldi";"Art: Galactic Empire";"Art: Family Force Five";"Art: Blessthefall";};
+"Art: MxPx"->"Alb: Secret Weapon";
+"Art: MxPx"->"Art: Blessthefall";
+"Art: MxPx"->"Art: Paramore";
+subgraph cluster_5{
+rank=same;
+label="Albums";
+"Alb: Secret Weapon"->"Can: Sad Sad Song";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Sad Sad Song";
+};
+"Alb: Secret Weapon";
+{rank=same;"Alb: Secret Weapon";};
+};
+"Art: Paramore"->"Alb: brand new eyes";
+"Art: Paramore"->"Art: MxPx";
+"Art: Paramore"->"Art: The Fray";
+subgraph cluster_6{
+rank=same;
+label="Albums";
+"Alb: brand new eyes"->"Can: Brick By A Boring Brick";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Brick By A Boring Brick"->"Can: Careful";
+"Can: Careful";
+};
+"Alb: brand new eyes";
+"Alb: brand new eyes"->"Alb: All We Know Is Falling";
+"Alb: All We Know Is Falling"->"Can: Pressure";
+subgraph cluster_1{
+rank=same;
+label="Canciones";
+"Can: Pressure";
+};
+"Alb: All We Know Is Falling"->"Alb: brand new eyes";
+"Alb: All We Know Is Falling"->"Alb: Riot";
+"Alb: Riot"->"Can: Misery Buisiness";
+subgraph cluster_2{
+rank=same;
+label="Canciones";
+"Can: Misery Buisiness";
+};
+"Alb: Riot"->"Alb: All We Know Is Falling";
+{rank=same;"Alb: brand new eyes";"Alb: All We Know Is Falling";"Alb: Riot";};
+};
+"Art: The Fray"->"Alb: The Fray";
+"Art: The Fray"->"Art: Paramore";
+"Art: The Fray"->"Art: Switchfoot";
+subgraph cluster_7{
+rank=same;
+label="Albums";
+"Alb: The Fray"->"Can: Over My Head";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Over My Head";
+};
+"Alb: The Fray";
+{rank=same;"Alb: The Fray";};
+};
+"Art: Switchfoot"->"Alb: The Best Yet";
+"Art: Switchfoot"->"Art: The Fray";
+"Art: Switchfoot"->"Art: Coldplay";
+subgraph cluster_8{
+rank=same;
+label="Albums";
+"Alb: The Best Yet"->"Can: Stars";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Stars";
+};
+"Alb: The Best Yet";
+{rank=same;"Alb: The Best Yet";};
+};
+"Art: Coldplay"->"Alb: Viva La Vida";
+"Art: Coldplay"->"Art: Switchfoot";
+"Art: Coldplay"->"Art: ADTR";
+subgraph cluster_9{
+rank=same;
+label="Albums";
+"Alb: Viva La Vida"->"Can: Viva La Vida";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Viva La Vida";
+};
+"Alb: Viva La Vida";
+"Alb: Viva La Vida"->"Alb: Parachutes";
+"Alb: Parachutes"->"Can: Yellow";
+subgraph cluster_1{
+rank=same;
+label="Canciones";
+"Can: Yellow";
+};
+"Alb: Parachutes"->"Alb: Viva La Vida";
+{rank=same;"Alb: Viva La Vida";"Alb: Parachutes";};
+};
+"Art: ADTR"->"Alb: ADTR";
+"Art: ADTR"->"Art: Coldplay";
+"Art: ADTR"->"Art: Mxpx";
+subgraph cluster_10{
+rank=same;
+label="Albums";
+"Alb: ADTR"->"Can: Have Faith Me";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Have Faith Me";
+};
+"Alb: ADTR";
+{rank=same;"Alb: ADTR";};
+};
+"Art: Mxpx"->"Alb: Secrete Weapon";
+"Art: Mxpx"->"Art: ADTR";
+"Art: Mxpx"->"Art: Underoath";
+subgraph cluster_11{
+rank=same;
+label="Albums";
+"Alb: Secrete Weapon"->"Can: Youre On Fire";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Youre On Fire";
+};
+"Alb: Secrete Weapon";
+"Alb: Secrete Weapon"->"Alb: Acoustic";
+"Alb: Acoustic"->"Can: Your On Fire (ac)";
+subgraph cluster_1{
+rank=same;
+label="Canciones";
+"Can: Your On Fire (ac)";
+};
+"Alb: Acoustic"->"Alb: Secrete Weapon";
+{rank=same;"Alb: Secrete Weapon";"Alb: Acoustic";};
+};
+"Art: Underoath"->"Alb: Lost In The Sound Of Separation";
+"Art: Underoath"->"Art: Mxpx";
+"Art: Underoath"->"Art: Skillet";
+subgraph cluster_12{
+rank=same;
+label="Albums";
+"Alb: Lost In The Sound Of Separation"->"Can: Desperate Times Desperate Measures";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Desperate Times Desperate Measures";
+};
+"Alb: Lost In The Sound Of Separation";
+{rank=same;"Alb: Lost In The Sound Of Separation";};
+};
+"Art: Skillet"->"Alb: Comatose";
+"Art: Skillet"->"Art: Underoath";
+subgraph cluster_13{
+rank=same;
+label="Albums";
+"Alb: Comatose"->"Can: Comatose";
+subgraph cluster_0{
+rank=same;
+label="Canciones";
+"Can: Comatose";
+};
+"Alb: Comatose";
+{rank=same;"Alb: Comatose";};
+};
+{rank=same;"Art: Angel Vivaldi";"Art: Galactic Empire";"Art: Family Force Five";"Art: The Color Morale";"Art: Blessthefall";"Art: MxPx";"Art: Paramore";"Art: The Fray";"Art: Switchfoot";"Art: Coldplay";"Art: ADTR";"Art: Mxpx";"Art: Underoath";"Art: Skillet";};
 }

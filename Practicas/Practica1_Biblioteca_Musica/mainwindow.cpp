@@ -416,6 +416,7 @@ void MainWindow::on_actionPause_triggered()
 {
     if(enReproduccion)
     {
-        player->stop();
+        //player->stop();
+        player->pause();
     }
 }
