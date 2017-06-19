@@ -1,9 +1,9 @@
 digraph top{
 node [shape=box];
 label="Top 5Songs";
-"Nombre: Yellow | Val: 5"->"Nombre: Comatose | Val: 5";
-"Nombre: Comatose | Val: 5"->"Nombre: The Reign | Val: 4.5";
-"Nombre: The Reign | Val: 4.5"->"Nombre: Pressure | Val: 4.5";
-"Nombre: Pressure | Val: 4.5"->"Nombre: Desperate Times Desperate Measures | Val: 4.3";
-"Nombre: Desperate Times Desperate Measures | Val: 4.3";
+"Nombre: Yellow | Val: 5"->"Nombre: Trouble | Val: 5";
+"Nombre: Trouble | Val: 5"->"Nombre: Comatose | Val: 5";
+"Nombre: Comatose | Val: 5"->"Nombre: One Step Closer | Val: 4.9";
+"Nombre: One Step Closer | Val: 4.9"->"Nombre: Papercut | Val: 4.9";
+"Nombre: Papercut | Val: 4.9";
 }

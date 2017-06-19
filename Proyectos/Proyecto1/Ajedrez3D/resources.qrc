@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/rec">
+        <file>Img/1497870084_settings-24.png</file>
+        <file>Img/1497870210_screen.png</file>
+        <file>Img/1497870266_Strategy.png</file>
+        <file>Img/1497870286_black_rook.png</file>
+        <file>Img/1497870304_black_pawn.png</file>
+        <file>Img/1497870321_black_queen.png</file>
+        <file>Img/1497870338_white_pawn.png</file>
+        <file>Img/1497870349_white_king.png</file>
+        <file>Img/1497870361_black_knight.png</file>
+        <file>Img/1497870375_white_rook.png</file>
+        <file>Img/1497870390_Chess-Game-grey.png</file>
+    </qresource>
+</RCC>

@@ -1,9 +1,17 @@
 digraph G{
 node [shape=box];
-"Song: Have Faith Me"->"Song: Comatose";
-"Song: Comatose"->"Song: Have Faith Me";
-"Song: Comatose"->"Song: 40 Days";
-"Song: 40 Days"->"Song: Comatose";
-"Song: 40 Days"->"Song: Have Faith Me";
-"Song: Have Faith Me"->"Song: 40 Days";
+"Song: Brick By A Boring Brick"->"Song: Viva La Vida";
+"Song: Viva La Vida"->"Song: Brick By A Boring Brick";
+"Song: Viva La Vida"->"Song: Yellow";
+"Song: Yellow"->"Song: Viva La Vida";
+"Song: Yellow"->"Song: Trouble";
+"Song: Trouble"->"Song: Yellow";
+"Song: Trouble"->"Song: The Imperial March";
+"Song: The Imperial March"->"Song: Trouble";
+"Song: The Imperial March"->"Song: Faint";
+"Song: Faint"->"Song: The Imperial March";
+"Song: Faint"->"Song: Papercut";
+"Song: Papercut"->"Song: Faint";
+"Song: Papercut"->"Song: Brick By A Boring Brick";
+"Song: Brick By A Boring Brick"->"Song: Papercut";
 }

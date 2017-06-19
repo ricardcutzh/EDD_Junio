@@ -1,7 +1,7 @@
 digraph top{
 node [shape=box];
 label="Top 5Artists";
-"Nombre: Skillet | Val: 5"->"Nombre: Underoath | Val: 4.3";
+"Nombre: Skillet | Val: 4.45"->"Nombre: Underoath | Val: 4.3";
 "Nombre: Underoath | Val: 4.3"->"Nombre: Blessthefall | Val: 4.26667";
 "Nombre: Blessthefall | Val: 4.26667"->"Nombre: Coldplay | Val: 4.25";
 "Nombre: Coldplay | Val: 4.25"->"Nombre: Family Force Five | Val: 4.2";

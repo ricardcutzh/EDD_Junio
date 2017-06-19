@@ -1,9 +1,9 @@
 digraph top{
 node [shape=box];
 label="Top 5Albums";
-"Nombre: Parachutes | Val: 5"->"Nombre: Comatose | Val: 5";
-"Nombre: Comatose | Val: 5"->"Nombre: All We Know Is Falling | Val: 4.5";
-"Nombre: All We Know Is Falling | Val: 4.5"->"Nombre: Lost In The Sound Of Separation | Val: 4.3";
-"Nombre: Lost In The Sound Of Separation | Val: 4.3"->"Nombre: Awakening | Val: 4.26667";
-"Nombre: Awakening | Val: 4.26667";
+"Nombre: Parachutes | Val: 5"->"Nombre: Hybrid Theory | Val: 4.9";
+"Nombre: Hybrid Theory | Val: 4.9"->"Nombre: All We Know Is Falling | Val: 4.5";
+"Nombre: All We Know Is Falling | Val: 4.5"->"Nombre: How To Save A Life | Val: 4.5";
+"Nombre: How To Save A Life | Val: 4.5"->"Nombre: Comatose | Val: 4.45";
+"Nombre: Comatose | Val: 4.45";
 }
