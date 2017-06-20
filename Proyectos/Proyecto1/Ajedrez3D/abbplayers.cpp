@@ -25,7 +25,6 @@ bool ABBPlayers::insertarABB(Jugador *nuevo)
 {
     this->insertado = false;
     this->root = insertarABBP(this->root, nuevo);
-    actualizarArbol();
     return this->insertado;
 }
 
@@ -61,7 +60,6 @@ bool ABBPlayers::eliminarABB(std::string nombre)
 {
     this->eliminado = false;
     this->root = eliminarABBP(this->root, nombre);
-    actualizarArbol();
     return this->eliminado;
 }
 
@@ -104,7 +102,7 @@ NodoJugador* ABBPlayers::eliminarABBP(NodoJugador *subarbol, std::string nombre)
         {
             aux = replace(aux);
         }
-        delete aux;
+        //delete aux;
         aux = NULL;
         this->eliminado = true;
     }
@@ -122,10 +120,12 @@ NodoJugador *ABBPlayers::replace(NodoJugador *actual)
         p = a;
         a = a->right;
     }
+    //Jugador *reemplazo = new Jugador(a->player->nombre, a->player->p_ganadas, a->player->p_perdidas);
+    //actual->player = reemplazo;
     actual->player = a->player;
     if(p == actual)
     {
-        p->left = a->right;
+        p->left = a->left;
     }
     else
     {
@@ -212,11 +212,14 @@ bool ABBPlayers::graphTree()
     }
     else
     {
+        actualizarArbol();
         archivo << "digraph ABB{" << std::endl;
+        archivo << "label=\"Nodos Hoja: " <<this->nodosHoja << " Nodos Rama: " << this->nodosRama << "\";" << std::endl;
         graphTreeP(archivo,this->root);
         archivo << "}" << std::endl;
         archivo.close();
         system("dot -Tpng ABB.dot -o ABB.png");
+        //actualizarArbol();
         return true;
     }
 }
@@ -239,5 +242,18 @@ void ABBPlayers::graphTreeP(std::ofstream &archivo, NodoJugador *raiz)
         }
         graphTreeP(archivo, raiz->left);//MUEVO RECURSIVAMENTE HACIA LA IZQUIERDA
         graphTreeP(archivo, raiz->right);//MUEVO RECURSIVAMENTE HACIA LA DERECHA
+    }
+}
+
+//VE SI EL ARBOL ESTA VACIO
+bool ABBPlayers::vacio()
+{
+    if(this->root == NULL)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
     }
 }

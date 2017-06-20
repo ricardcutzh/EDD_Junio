@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\jugador.o
+./debug\funciones.o
+./debug\nodojugador.o
+./debug\abbplayers.o
+./debug\nodotop.o
+./debug\listatopplayers.o
+./debug\qrc_resources.o
+./debug\moc_mainwindow.o
+);

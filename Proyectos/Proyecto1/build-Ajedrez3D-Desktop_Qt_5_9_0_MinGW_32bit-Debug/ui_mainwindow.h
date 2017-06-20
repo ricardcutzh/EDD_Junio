@@ -21,6 +21,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QScrollArea>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QToolBar>
@@ -47,12 +48,21 @@ public:
     QLabel *label_3;
     QPushButton *pushButton;
     QLabel *label_4;
-    QLineEdit *lineEdit_4;
+    QLineEdit *JugElim;
     QPushButton *pushButton_2;
     QGroupBox *groupBox_4;
     QPushButton *pushButton_3;
     QWidget *tab_2;
     QWidget *tab_3;
+    QTabWidget *tabWidget_2;
+    QWidget *tab_4;
+    QWidget *tab_5;
+    QScrollArea *TreeViewArea;
+    QWidget *scrollAreaWidgetContents;
+    QPushButton *pushButton_4;
+    QPushButton *pushButton_5;
+    QLabel *label_5;
+    QLabel *HeithLabel;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -111,9 +121,9 @@ public:
         label_4 = new QLabel(groupBox_3);
         label_4->setObjectName(QStringLiteral("label_4"));
         label_4->setGeometry(QRect(30, 120, 81, 16));
-        lineEdit_4 = new QLineEdit(groupBox_3);
-        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
-        lineEdit_4->setGeometry(QRect(130, 120, 241, 20));
+        JugElim = new QLineEdit(groupBox_3);
+        JugElim->setObjectName(QStringLiteral("JugElim"));
+        JugElim->setGeometry(QRect(130, 120, 241, 20));
         pushButton_2 = new QPushButton(groupBox_3);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
         pushButton_2->setGeometry(QRect(130, 150, 241, 23));
@@ -133,9 +143,42 @@ public:
         tabWidget->addTab(tab_2, icon2, QString());
         tab_3 = new QWidget();
         tab_3->setObjectName(QStringLiteral("tab_3"));
+        tabWidget_2 = new QTabWidget(tab_3);
+        tabWidget_2->setObjectName(QStringLiteral("tabWidget_2"));
+        tabWidget_2->setGeometry(QRect(10, 10, 841, 421));
+        tab_4 = new QWidget();
+        tab_4->setObjectName(QStringLiteral("tab_4"));
         QIcon icon3;
-        icon3.addFile(QStringLiteral(":/rec/Img/1497870210_screen.png"), QSize(), QIcon::Normal, QIcon::Off);
-        tabWidget->addTab(tab_3, icon3, QString());
+        icon3.addFile(QStringLiteral(":/rec/Img/1497937279__m.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tabWidget_2->addTab(tab_4, icon3, QString());
+        tab_5 = new QWidget();
+        tab_5->setObjectName(QStringLiteral("tab_5"));
+        TreeViewArea = new QScrollArea(tab_5);
+        TreeViewArea->setObjectName(QStringLiteral("TreeViewArea"));
+        TreeViewArea->setGeometry(QRect(20, 80, 791, 301));
+        TreeViewArea->setWidgetResizable(true);
+        scrollAreaWidgetContents = new QWidget();
+        scrollAreaWidgetContents->setObjectName(QStringLiteral("scrollAreaWidgetContents"));
+        scrollAreaWidgetContents->setGeometry(QRect(0, 0, 789, 299));
+        TreeViewArea->setWidget(scrollAreaWidgetContents);
+        pushButton_4 = new QPushButton(tab_5);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        pushButton_4->setGeometry(QRect(20, 30, 211, 23));
+        pushButton_5 = new QPushButton(tab_5);
+        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
+        pushButton_5->setGeometry(QRect(260, 30, 191, 23));
+        label_5 = new QLabel(tab_5);
+        label_5->setObjectName(QStringLiteral("label_5"));
+        label_5->setGeometry(QRect(480, 30, 81, 21));
+        HeithLabel = new QLabel(tab_5);
+        HeithLabel->setObjectName(QStringLiteral("HeithLabel"));
+        HeithLabel->setGeometry(QRect(580, 30, 81, 21));
+        QIcon icon4;
+        icon4.addFile(QStringLiteral(":/rec/Img/1497937232_tree.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tabWidget_2->addTab(tab_5, icon4, QString());
+        QIcon icon5;
+        icon5.addFile(QStringLiteral(":/rec/Img/1497870210_screen.png"), QSize(), QIcon::Normal, QIcon::Off);
+        tabWidget->addTab(tab_3, icon5, QString());
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -150,7 +193,8 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(0);
+        tabWidget->setCurrentIndex(2);
+        tabWidget_2->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -174,6 +218,12 @@ public:
         pushButton_3->setText(QApplication::translate("MainWindow", "Guardar Configuraciones", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Configuraci\303\263n de Juego", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Tablero", Q_NULLPTR));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_4), QApplication::translate("MainWindow", "Matriz Ortogonal", Q_NULLPTR));
+        pushButton_4->setText(QApplication::translate("MainWindow", "Ver \303\201rbol de Jugadores", Q_NULLPTR));
+        pushButton_5->setText(QApplication::translate("MainWindow", "Ver Top 10 Jugadores", Q_NULLPTR));
+        label_5->setText(QApplication::translate("MainWindow", "Altura de \303\201rbol:", Q_NULLPTR));
+        HeithLabel->setText(QString());
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_5), QApplication::translate("MainWindow", "\303\201rbol Binario de B\303\272squedad", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_3), QApplication::translate("MainWindow", "Reportes", Q_NULLPTR));
     } // retranslateUi
 

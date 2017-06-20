@@ -51,7 +51,9 @@ SOURCES       = ..\Ajedrez3D\main.cpp \
 		..\Ajedrez3D\jugador.cpp \
 		..\Ajedrez3D\funciones.cpp \
 		..\Ajedrez3D\nodojugador.cpp \
-		..\Ajedrez3D\abbplayers.cpp release\qrc_resources.cpp \
+		..\Ajedrez3D\abbplayers.cpp \
+		..\Ajedrez3D\nodotop.cpp \
+		..\Ajedrez3D\listatopplayers.cpp release\qrc_resources.cpp \
 		release\moc_mainwindow.cpp
 OBJECTS       = release/main.o \
 		release/mainwindow.o \
@@ -59,6 +61,8 @@ OBJECTS       = release/main.o \
 		release/funciones.o \
 		release/nodojugador.o \
 		release/abbplayers.o \
+		release/nodotop.o \
+		release/listatopplayers.o \
 		release/qrc_resources.o \
 		release/moc_mainwindow.o
 
@@ -66,12 +70,16 @@ DIST          =  ..\Ajedrez3D\mainwindow.h \
 		..\Ajedrez3D\jugador.h \
 		..\Ajedrez3D\funciones.h \
 		..\Ajedrez3D\nodojugador.h \
-		..\Ajedrez3D\abbplayers.h ..\Ajedrez3D\main.cpp \
+		..\Ajedrez3D\abbplayers.h \
+		..\Ajedrez3D\nodotop.h \
+		..\Ajedrez3D\listatopplayers.h ..\Ajedrez3D\main.cpp \
 		..\Ajedrez3D\mainwindow.cpp \
 		..\Ajedrez3D\jugador.cpp \
 		..\Ajedrez3D\funciones.cpp \
 		..\Ajedrez3D\nodojugador.cpp \
-		..\Ajedrez3D\abbplayers.cpp
+		..\Ajedrez3D\abbplayers.cpp \
+		..\Ajedrez3D\nodotop.cpp \
+		..\Ajedrez3D\listatopplayers.cpp
 QMAKE_TARGET  = Ajedrez3D
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = Ajedrez3D.exe
@@ -83,7 +91,7 @@ first: all
 all: Makefile.Release  $(DESTDIR_TARGET)
 
 $(DESTDIR_TARGET): ui_mainwindow.h $(OBJECTS) 
-	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) $(OBJECTS)  $(LIBS)
+	$(LINKER) $(LFLAGS) -o $(DESTDIR_TARGET) object_script.Ajedrez3D.Release  $(LIBS)
 
 qmake: FORCE
 	@$(QMAKE) -o Makefile.Release ..\Ajedrez3D\Ajedrez3D.pro -spec win32-g++ "CONFIG+=debug" "CONFIG+=qml_debug"
@@ -91,10 +99,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) Ajedrez3D.zip $(SOURCES) $(DIST) ..\Ajedrez3D\Ajedrez3D.pro C:\Qt\5.9\mingw53_32\mkspecs\features\spec_pre.prf C:\Qt\5.9\mingw53_32\mkspecs\qdevice.pri C:\Qt\5.9\mingw53_32\mkspecs\features\device_config.prf C:\Qt\5.9\mingw53_32\mkspecs\common\g++-base.conf C:\Qt\5.9\mingw53_32\mkspecs\common\angle.conf C:\Qt\5.9\mingw53_32\mkspecs\common\sanitize.conf C:\Qt\5.9\mingw53_32\mkspecs\common\gcc-base.conf C:\Qt\5.9\mingw53_32\mkspecs\qconfig.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_charts.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_core.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_datavisualization.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_datavisualization_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_egl_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_help.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_location.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_network.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_networkauth.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_networkauth_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_purchasing.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_purchasing_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_remoteobjects.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_remoteobjects_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_repparser.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_repparser_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_script.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_texttospeech.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_texttospeech_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_theme_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.9\mingw53_32\mkspecs\features\qt_functions.prf C:\Qt\5.9\mingw53_32\mkspecs\features\qt_config.prf C:\Qt\5.9\mingw53_32\mkspecs\win32-g++\qmake.conf C:\Qt\5.9\mingw53_32\mkspecs\features\spec_post.prf .qmake.stash C:\Qt\5.9\mingw53_32\mkspecs\features\exclusive_builds.prf C:\Qt\5.9\mingw53_32\mkspecs\features\toolchain.prf C:\Qt\5.9\mingw53_32\mkspecs\features\default_pre.prf C:\Qt\5.9\mingw53_32\mkspecs\features\win32\default_pre.prf C:\Qt\5.9\mingw53_32\mkspecs\features\resolve_config.prf C:\Qt\5.9\mingw53_32\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.9\mingw53_32\mkspecs\features\default_post.prf C:\Qt\5.9\mingw53_32\mkspecs\features\build_pass.prf C:\Qt\5.9\mingw53_32\mkspecs\features\qml_debug.prf C:\Qt\5.9\mingw53_32\mkspecs\features\precompile_header.prf C:\Qt\5.9\mingw53_32\mkspecs\features\warn_on.prf C:\Qt\5.9\mingw53_32\mkspecs\features\qt.prf C:\Qt\5.9\mingw53_32\mkspecs\features\resources.prf C:\Qt\5.9\mingw53_32\mkspecs\features\moc.prf C:\Qt\5.9\mingw53_32\mkspecs\features\win32\opengl.prf C:\Qt\5.9\mingw53_32\mkspecs\features\uic.prf C:\Qt\5.9\mingw53_32\mkspecs\features\qmake_use.prf C:\Qt\5.9\mingw53_32\mkspecs\features\file_copies.prf C:\Qt\5.9\mingw53_32\mkspecs\features\win32\windows.prf C:\Qt\5.9\mingw53_32\mkspecs\features\testcase_targets.prf C:\Qt\5.9\mingw53_32\mkspecs\features\exceptions.prf C:\Qt\5.9\mingw53_32\mkspecs\features\yacc.prf C:\Qt\5.9\mingw53_32\mkspecs\features\lex.prf ..\Ajedrez3D\Ajedrez3D.pro ..\Ajedrez3D\resources.qrc C:\Qt\5.9\mingw53_32\lib\qtmain.prl C:\Qt\5.9\mingw53_32\lib\Qt5Widgets.prl C:\Qt\5.9\mingw53_32\lib\Qt5Gui.prl C:\Qt\5.9\mingw53_32\lib\Qt5Core.prl   ..\Ajedrez3D\resources.qrc C:\Qt\5.9\mingw53_32\mkspecs\features\data\dummy.cpp ..\Ajedrez3D\mainwindow.h ..\Ajedrez3D\jugador.h ..\Ajedrez3D\funciones.h ..\Ajedrez3D\nodojugador.h ..\Ajedrez3D\abbplayers.h ..\Ajedrez3D\main.cpp ..\Ajedrez3D\mainwindow.cpp ..\Ajedrez3D\jugador.cpp ..\Ajedrez3D\funciones.cpp ..\Ajedrez3D\nodojugador.cpp ..\Ajedrez3D\abbplayers.cpp ..\Ajedrez3D\mainwindow.ui    
+	$(ZIP) Ajedrez3D.zip $(SOURCES) $(DIST) ..\Ajedrez3D\Ajedrez3D.pro C:\Qt\5.9\mingw53_32\mkspecs\features\spec_pre.prf C:\Qt\5.9\mingw53_32\mkspecs\qdevice.pri C:\Qt\5.9\mingw53_32\mkspecs\features\device_config.prf C:\Qt\5.9\mingw53_32\mkspecs\common\g++-base.conf C:\Qt\5.9\mingw53_32\mkspecs\common\angle.conf C:\Qt\5.9\mingw53_32\mkspecs\common\sanitize.conf C:\Qt\5.9\mingw53_32\mkspecs\common\gcc-base.conf C:\Qt\5.9\mingw53_32\mkspecs\qconfig.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3danimation.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3danimation_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dcore.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dcore_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dextras.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dextras_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dinput.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dinput_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dlogic.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dlogic_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquick.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquick_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickanimation.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickanimation_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickextras.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickextras_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickinput.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickinput_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickrender.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickrender_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickscene2d.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3dquickscene2d_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3drender.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_3drender_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_accessibility_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_axbase.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_axbase_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_axcontainer.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_axcontainer_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_axserver.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_axserver_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_bluetooth.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_bluetooth_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_bootstrap_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_charts.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_core.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_core_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_datavisualization.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_datavisualization_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_dbus.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_designer.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_egl_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_eventdispatcher_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_fontdatabase_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_gamepad.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_gamepad_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_gui.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_help.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_help_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_location.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_location_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_network.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_network_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_networkauth.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_networkauth_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_nfc.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_nfc_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_opengl.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_openglextensions.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_openglextensions_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_platformcompositor_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_positioning.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_positioning_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_purchasing.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_purchasing_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qml.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qmldevtools_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quick.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_remoteobjects.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_remoteobjects_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_repparser.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_repparser_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_script.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_script_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_scripttools.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_scripttools_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_scxml.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_scxml_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_sensors.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_sensors_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_serialbus.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_serialbus_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_serialport.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_serialport_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_sql.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_svg.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_testlib.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_texttospeech.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_texttospeech_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_theme_support_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_uitools.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_webchannel.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_webchannel_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_websockets.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_websockets_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_widgets.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_winextras.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_winextras_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_xml.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_xmlpatterns.pri C:\Qt\5.9\mingw53_32\mkspecs\modules\qt_lib_xmlpatterns_private.pri C:\Qt\5.9\mingw53_32\mkspecs\features\qt_functions.prf C:\Qt\5.9\mingw53_32\mkspecs\features\qt_config.prf C:\Qt\5.9\mingw53_32\mkspecs\win32-g++\qmake.conf C:\Qt\5.9\mingw53_32\mkspecs\features\spec_post.prf .qmake.stash C:\Qt\5.9\mingw53_32\mkspecs\features\exclusive_builds.prf C:\Qt\5.9\mingw53_32\mkspecs\features\toolchain.prf C:\Qt\5.9\mingw53_32\mkspecs\features\default_pre.prf C:\Qt\5.9\mingw53_32\mkspecs\features\win32\default_pre.prf C:\Qt\5.9\mingw53_32\mkspecs\features\resolve_config.prf C:\Qt\5.9\mingw53_32\mkspecs\features\exclusive_builds_post.prf C:\Qt\5.9\mingw53_32\mkspecs\features\default_post.prf C:\Qt\5.9\mingw53_32\mkspecs\features\build_pass.prf C:\Qt\5.9\mingw53_32\mkspecs\features\qml_debug.prf C:\Qt\5.9\mingw53_32\mkspecs\features\precompile_header.prf C:\Qt\5.9\mingw53_32\mkspecs\features\warn_on.prf C:\Qt\5.9\mingw53_32\mkspecs\features\qt.prf C:\Qt\5.9\mingw53_32\mkspecs\features\resources.prf C:\Qt\5.9\mingw53_32\mkspecs\features\moc.prf C:\Qt\5.9\mingw53_32\mkspecs\features\win32\opengl.prf C:\Qt\5.9\mingw53_32\mkspecs\features\uic.prf C:\Qt\5.9\mingw53_32\mkspecs\features\qmake_use.prf C:\Qt\5.9\mingw53_32\mkspecs\features\file_copies.prf C:\Qt\5.9\mingw53_32\mkspecs\features\win32\windows.prf C:\Qt\5.9\mingw53_32\mkspecs\features\testcase_targets.prf C:\Qt\5.9\mingw53_32\mkspecs\features\exceptions.prf C:\Qt\5.9\mingw53_32\mkspecs\features\yacc.prf C:\Qt\5.9\mingw53_32\mkspecs\features\lex.prf ..\Ajedrez3D\Ajedrez3D.pro ..\Ajedrez3D\resources.qrc C:\Qt\5.9\mingw53_32\lib\qtmain.prl C:\Qt\5.9\mingw53_32\lib\Qt5Widgets.prl C:\Qt\5.9\mingw53_32\lib\Qt5Gui.prl C:\Qt\5.9\mingw53_32\lib\Qt5Core.prl   ..\Ajedrez3D\resources.qrc C:\Qt\5.9\mingw53_32\mkspecs\features\data\dummy.cpp ..\Ajedrez3D\mainwindow.h ..\Ajedrez3D\jugador.h ..\Ajedrez3D\funciones.h ..\Ajedrez3D\nodojugador.h ..\Ajedrez3D\abbplayers.h ..\Ajedrez3D\nodotop.h ..\Ajedrez3D\listatopplayers.h ..\Ajedrez3D\main.cpp ..\Ajedrez3D\mainwindow.cpp ..\Ajedrez3D\jugador.cpp ..\Ajedrez3D\funciones.cpp ..\Ajedrez3D\nodojugador.cpp ..\Ajedrez3D\abbplayers.cpp ..\Ajedrez3D\nodotop.cpp ..\Ajedrez3D\listatopplayers.cpp ..\Ajedrez3D\mainwindow.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\main.o release\mainwindow.o release\jugador.o release\funciones.o release\nodojugador.o release\abbplayers.o release\qrc_resources.o release\moc_mainwindow.o
+	-$(DEL_FILE) release\main.o release\mainwindow.o release\jugador.o release\funciones.o release\nodojugador.o release\abbplayers.o release\nodotop.o release\listatopplayers.o release\qrc_resources.o release\moc_mainwindow.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -126,7 +134,9 @@ release/qrc_resources.cpp: ../Ajedrez3D/resources.qrc \
 		../Ajedrez3D/Img/1497870210_screen.png \
 		../Ajedrez3D/Img/1497870304_black_pawn.png \
 		../Ajedrez3D/Img/1497870321_black_queen.png \
-		../Ajedrez3D/Img/1497870375_white_rook.png
+		../Ajedrez3D/Img/1497870375_white_rook.png \
+		../Ajedrez3D/Img/1497937232_tree.png \
+		../Ajedrez3D/Img/1497937279__m.png
 	C:\Qt\5.9\mingw53_32\bin\rcc.exe -name resources ..\Ajedrez3D\resources.qrc -o release\qrc_resources.cpp
 
 compiler_moc_predefs_make_all: release/moc_predefs.h
@@ -498,11 +508,13 @@ release/mainwindow.o: ../Ajedrez3D/mainwindow.cpp ../Ajedrez3D/mainwindow.h \
 		C:/Qt/5.9/mingw53_32/include/QtGui/qinputmethod.h \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/QButtonGroup \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/qbuttongroup.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/QGroupBox \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qgroupbox.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/QHeaderView \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/qheaderview.h \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/qabstractitemview.h \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.9/mingw53_32/include/QtWidgets/qframe.h \
 		C:/Qt/5.9/mingw53_32/include/QtCore/qabstractitemmodel.h \
 		C:/Qt/5.9/mingw53_32/include/QtCore/qitemselectionmodel.h \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/qabstractitemdelegate.h \
@@ -515,15 +527,49 @@ release/mainwindow.o: ../Ajedrez3D/mainwindow.cpp ../Ajedrez3D/mainwindow.h \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/qstyle.h \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/qtabbar.h \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/qrubberband.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/QLabel \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qlabel.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/QLineEdit \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qlineedit.h \
+		C:/Qt/5.9/mingw53_32/include/QtGui/qtextcursor.h \
+		C:/Qt/5.9/mingw53_32/include/QtGui/qtextformat.h \
+		C:/Qt/5.9/mingw53_32/include/QtGui/qpen.h \
+		C:/Qt/5.9/mingw53_32/include/QtGui/qtextoption.h \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/QMenuBar \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/qmenubar.h \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/qmenu.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/QPushButton \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/QRadioButton \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qradiobutton.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/QScrollArea \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qscrollarea.h \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/QStatusBar \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/qstatusbar.h \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/QTabWidget \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/QToolBar \
 		C:/Qt/5.9/mingw53_32/include/QtWidgets/qtoolbar.h \
-		C:/Qt/5.9/mingw53_32/include/QtWidgets/QWidget
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/QWidget \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/QFileDialog \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qfiledialog.h \
+		C:/Qt/5.9/mingw53_32/include/QtCore/qdir.h \
+		C:/Qt/5.9/mingw53_32/include/QtCore/qfileinfo.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qdialog.h \
+		../Ajedrez3D/funciones.h \
+		../Ajedrez3D/jugador.h \
+		../Ajedrez3D/abbplayers.h \
+		../Ajedrez3D/nodojugador.h \
+		../Ajedrez3D/nodotop.h \
+		../Ajedrez3D/listatopplayers.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/QMessageBox \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.9/mingw53_32/include/QtGui/QPixmap \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/QVBoxLayout \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qboxlayout.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.9/mingw53_32/include/QtWidgets/qgridlayout.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\Ajedrez3D\mainwindow.cpp
 
 release/jugador.o: ../Ajedrez3D/jugador.cpp ../Ajedrez3D/jugador.h
@@ -531,7 +577,10 @@ release/jugador.o: ../Ajedrez3D/jugador.cpp ../Ajedrez3D/jugador.h
 
 release/funciones.o: ../Ajedrez3D/funciones.cpp ../Ajedrez3D/funciones.h \
 		../Ajedrez3D/jugador.h \
-		../Ajedrez3D/nodojugador.h
+		../Ajedrez3D/abbplayers.h \
+		../Ajedrez3D/nodojugador.h \
+		../Ajedrez3D/nodotop.h \
+		../Ajedrez3D/listatopplayers.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\funciones.o ..\Ajedrez3D\funciones.cpp
 
 release/nodojugador.o: ../Ajedrez3D/nodojugador.cpp ../Ajedrez3D/nodojugador.h \
@@ -542,6 +591,13 @@ release/abbplayers.o: ../Ajedrez3D/abbplayers.cpp ../Ajedrez3D/abbplayers.h \
 		../Ajedrez3D/nodojugador.h \
 		../Ajedrez3D/jugador.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\abbplayers.o ..\Ajedrez3D\abbplayers.cpp
+
+release/nodotop.o: ../Ajedrez3D/nodotop.cpp ../Ajedrez3D/nodotop.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\nodotop.o ..\Ajedrez3D\nodotop.cpp
+
+release/listatopplayers.o: ../Ajedrez3D/listatopplayers.cpp ../Ajedrez3D/listatopplayers.h \
+		../Ajedrez3D/nodotop.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\listatopplayers.o ..\Ajedrez3D\listatopplayers.cpp
 
 release/qrc_resources.o: release/qrc_resources.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\qrc_resources.o release\qrc_resources.cpp

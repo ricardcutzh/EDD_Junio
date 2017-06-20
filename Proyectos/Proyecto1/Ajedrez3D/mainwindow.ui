@@ -28,7 +28,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="icon">
@@ -197,7 +197,7 @@
         <string>Eliminar Jugador</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="lineEdit_4">
+      <widget class="QLineEdit" name="JugElim">
        <property name="geometry">
         <rect>
          <x>130</x>
@@ -265,6 +265,112 @@
      <attribute name="title">
       <string>Reportes</string>
      </attribute>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>841</width>
+        <height>421</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/rec/Img/1497937279__m.png</normaloff>:/rec/Img/1497937279__m.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Matriz Ortogonal</string>
+       </attribute>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="icon">
+        <iconset resource="resources.qrc">
+         <normaloff>:/rec/Img/1497937232_tree.png</normaloff>:/rec/Img/1497937232_tree.png</iconset>
+       </attribute>
+       <attribute name="title">
+        <string>Árbol Binario de Búsquedad</string>
+       </attribute>
+       <widget class="QScrollArea" name="TreeViewArea">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>80</y>
+          <width>791</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="widgetResizable">
+         <bool>true</bool>
+        </property>
+        <widget class="QWidget" name="scrollAreaWidgetContents">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>789</width>
+           <height>299</height>
+          </rect>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>30</y>
+          <width>211</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ver Árbol de Jugadores</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="geometry">
+         <rect>
+          <x>260</x>
+          <y>30</y>
+          <width>191</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Ver Top 10 Jugadores</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_5">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>30</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Altura de Árbol:</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="HeithLabel">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>30</y>
+          <width>81</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+     </widget>
     </widget>
    </widget>
   </widget>

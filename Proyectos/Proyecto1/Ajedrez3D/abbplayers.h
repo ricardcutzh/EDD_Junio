@@ -18,6 +18,7 @@ public:
     bool eliminarABB(std::string nombre);
     bool graphTree();
     int TreeHeight();
+    bool vacio();
 private:
     void actualizarArbol();
     int obtenerAltura(NodoJugador *subarb);

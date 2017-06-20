@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\jugador.o
+./release\funciones.o
+./release\nodojugador.o
+./release\abbplayers.o
+./release\nodotop.o
+./release\listatopplayers.o
+./release\qrc_resources.o
+./release\moc_mainwindow.o
+);

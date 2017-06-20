@@ -1,0 +1,14 @@
+digraph ABB{
+label="Nodos Hoja: 3 Nodos Rama: 3";
+"H";
+"H"->"B";
+"H"->"Z";
+"B";
+"B"->"A";
+"B"->"D";
+"A";
+"D";
+"Z";
+"Z"->"J";
+"J";
+}

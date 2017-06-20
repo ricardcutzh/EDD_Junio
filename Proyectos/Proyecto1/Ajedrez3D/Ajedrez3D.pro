@@ -29,14 +29,18 @@ SOURCES += \
     jugador.cpp \
     funciones.cpp \
     nodojugador.cpp \
-    abbplayers.cpp
+    abbplayers.cpp \
+    nodotop.cpp \
+    listatopplayers.cpp
 
 HEADERS += \
         mainwindow.h \
     jugador.h \
     funciones.h \
     nodojugador.h \
-    abbplayers.h
+    abbplayers.h \
+    nodotop.h \
+    listatopplayers.h
 
 FORMS += \
         mainwindow.ui

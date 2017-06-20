@@ -1,0 +1,11 @@
+digraph top{
+node [shape=box];
+label="Top 10 Players ";
+"Nombre: D | Vic: 7"->"Nombre: H | Vic: 5";
+"Nombre: H | Vic: 5"->"Nombre: B | Vic: 4";
+"Nombre: B | Vic: 4"->"Nombre: Z | Vic: 4";
+"Nombre: Z | Vic: 4"->"Nombre: J | Vic: 2";
+"Nombre: J | Vic: 2"->"Nombre: A | Vic: 1";
+"Nombre: A | Vic: 1";
+{rank=same;"Nombre: D | Vic: 7";"Nombre: H | Vic: 5";"Nombre: B | Vic: 4";"Nombre: Z | Vic: 4";"Nombre: J | Vic: 2";"Nombre: A | Vic: 1";}
+}
