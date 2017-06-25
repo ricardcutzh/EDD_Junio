@@ -31,7 +31,10 @@ SOURCES += \
     nodojugador.cpp \
     abbplayers.cpp \
     nodotop.cpp \
-    listatopplayers.cpp
+    listatopplayers.cpp \
+    pieza.cpp \
+    nodomatriz.cpp \
+    matrizortogonal.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,7 +43,10 @@ HEADERS += \
     nodojugador.h \
     abbplayers.h \
     nodotop.h \
-    listatopplayers.h
+    listatopplayers.h \
+    pieza.h \
+    nodomatriz.h \
+    matrizortogonal.h
 
 FORMS += \
         mainwindow.ui

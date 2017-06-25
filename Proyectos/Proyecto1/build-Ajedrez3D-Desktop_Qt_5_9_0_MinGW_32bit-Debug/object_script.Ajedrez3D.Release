@@ -7,6 +7,9 @@ INPUT(
 ./release\abbplayers.o
 ./release\nodotop.o
 ./release\listatopplayers.o
+./release\pieza.o
+./release\nodomatriz.o
+./release\matrizortogonal.o
 ./release\qrc_resources.o
 ./release\moc_mainwindow.o
 );

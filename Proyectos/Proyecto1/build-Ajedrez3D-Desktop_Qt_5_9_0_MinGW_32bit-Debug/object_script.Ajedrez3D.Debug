@@ -7,6 +7,9 @@ INPUT(
 ./debug\abbplayers.o
 ./debug\nodotop.o
 ./debug\listatopplayers.o
+./debug\pieza.o
+./debug\nodomatriz.o
+./debug\matrizortogonal.o
 ./debug\qrc_resources.o
 ./debug\moc_mainwindow.o
 );
