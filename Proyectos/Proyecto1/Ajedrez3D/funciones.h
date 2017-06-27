@@ -10,6 +10,13 @@
 #include "nodojugador.h"
 #include <nodotop.h>
 #include <listatopplayers.h>
+#include <matrizortogonal.h>
+#include <nodomatriz.h>
+#include <pieza.h>
+#include <string>
+#include <iostream>
+#include <sstream>
+#include <fstream>
 
 //AQUI DECLARARE MIS PROTOTIPOS DE FUNCIONES
 void inicializaArbol();
@@ -22,4 +29,8 @@ bool verSiArbolEstaVacio();
 int getTreeHeight();
 void generaTops();
 void generaTopsR(NodoJugador *raiz);
+void inicializarMatriz();
+void insertaNivel0Negros();
+void insertaNivel0Blancos();
+bool generaGrafoMatriz(int nivel);
 #endif // FUNCIONES_H

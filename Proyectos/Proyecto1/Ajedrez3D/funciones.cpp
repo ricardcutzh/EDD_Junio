@@ -1,6 +1,7 @@
 #include "funciones.h"
 ABBPlayers *PlayersTree;
 ListaTopPlayers *topPlayers;
+MatrizOrtogonal *matriz;
 
 //INICIALIZA ARBOL
 void inicializaArbol()
@@ -101,6 +102,7 @@ void generaTopsR(NodoJugador *raiz)
     }
 }
 
+//GRAFICA LA LISTA DE LOS TOP 10 JUGADORES
 bool graficameListaTops()
 {
     std::ofstream archivo;
@@ -117,4 +119,97 @@ bool graficameListaTops()
         //actualizarArbol();
         return true;
     }
+}
+
+void inicializarMatriz()
+{
+    matriz = new MatrizOrtogonal();
+    insertaNivel0Negros();
+    insertaNivel0Blancos();
+}
+
+void insertaNivel0Negros()
+{
+    //INSERTANDO CABALLOS NEGROS
+    Pieza *caballo1 = new Pieza("Caballo-N-1", "Caballo 1");
+    caballo1->color = "Negro";
+    Pieza *caballo2 = new Pieza("Caballo-N-2", "Caballo 2");
+    caballo2->color = "Negro";
+    matriz->insertarEnMatriz(1,1,0,caballo1);
+    matriz->insertarEnMatriz(8,1,0,caballo2);
+    //INSERTANDO ALFILES NEGROS
+    Pieza *alfil1 = new Pieza("Alfil-N-1", "Alfil 1");
+    alfil1->color = "Negro";
+    Pieza *alfil2 = new Pieza("Alfil-N-2", "Alfil 2");
+    alfil2->color = "Negro";
+    matriz->insertarEnMatriz(2,1,0,alfil1);
+    matriz->insertarEnMatriz(7,1,0,alfil2);
+    //INSERTANDO TORRES
+    Pieza *torre1 = new Pieza("Torre-N-1", "Torre 1");
+    torre1->color = "Negro";
+    Pieza *torre2 = new Pieza("Torre-N-2", "Torre 2");
+    torre2->color = "Negro";
+    matriz->insertarEnMatriz(3,1,0,torre1);
+    matriz->insertarEnMatriz(6,1,0,torre2);
+    //INSERTANDO REY Y REYNA
+    Pieza *dama = new Pieza("Dama-N", "Dama");
+    dama->color = "Negro";
+    Pieza *rey = new Pieza("Rey-N","Rey");
+    rey->color = "Negro";
+    matriz->insertarEnMatriz(5,1,0,dama);
+    matriz->insertarEnMatriz(4,1,0,rey);
+    //INSERTANDO PEONES
+    for(int i = 1; i <= 8; i++)
+    {
+        std::string n = std::to_string(i);
+        Pieza *peon = new Pieza("Peon-N-"+n,"Peon "+n);
+        peon->color = "Negro";
+        matriz->insertarEnMatriz(i,2,0,peon);
+    }
+}
+
+void insertaNivel0Blancos()
+{
+    //INSERTANDO CABALLOS NEGROS
+    Pieza *caballo1 = new Pieza("Caballo-B-1", "Caballo 1");
+    caballo1->color = "Blanco";
+    Pieza *caballo2 = new Pieza("Caballo-B-2", "Caballo 2");
+    caballo2->color = "Blanco";
+    matriz->insertarEnMatriz(1,8,0,caballo1);
+    matriz->insertarEnMatriz(8,8,0,caballo2);
+    //INSERTANDO ALFILES NEGROS
+    Pieza *alfil1 = new Pieza("Alfil-B-1", "Alfil 1");
+    alfil1->color = "Blanco";
+    Pieza *alfil2 = new Pieza("Alfil-B-2", "Alfil 2");
+    alfil2->color = "Blanco";
+    matriz->insertarEnMatriz(2,8,0,alfil1);
+    matriz->insertarEnMatriz(7,8,0,alfil2);
+    //INSERTANDO TORRES
+    Pieza *torre1 = new Pieza("Torre-B-1", "Torre 1");
+    torre1->color = "Blanco";
+    Pieza *torre2 = new Pieza("Torre-B-2", "Torre 2");
+    torre2->color = "Blanco";
+    matriz->insertarEnMatriz(3,8,0,torre1);
+    matriz->insertarEnMatriz(6,8,0,torre2);
+    //INSERTANDO REY Y REYNA
+    Pieza *dama = new Pieza("Dama-B", "Dama");
+    dama->color = "Blanco";
+    Pieza *rey = new Pieza("Rey-B","Rey");
+    rey->color = "Blanco";
+    matriz->insertarEnMatriz(5,8,0,dama);
+    matriz->insertarEnMatriz(4,8,0,rey);
+    //INSERTANDO PEONES
+    for(int i = 1; i <= 8; i++)
+    {
+        std::string n = std::to_string(i);
+        Pieza *peon = new Pieza("Peon-B-"+n,"Peon "+n);
+        peon->color = "Blanco";
+        matriz->insertarEnMatriz(i,7,0,peon);
+    }
+}
+
+//MANDA A LLAMAR LOS METODOS DE LA MATRIZ GRAFICAR
+bool generaGrafoMatriz(int nivel)
+{
+    return matriz->generaDotMatriz(nivel);
 }

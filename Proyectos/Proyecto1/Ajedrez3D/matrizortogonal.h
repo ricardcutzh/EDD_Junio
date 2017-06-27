@@ -38,6 +38,18 @@ public:
     NodoMatriz *encuentraElArribaQueNoEsPiso(NodoMatriz *inicio);
     NodoMatriz *encuentraElAbajoQueNoEsPiso(NodoMatriz *inicio);
     void escribeMatrizSegunNiveles(std::ofstream &archivo, NodoMatriz *fil, int nivel);
+    NodoMatriz *existeInterseccion(int x, int y);
+    NodoMatriz *insertaEnCuboOrdenado(NodoMatriz *inicio, NodoMatriz *nuevo);
+    NodoMatriz *creaNodoPiso(int x, int y);
+    void insertarEnMatriz(int x, int y, int z, Pieza *pieza);
+    //ELIMINAR
+    bool EliminarGeneral(int x, int y, int z);
+    bool EliminarDeMatriz(int x, int y, int z);
+    bool EliminarDeMatriz3D(int x, int y, int z);
+    int numeroDeDatosEnColumnas(NodoMatriz *col);
+    int numeroDeDatosEnFilas(NodoMatriz *fil);
+    NodoMatriz *punteroEliminarDesdeFila(NodoMatriz *fila, int x, int y, int z);
+    NodoMatriz *punteroEliminarDesdeColumna(NodoMatriz *col, int x, int y, int z);
 };
 
 #endif // MATRIZORTOGONAL_H

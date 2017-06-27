@@ -16,7 +16,7 @@ NodoMatriz::NodoMatriz(int x, int y, int z, Pieza *pieza, bool EsPiso)
 }
 
 //DESTRUCTOR DEL NODO
-NodoMatriz::~NodoMatriz()
+/*NodoMatriz::~NodoMatriz()
 {
     delete this->siguiente;
     delete this->anterior;
@@ -24,4 +24,4 @@ NodoMatriz::~NodoMatriz()
     delete this->abajo;
     delete this->adelante;
     delete this->atras;
-}
+}*/

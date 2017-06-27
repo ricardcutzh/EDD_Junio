@@ -10,6 +10,7 @@ INPUT(
 ./release\pieza.o
 ./release\nodomatriz.o
 ./release\matrizortogonal.o
+./release\configuracion.o
 ./release\qrc_resources.o
 ./release\moc_mainwindow.o
 );

@@ -9,6 +9,7 @@ class Pieza
 public:
     std::string tipo;
     std::string PATH;
+    std::string color;
     Pieza(std::string tipo, std::string PATH);
 };
 

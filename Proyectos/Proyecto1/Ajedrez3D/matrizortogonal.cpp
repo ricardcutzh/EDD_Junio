@@ -21,7 +21,7 @@ MatrizOrtogonal::~MatrizOrtogonal()
 //VERIFICA SI LA MATRIZ ESTA VACIA
 bool MatrizOrtogonal::matrizVacia()
 {
-    if((this->raiz->siguiente == NULL) && (this->raiz->abajo == NULL))
+    if((this->raiz->siguiente == NULL) || (this->raiz->abajo == NULL))
     {
         return true;
     }
@@ -117,7 +117,7 @@ NodoMatriz *MatrizOrtogonal::crearCabeceraColumnas(int x)
 NodoMatriz *MatrizOrtogonal::crearCabecerasFilas(int y)
 {
     NodoMatriz *aux = this->raiz->abajo;//PARA RECORRER
-    Pieza *n = new Pieza(std::to_string(y),std::to_string(y));
+    Pieza *n = new Pieza(letras[y],std::to_string(y));
     NodoMatriz *nuevo = new NodoMatriz(y,y,0,n,false);//PARA CABECERA..
     if(matrizVacia())
     {//SI ESTA VACIA LO PONGO ABAJO DE LA RAIZ
@@ -208,7 +208,7 @@ NodoMatriz *MatrizOrtogonal::recorreFila(NodoMatriz *nodoB, NodoMatriz *nuevo)
 {
     NodoMatriz *aux = nodoB;
     int bandera = 0;
-    while(aux!=NULL)
+    while(aux->siguiente!=NULL)
     {
         if(nuevo->x < aux->siguiente->x)
         {
@@ -218,6 +218,10 @@ NodoMatriz *MatrizOrtogonal::recorreFila(NodoMatriz *nodoB, NodoMatriz *nuevo)
         if(aux->siguiente!=NULL)
         {
             aux = aux->siguiente;
+        }
+        else
+        {
+            break;
         }
     }
     if(bandera == 1)
@@ -242,7 +246,7 @@ NodoMatriz *MatrizOrtogonal::recorreColumna(NodoMatriz *nodoB, NodoMatriz *nuevo
     int bandera = 0;
     while(aux->abajo!=NULL)
     {
-        if(nuevo->y < aux->y)
+        if(nuevo->y < aux->abajo->y)
         {
             bandera = 1;//SI VA DESPUES
             break;
@@ -375,8 +379,8 @@ bool MatrizOrtogonal::generaDotMatriz(int nivel)
         }
         archivo << "}";
     }
-    system("dot -Tpng Matriz.dot -o Matriz.png");
     archivo.close();
+    system("dot -Tpng Matriz.dot -o Matriz.png");
     return true;
 }
 
@@ -742,7 +746,7 @@ void MatrizOrtogonal::escribeMatrizSegunNiveles(std::ofstream &archivo, NodoMatr
                 }
                 else
                 {
-                    Destino = DatoEnNiveN(aux, nivel);
+                    Destino = DatoEnNiveN(aux->arriba, nivel);
                 }
                 if(Original.compare("")!=0 && Destino.compare("")!=0)
                 {
@@ -757,5 +761,416 @@ void MatrizOrtogonal::escribeMatrizSegunNiveles(std::ofstream &archivo, NodoMatr
             }
         }
         aux = aux->siguiente;
+    }
+}
+
+//ENCARGADO DE ENCONTRAR LA INTERSECCIÓN DE UNC COORDENADA EN ESPECÍFICO
+NodoMatriz *MatrizOrtogonal::existeInterseccion(int x, int y)
+{
+    NodoMatriz *aux = encuentraFila(y);//ME DEVUELVE LA POSICIÓN EN Y DE LAS COORDENADAS
+    aux = aux->siguiente;
+    while(aux!=NULL)//SE ENCARGA DE MOVERSE EN X ENCONTRANDO EL DATO QUE ANDO BUSCANDO
+    {
+        if(aux->x == x)//AL SER IGUALES ENTONCES HE ENCONTRADO EL DATO QUE BUSCO
+        {
+            break;
+        }
+        aux = aux->siguiente;//SINO.. SIGO BUSCANDO
+    }
+    return aux;
+}
+
+//SE ENCARGA DE POSICIONAR EL NODO EN EL LUGAR CORRECTO SEGUN EL NIVEL QUE TENGA
+NodoMatriz *MatrizOrtogonal::insertaEnCuboOrdenado(NodoMatriz *inicio, NodoMatriz *nuevo)
+{
+    NodoMatriz *aux = inicio;
+    if(aux->adelante!=NULL)//SI ES EL PRIMERO EN ESE NODO EN IR A Z...
+    {
+        aux->adelante = nuevo;
+        nuevo->atras = aux;
+    }
+    else//SI YA EXISTEN OTROS NIVELES BUSCA EL LUGAR QUE LE CORRESPONDE
+    {
+        int bandera = 0;
+        while(aux!=NULL)
+        {
+            if(nuevo->z < aux->z)
+            {
+                bandera = 1;
+                break;
+            }
+            if(aux->adelante!=NULL)
+            {
+                aux = aux->adelante;
+            }
+            else
+            {
+                break;
+            }
+        }
+        if(bandera == 1)
+        {
+            aux->atras->adelante = nuevo;
+            nuevo->atras = aux->atras;
+            nuevo->adelante = aux;
+            aux->atras = nuevo;
+        }
+        if(bandera == 0)
+        {
+            aux->adelante = nuevo;
+            nuevo->atras = aux;
+        }
+    }
+    return inicio;
+}
+
+//SE ENCARGA DE RETORNARME UN NODO PISO:
+NodoMatriz *MatrizOrtogonal::creaNodoPiso(int x, int y)
+{
+    Pieza *p = new Pieza("PISO","PISO");
+    NodoMatriz *piso = new NodoMatriz(x,y,0,p,true);
+    return piso;
+}
+
+//EL METODO PARA INGRESAR A LA MATRIZ:
+void MatrizOrtogonal::insertarEnMatriz(int x, int y, int z, Pieza *pieza)
+{
+    NodoMatriz *nuevo = new NodoMatriz(x,y,z,pieza, false);//CREO EL NUEVO NODO A INSERTAR..
+    bool SiHayCol = existeColumna(x);//COMPRUEBA SI EXISTE LA COLUMNA A INSERTAR
+    bool SiHayFil = existeFila(y);//COMPRUEBA SI EXISTE LA FILA
+    if((SiHayCol==false) && (SiHayFil==false))//CASO 1: NO HAY FILA NI COLUMNA...
+    {
+        NodoMatriz *punteroCol = crearCabeceraColumnas(x);//ENVIO LA COLUMNA QUE DEBE CREAR Y GUARDO LA REFERENCIA
+        NodoMatriz *punteroFil = crearCabecerasFilas(y);//ENVIO LA FILA QUE DEBE CREAR Y GUARDO LA REFERENCIA
+        if(z > 0)//SI DEBE INSERTARSE EN 3D...
+        {
+            NodoMatriz *piso = creaNodoPiso(x,y);//CREO EL PISO DONDE SE VA A INSERTAR EL NODO ADELANTE
+            punteroCol->abajo = piso;//JUNTO LA CABECERA DE X
+            piso->arriba = punteroCol;
+            punteroFil->siguiente = piso;//JUNTO LA CABECERA EN Y
+            piso->anterior = punteroFil;
+            piso = insertaEnCuboOrdenado(piso, nuevo);//LO INSERTA ADELANTE EN EL LUGAR QUE LE CORRESPONDE
+        }
+        else//SI NO.. ENTONCES ES EN 2D
+        {
+            punteroCol->abajo = nuevo;//JUNTO LA CABECERA X
+            nuevo->arriba = punteroCol;
+            punteroFil->siguiente = nuevo;//JUNTO LA CABECERA Y
+            nuevo->anterior = punteroFil;
+        }
+        return;//TERMINA LA INSERCIÓN
+    }
+    if((SiHayCol==false) && (SiHayFil==true))//CASO 2: HAY FILA PERO NO COLUMNA
+    {
+        NodoMatriz *punteroCol = crearCabeceraColumnas(x);//CREA LA CABECERA
+        NodoMatriz *punteroFil = encuentraFila(y);//BUSCA LA CABECERA EXISTENTE
+        if(z > 0)//SI HAY QUE INSERTARLO EN 3D
+        {
+            NodoMatriz *piso = creaNodoPiso(x,y);//COMO NO EXISTE ESTA INTERSECCIÓN (X,Y) ENTONCES CREO EL PISO
+            NodoMatriz *coloca = recorreFila(punteroFil, piso);//EN LA FILA QUE EXISTE PONE EL NODO PISO DONDE CORRESPONDE
+            punteroCol->abajo = coloca;//CON LA CABECERA QUE CREE, UNO LOS PUNTEROS
+            coloca->arriba = punteroCol;
+            coloca = insertaEnCuboOrdenado(coloca, nuevo);//INSERTO EN 3D
+        }
+        else//SI SE DEBE INSERTAR EN 2D...
+        {
+            NodoMatriz *colocado = recorreFila(punteroFil, nuevo);
+            punteroCol->abajo = colocado;//UNO LOS PUNTEROS CON SUS CABECERAS
+            colocado->arriba = punteroCol;
+        }
+        return;//FINALIZA LA INSERCIÓN
+    }
+    if((SiHayCol==true) && (SiHayFil==false))//CASO 3: HAY COLUMNA PERO NO FILA
+    {
+        NodoMatriz *punteroCol = encuentraColumna(x);
+        NodoMatriz *punteroFil = crearCabecerasFilas(y);
+        if(z > 0)//SI SE DEBE INSERTAR EN 3D
+        {
+            NodoMatriz *piso = creaNodoPiso(x,y);
+            NodoMatriz *colocado = recorreColumna(punteroCol, piso);
+            punteroFil->siguiente = colocado;
+            colocado->anterior = punteroFil;
+            colocado = insertaEnCuboOrdenado(piso, nuevo);
+        }
+        else//SI ES EN 2D
+        {
+            NodoMatriz *colocado = recorreColumna(punteroCol, nuevo);
+            punteroFil->siguiente = colocado;//HAGO LA UNION DE LOS PUNTEROS
+            colocado->anterior = punteroFil;
+        }
+        return;//FINALIZA LA INSERCIÓN
+    }
+    if((SiHayCol==true) && (SiHayFil==true))//CASO 4: HAY COLUMNA Y FILA
+    {
+        if(z > 0)//SI HAY QUE INSERTARLO EN 3D
+        {
+            NodoMatriz *interseccion = existeInterseccion(x,y);//COMPRUEBO SI EXISTE ESTA COORDENADA (X,Y)
+            if(interseccion!=NULL)
+            {//SI EXISTE..
+                insertaEnCuboOrdenado(interseccion, nuevo);
+            }
+            else//SI NO EXISTE
+            {
+                NodoMatriz *piso = creaNodoPiso(x,y);//CREO EL NODO PISO
+                NodoMatriz *colum = encuentraColumna(x);
+                NodoMatriz *fila = encuentraFila(y);
+                NodoMatriz *auxfil = colocaEnFilaConPosicionCorrecta(fila, piso);
+                NodoMatriz *auxcol = colocaEnColumnaConPosicionCorrecta(colum, auxfil);
+                auxcol = insertaEnCuboOrdenado(auxcol, nuevo);
+            }
+        }
+        else//SI HAY QUE INSERTARLO EN 2D
+        {
+            NodoMatriz *interseccion = existeInterseccion(x,y);//VE SI ENCUENTRA LA INTERSECCIÓN
+            if(interseccion!=NULL)//SI SI EXISTE LA INTERSECCIÓN
+            {
+                interseccion->pieza = nuevo->pieza;//REEMPLAZO EL DATO DEL PISO CON EL DE LA PIEZA
+                interseccion->EsPiso = false;
+            }
+            else
+            {
+                NodoMatriz *punteroCol = encuentraColumna(x);//ENCUENTRA LA COLUMNA EXISTENTE
+                NodoMatriz *punteroFil = encuentraFila(y);//ENCUENTRA LA FILA EXISTENTE
+                NodoMatriz *colfil = colocaEnFilaConPosicionCorrecta(punteroFil, nuevo);//COLOCA EL NODO EN POSICIÓN
+                NodoMatriz *coloca = colocaEnColumnaConPosicionCorrecta(punteroCol, colfil);//COLOCA EL NODO EN POSICIÓN
+            }
+        }
+        return;//FIN DE EJECUCIÓN
+    }
+}
+
+//DEVUELVE EL NUMERO DE DATOS QUE HAY EN COLUMNAS
+int MatrizOrtogonal::numeroDeDatosEnColumnas(NodoMatriz *col)
+{
+    NodoMatriz *aux = col;
+    int contador = -1;
+    while(aux!=NULL)
+    {
+        aux = aux->abajo;
+        contador = contador+1;
+    }
+    return contador;
+}
+
+//DEVUELVE EL NUMERO DE DATOS QUE HAY EN UNA FILA
+int MatrizOrtogonal::numeroDeDatosEnFilas(NodoMatriz *fil)
+{
+    NodoMatriz *aux = fil;
+    int contador = 0;
+    while(aux!=NULL)
+    {
+        if(aux->siguiente!=NULL)//SI EL SIGUIENTE NO ES NULO ENTONCES CONTINUO
+        {
+            aux = aux->siguiente;
+        }
+        else
+        {//SI LO ES ROMPE EL CICLO Y RETORNA EL NUMERO DE NODOS RECORRIDOS
+            break;
+        }
+        contador = contador+1;
+    }
+    return contador;
+}
+
+//BUSCA EL NODO QUE SE DEBE ELIMINAR DESDE UNA COLUMNA
+NodoMatriz *MatrizOrtogonal::punteroEliminarDesdeColumna(NodoMatriz *col, int x, int y, int z)
+{
+    NodoMatriz *aux = col;
+    while(aux!=NULL)
+    {
+        if(aux->x == x && aux->y == y)
+        {
+            break;
+        }
+        aux = aux->abajo;
+    }
+    return aux;
+}
+
+//BUSCA EL NODO QUE SE DEBE ELIMINAR DESDE UNA FILA
+NodoMatriz *MatrizOrtogonal::punteroEliminarDesdeFila(NodoMatriz *fila, int x, int y, int z)
+{
+    NodoMatriz *aux = fila->siguiente;
+    while(aux!=NULL)
+    {
+        if(aux->x == x && aux->y == y)
+        {
+            break;
+        }
+        aux = aux->siguiente;
+    }
+    return aux;
+}
+
+//ELIMINADO DE MATRIZ EN EL NIVEL 0
+bool MatrizOrtogonal::EliminarDeMatriz(int x, int y, int z)
+{
+    bool siExisteCol = existeColumna(x);
+    bool siExisteFil = existeFila(y);
+    if(siExisteCol==true && siExisteFil==true)
+    {
+        NodoMatriz *punteroCol = encuentraColumna(x);
+        NodoMatriz *punteroFil = encuentraFila(y);
+        NodoMatriz *elim = punteroEliminarDesdeFila(punteroFil, x,y,z);
+        int numFil = numeroDeDatosEnFilas(punteroFil);
+        int numCol = numeroDeDatosEnColumnas(punteroCol);
+        if(numCol == 1 && numFil == 1)//CASO 1: UN SOLO DATO EN AMBAS CABECERAS
+        {
+            if(elim->adelante!=NULL)//EXISTEN MAS NODOS ADELANTE (3D)
+            {
+                elim->pieza->PATH = "PISO";
+                elim->pieza->tipo = "PISO";
+                elim->EsPiso = true;//VUELVO PISO LA PIEZA
+            }
+            else
+            {//SI ES UN NODO QUE NO TIENE NADA ENCIMA...
+                punteroCol->anterior->siguiente = punteroCol->siguiente;
+                if(punteroCol->siguiente!=NULL)
+                {
+                    punteroCol->siguiente->anterior = punteroCol->anterior;
+                }
+                delete punteroCol;//LIBERO LA MEMORIA DEL OBJETO
+                punteroFil->arriba->abajo = punteroFil->abajo;
+                if(punteroFil->abajo!=NULL)
+                {
+                    punteroFil->abajo->arriba = punteroFil->arriba;
+                }
+                delete punteroFil;
+                delete elim;//LIBERO DE LA MEMORIA LOS OBJETOS
+            }
+            return true;
+        }
+        if(numCol == 1 && numFil > 1)//CASO 2: UN SOLO DATO EN COLS PERO MAS DE UNO EN FILAS
+        {
+            if(elim->adelante!=NULL)
+            {
+                elim->pieza->PATH = "PISO";
+                elim->pieza->tipo = "PISO";
+                elim->EsPiso = true;//VUELVO PISO LA PIEZA
+            }
+            else
+            {
+                punteroCol->anterior->siguiente = punteroCol->siguiente;
+                if(punteroCol->siguiente!=NULL)
+                {
+                    punteroCol->siguiente->anterior = punteroCol->anterior;
+                }
+                delete punteroCol;
+                elim->anterior->siguiente = elim->siguiente;
+                if(elim->siguiente!=NULL)
+                {
+                    elim->siguiente->anterior = elim->anterior;
+                }
+                delete elim;
+            }
+            return true;
+        }
+        if(numCol > 1 && numFil == 1)//CASO 3: UN SOLO DATO EN FILAS PERO MAS DE UNO EN COLS
+        {
+            if(elim->adelante!=NULL)
+            {
+                elim->pieza->PATH = "PISO";
+                elim->pieza->tipo = "PISO";
+                elim->EsPiso = true;//VUELVO PISO LA PIEZA
+            }
+            else
+            {
+                punteroFil->arriba->abajo = punteroFil->abajo;
+                if(punteroFil->abajo!=NULL)
+                {
+                    punteroFil->abajo->arriba = punteroFil->arriba;
+                }
+                delete punteroFil;
+                elim->arriba->abajo = elim->abajo;
+                if(elim->abajo!=NULL)
+                {
+                    elim->abajo->arriba = elim->arriba;
+                }
+                delete elim;
+            }
+            return true;
+        }
+        if(numCol > 1 && numFil > 1)//CASO 4: DONDE HAY DE UN DATO EN COLS Y FILS
+        {
+            if(elim->adelante!=NULL)
+            {
+                elim->pieza->PATH = "PISO";
+                elim->pieza->tipo = "PISO";
+                elim->EsPiso = true;//VUELVO PISO LA PIEZA
+            }
+            else
+            {
+                elim->anterior->siguiente = elim->siguiente;
+                if(elim->siguiente!=NULL)
+                {
+                    elim->siguiente->anterior = elim->anterior;
+                }
+                elim->arriba->abajo = elim->abajo;
+                if(elim->abajo!=NULL)
+                {
+                    elim->abajo->arriba = elim->arriba;
+                }
+                delete elim;
+            }
+            return true;
+        }
+    }
+    else
+    {
+        return false;
+    }
+}
+
+//ELIMINADO DE MATRIZ EN EL NIVEL N
+bool MatrizOrtogonal::EliminarDeMatriz3D(int x, int y, int z)
+{
+    bool existeCol = existeColumna(x);
+    bool existeFil = existeFila(y);
+    if(existeCol == true && existeFil == true)
+    {
+        NodoMatriz *interseccion = existeInterseccion(x,y);
+        NodoMatriz *aux = interseccion;
+        while(aux!=NULL)
+        {
+            if(aux->z == z)
+            {
+                break;
+            }
+        }
+        if(aux!=NULL)
+        {
+            aux->atras->adelante = aux->adelante;
+            if(aux->adelante!=NULL)
+            {
+                aux->adelante->atras = aux->atras;
+            }
+            delete aux;
+            if(interseccion->EsPiso == true && interseccion->adelante==NULL)
+            {
+                EliminarDeMatriz(x,y,z);
+            }
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    else
+    {
+        return false;
+    }
+}
+
+//ELIMINAR GENERAL EL QUE INICIA LAS ELIMINACIONES EN EL JUEGO
+bool MatrizOrtogonal::EliminarGeneral(int x, int y, int z)
+{
+    if(z > 0)
+    {
+        return EliminarDeMatriz3D(x,y,z);
+    }
+    else
+    {
+        return EliminarDeMatriz(x,y,z);
     }
 }

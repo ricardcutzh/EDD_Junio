@@ -34,7 +34,8 @@ SOURCES += \
     listatopplayers.cpp \
     pieza.cpp \
     nodomatriz.cpp \
-    matrizortogonal.cpp
+    matrizortogonal.cpp \
+    configuracion.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -46,7 +47,8 @@ HEADERS += \
     listatopplayers.h \
     pieza.h \
     nodomatriz.h \
-    matrizortogonal.h
+    matrizortogonal.h \
+    configuracion.h
 
 FORMS += \
         mainwindow.ui

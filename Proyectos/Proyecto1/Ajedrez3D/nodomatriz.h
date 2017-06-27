@@ -21,7 +21,7 @@ public:
     //PIEZA
     Pieza *pieza;
     NodoMatriz(int x, int y, int z, Pieza *pieza, bool EsPiso);
-    ~NodoMatriz();
+    //~NodoMatriz();
 };
 
 #endif // NODOMATRIZ_H

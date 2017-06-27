@@ -2,7 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-
+#include <QTimer>
 namespace Ui {
 class MainWindow;
 }
@@ -24,7 +24,13 @@ private slots:
 
     void on_pushButton_5_clicked();
 
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_6_clicked();
+public slots:
+    void updateGameTime();
 private:
+    QTimer *timer;
     Ui::MainWindow *ui;
 };
 
