@@ -35,7 +35,9 @@ SOURCES += \
     pieza.cpp \
     nodomatriz.cpp \
     matrizortogonal.cpp \
-    configuracion.cpp
+    configuracion.cpp \
+    listalinealizacion.cpp \
+    nodolinealizacion.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -48,7 +50,9 @@ HEADERS += \
     pieza.h \
     nodomatriz.h \
     matrizortogonal.h \
-    configuracion.h
+    configuracion.h \
+    listalinealizacion.h \
+    nodolinealizacion.h
 
 FORMS += \
         mainwindow.ui

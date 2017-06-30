@@ -6,10 +6,24 @@
 #include <QPixmap>
 #include <QLabel>
 #include <QVBoxLayout>
+#include <QGridLayout>
 #include <configuracion.h>
 //VARIABLES GLOBALES
 QLabel *d;
+QLabel *b;
+Jugador *player1;
+Jugador *player2;
+QVBoxLayout* layMatrix = new QVBoxLayout();
 QVBoxLayout* layTree = new QVBoxLayout();
+//LAYOUTSTABLEROS//
+QGridLayout *lev0 = new QGridLayout();
+QGridLayout *lev1 = new QGridLayout();
+QGridLayout *lev2 = new QGridLayout();
+//MATRICES DE LABELS
+QLabel *l0[8][8] = {};
+QLabel *l1[8][8] = {};
+QLabel *l2[8][8] = {};
+//FIN
 Configuracion *config;
 int minu;
 int sec;
@@ -23,8 +37,12 @@ MainWindow::MainWindow(QWidget *parent) :
     this->setFixedHeight(this->height());
     this->setFixedWidth(this->width());
     inicializaArbol();
+    ui->Move->setEnabled(false);
+    ui->Console->setEnabled(false);
+    ui->BotonMover->setEnabled(false);
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()),this, SLOT(updateGameTime()));
+    PintaTableros();
 }
 
 MainWindow::~MainWindow()
@@ -171,6 +189,7 @@ void MainWindow::on_pushButton_6_clicked()
     {
         ui->pl1Name->setText(QString::fromStdString(config->pl1));
         ui->pl2Name->setText(QString::fromStdString(config->pl2));
+
         if(config->Tiempo)
         {
             ui->GameType->setText("Tiempo");
@@ -185,12 +204,15 @@ void MainWindow::on_pushButton_6_clicked()
             ui->GameType->setText("Normal");
         }
         inicializarMatriz();
-        generaGrafoMatriz(0);
+        ui->Move->setEnabled(true);
+        ui->Console->setEnabled(true);
+        ui->BotonMover->setEnabled(true);
     }
     else
     {
         QMessageBox::warning(this,"Error: Configuración", "No Se ha guardado una configuración");
     }
+    actualizarTablero(l0,l1,l2);
 }
 
 //METODO QUE SE ENCARGA DE ACTUALIZAR EL TIMER
@@ -207,6 +229,13 @@ void MainWindow::updateGameTime()
            ui->Seg->setText("00");
            ui->Min->setText("00");
            timer->stop();
+           ui->pl1Name->setText("");
+           ui->pl2Name->setText("");
+           ui->GameType->setText("Time Is Over");
+           ui->Move->setEnabled(false);
+           ui->Console->setEnabled(false);
+           ui->BotonMover->setEnabled(false);
+           QMessageBox::warning(this,"Game Over","Fin de Partida!");
        }
        else
        {
@@ -215,4 +244,187 @@ void MainWindow::updateGameTime()
            ui->Min->setText(QString::fromStdString(m));
        }
    }
+}
+
+void MainWindow::on_pushButton_8_clicked()
+{
+    if(!matrizVacia())
+    {
+        std::string n = ui->ComboLevel->currentText().toStdString();
+        int nivel = std::stoi(n);
+        if(generaGrafoMatriz(nivel))
+        {
+            layMatrix->removeWidget(b);
+            delete b;
+            b = 0;
+            //----------------//
+            QPixmap img("Matriz.png");
+            QLabel *nue = new QLabel();
+            b = nue;
+            nue->setPixmap(img);
+            nue->setFixedSize(img.size());
+            nue->repaint();
+            layMatrix->addWidget(nue);
+            ui->scrollAreaWidgetContents_2->setLayout(layMatrix);
+        }
+        else
+        {
+            layMatrix->removeWidget(b);
+            delete b;
+            b = 0;
+        }
+    }
+    else
+    {
+        layMatrix->removeWidget(b);
+        delete b;
+        b = 0;
+        QMessageBox::warning(this,"Error: Tablero", "No Se ha iniciado la partida");
+    }
+}
+
+//SE ENCARGA DE LLEVAR A CABO LA LINEALIZACIÓN Y MOSTRARLA
+void MainWindow::on_pushButton_9_clicked()
+{
+    if(!matrizVacia())
+    {
+        std::string n = ui->ComboLevel->currentText().toStdString();
+        std::string tipo = ui->ComboLinea->currentText().toStdString();
+        int nivel = std::stoi(n);
+        realizaLinealizacion(nivel,tipo);
+        if(realizaGrafoLinealizacion())
+        {
+            layMatrix->removeWidget(b);
+            delete b;
+            b = 0;
+            QPixmap img("Linealizacion.png");
+            QLabel *nue = new QLabel();
+            b = nue;
+            nue->setPixmap(img);
+            nue->setFixedSize(img.size());
+            nue->repaint();
+            layMatrix->addWidget(nue);
+            ui->scrollAreaWidgetContents_2->setLayout(layMatrix);
+            limpiaLinealizacion();
+        }
+        else
+        {
+            layMatrix->removeWidget(b);
+            delete b;
+            b = 0;
+        }
+    }
+    else
+    {
+        layMatrix->removeWidget(b);
+        delete b;
+        b = 0;
+        QMessageBox::warning(this,"Error: Tablero", "No Se ha iniciado la partida");
+    }
+}
+
+void MainWindow::ponLabels()
+{
+    QGridLayout *grid = new QGridLayout();
+    std::string coordenada;
+    for(int x = 0; x <8 ; x++)
+    {
+        for(int y = 0; y < 8 ; y++)
+        {
+            QLabel *l = new QLabel("");
+            coordenada = "x: "+std::to_string(x)+" y: "+std::to_string(y);
+            l->setText(QString::fromStdString(coordenada));
+            if(x%2 == 0 )
+            {
+                if(y%2 == 0)
+                {
+                    l->setStyleSheet("QLabel { background-color: white;}");
+                }
+                else
+                {
+                    l->setStyleSheet("QLabel { background-color: gray;}");
+                }
+            }
+            else
+            {
+                if(y%2 == 0)
+                {
+                    l->setStyleSheet("QLabel { background-color: gray;}");
+                }
+                else
+                {
+                    l->setStyleSheet("QLabel { background-color: white;}");
+                }
+            }
+            grid->addWidget(l,y,x);
+            l1[y][x] = l;
+        }
+    }
+    ui->tab_6->setLayout(grid);
+}
+
+//PINTA EL TABLERO DE JUEGO
+void MainWindow::PintaTableros()
+{
+    for(int x = 0; x < 8 ; x++)
+    {
+        for(int y = 0; y < 8 ; y++)
+        {
+            QLabel *la0 = new QLabel();
+            QLabel *la1 = new QLabel();
+            QLabel *la2 = new QLabel();
+            if(x%2 == 0 )
+            {
+                if(y%2 == 0)
+                {
+                    la0->setStyleSheet("QLabel { background-color: white;}");
+                    la1->setStyleSheet("QLabel { background-color: white;}");
+                    la2->setStyleSheet("QLabel { background-color: white;}");
+                }
+                else
+                {
+                    la0->setStyleSheet("QLabel { background-color: gray;}");
+                    la1->setStyleSheet("QLabel { background-color: gray;}");
+                    la2->setStyleSheet("QLabel { background-color: gray;}");
+                }
+            }
+            else
+            {
+                if(y%2 == 0)
+                {
+                    la0->setStyleSheet("QLabel { background-color: gray;}");
+                    la1->setStyleSheet("QLabel { background-color: gray;}");
+                    la2->setStyleSheet("QLabel { background-color: gray;}");
+                }
+                else
+                {
+                    la0->setStyleSheet("QLabel { background-color: white;}");
+                    la1->setStyleSheet("QLabel { background-color: white;}");
+                    la2->setStyleSheet("QLabel { background-color: white;}");
+                }
+            }
+            lev0->addWidget(la0,y,x);
+            l0[y][x] = la0;
+            lev1->addWidget(la1,y,x);
+            l1[y][x] = la1;
+            lev2->addWidget(la2,y,x);
+            l2[y][x] = la2;
+        }
+    }
+    ui->tab_6->setLayout(lev0);
+    ui->tab_7->setLayout(lev1);
+    ui->tab_8->setLayout(lev2);
+
+}
+
+//BOTON PARA RECIBIR LA ENTRADA DE MOVIMIENTOS
+void MainWindow::on_BotonMover_clicked()
+{
+    std::string entrada = ui->Move->text().toStdString();
+    muevePieza(entrada);
+}
+
+void MainWindow::ManejaTurnos()
+{
+
 }

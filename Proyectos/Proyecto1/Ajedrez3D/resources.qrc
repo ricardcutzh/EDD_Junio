@@ -14,4 +14,18 @@
         <file>Img/1497937232_tree.png</file>
         <file>Img/1497937279__m.png</file>
     </qresource>
+    <qresource prefix="/">
+        <file>Img/alfil-B.png</file>
+        <file>Img/alfil-N.png</file>
+        <file>Img/caballo-B.png</file>
+        <file>Img/caballo-N.png</file>
+        <file>Img/dama-B.png</file>
+        <file>Img/dama-N.png</file>
+        <file>Img/peon_B.png</file>
+        <file>Img/peon_N.png</file>
+        <file>Img/rey-B.png</file>
+        <file>Img/rey-N.png</file>
+        <file>Img/torre-B.png</file>
+        <file>Img/torre-N.png</file>
+    </qresource>
 </RCC>

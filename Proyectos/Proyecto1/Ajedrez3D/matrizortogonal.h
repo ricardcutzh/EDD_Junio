@@ -5,11 +5,15 @@
 #include <string>
 #include <iostream>
 #include <stdlib.h>
+#include <listalinealizacion.h>
+#include <QLabel>
+#include <QPixmap>
 using namespace std;
 
 class MatrizOrtogonal
 {
 public:
+    ListaLinealizacion *linea;
     NodoMatriz *raiz;
     std::string letras[9] = {"root","H","G","F","E","D","C","B","A"};
     MatrizOrtogonal();
@@ -33,6 +37,7 @@ public:
     std::string buscaColumnaDatoEnNivelN(NodoMatriz *inicio, int nivel);
     std::string DatoEnNiveN(NodoMatriz *inicio, int n);
     void alinearPorNiveles(std::ofstream &archivo, NodoMatriz *fil, int nivel);
+    void alinearTitulos(std::ofstream &archivo, NodoMatriz *r);
     NodoMatriz *encuentraElSiguienteQueNoEsPiso(NodoMatriz *inicio);
     NodoMatriz *encuentraElAnteriorQueNoEsPiso(NodoMatriz *inicio);
     NodoMatriz *encuentraElArribaQueNoEsPiso(NodoMatriz *inicio);
@@ -50,6 +55,13 @@ public:
     int numeroDeDatosEnFilas(NodoMatriz *fil);
     NodoMatriz *punteroEliminarDesdeFila(NodoMatriz *fila, int x, int y, int z);
     NodoMatriz *punteroEliminarDesdeColumna(NodoMatriz *col, int x, int y, int z);
+    //LINEALIZACIÓN
+    void creaNuevaLinealizacion(std::string tipo);
+    void linealizaPorColumnas(int nivel);
+    void linealizaPorFilas(int nivel);
+    //REPINTAR MATRIZ DE LABELS
+    NodoMatriz *nodoEnNivelN(int nivel, NodoMatriz *inicio);
+    void pintaMatrizLabels(QLabel *mat[8][8], int nivel);
 };
 
 #endif // MATRIZORTOGONAL_H

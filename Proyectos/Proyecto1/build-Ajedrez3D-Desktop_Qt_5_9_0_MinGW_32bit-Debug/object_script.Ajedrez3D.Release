@@ -11,6 +11,8 @@ INPUT(
 ./release\nodomatriz.o
 ./release\matrizortogonal.o
 ./release\configuracion.o
+./release\listalinealizacion.o
+./release\nodolinealizacion.o
 ./release\qrc_resources.o
 ./release\moc_mainwindow.o
 );

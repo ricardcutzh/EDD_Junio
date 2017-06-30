@@ -357,6 +357,7 @@ bool MatrizOrtogonal::generaDotMatriz(int nivel)
         archivo << "digraph g {" << std::endl;
         archivo << "node [shape=box, color=cornflowerblue ];" << std::endl;
         //ALINEAR NIVELES
+        alinearTitulos(archivo, this->raiz);
         if(nivel > 0)
         {
             //APUNTAR A ENCABEZADOS DE COLUMNAS
@@ -455,10 +456,10 @@ std::string MatrizOrtogonal::buscaFilaDatoEnNivelN(NodoMatriz *inicio, int nivel
             aux = aux->siguiente;
         }
     }
-    if(aux->EsPiso)
+    /*if(aux->EsPiso)
     {
         retorno = "";
-    }
+    }*/
     return retorno;
 }
 
@@ -479,10 +480,10 @@ std::string MatrizOrtogonal::buscaColumnaDatoEnNivelN(NodoMatriz *inicio, int ni
             aux = aux->abajo;
         }
     }
-    if(aux->EsPiso)
+    /*if(aux->EsPiso)
     {
         retorno = "";
-    }
+    }*/
     return retorno;
 }
 
@@ -508,14 +509,35 @@ void MatrizOrtogonal::alinearPorNiveles(ofstream &archivo, NodoMatriz *fil, int 
 {
     archivo << "{rank=same;";
     NodoMatriz *aux = fil;
+    archivo << "\"" << aux->pieza->tipo << "\";";
     while(aux!=NULL)
     {
         std::string n = DatoEnNiveN(aux, nivel);
         if(n.compare("")!=0)
         {
-            if(n.compare("PISO"))
+            if(n.compare("PISO")!=0)
             {
                 archivo << "\"" << n << "\";";
+            }
+        }
+        aux = aux->siguiente;
+    }
+    archivo << "};" << std::endl;
+}
+
+//ALINEAR TITULOS PARA QUE TENGAN MISMA ALTURA
+void MatrizOrtogonal::alinearTitulos(ofstream &archivo, NodoMatriz *r)
+{
+    archivo << "{rank=same;";
+    NodoMatriz *aux = r;
+    while(aux!=NULL)
+    {
+        std::string n = DatoEnNiveN(aux, 0);
+        if(n.compare("")!=0)
+        {
+            if(n.compare("PISO")!=0)
+            {
+                 archivo << "\"" << n << "\";";
             }
         }
         aux = aux->siguiente;
@@ -1173,4 +1195,104 @@ bool MatrizOrtogonal::EliminarGeneral(int x, int y, int z)
     {
         return EliminarDeMatriz(x,y,z);
     }
+}
+
+//CREA UNA NUEVA LISTA DE LINEALIZACIÓN
+void MatrizOrtogonal::creaNuevaLinealizacion(string tipo)
+{
+    linea = new ListaLinealizacion(tipo);
+}
+
+//HACE LA LINEALIZACIÓN POR COLUMNAS
+void MatrizOrtogonal::linealizaPorColumnas(int nivel)
+{
+    if(!matrizVacia())
+    {
+        NodoMatriz *aux = this->raiz->siguiente;
+        while(aux!=NULL)
+        {
+            NodoMatriz *auxFil = aux->abajo;
+            while(auxFil!=NULL)
+            {
+                std::string ca = DatoEnNiveN(auxFil, nivel);
+                if(ca.compare("")!=0 && ca.compare("PISO")!=0)
+                {
+                    NodoLinealizacion *n = new NodoLinealizacion(ca);
+                    this->linea->agregar(n);
+                }
+                auxFil = auxFil->abajo;
+            }
+            aux = aux->siguiente;
+        }
+    }
+}
+
+//HACE LA LINEALIZACION POR FILAS
+void MatrizOrtogonal::linealizaPorFilas(int nivel)
+{
+    if(!matrizVacia())
+    {
+        NodoMatriz *aux = this->raiz->abajo;
+        while(aux!=NULL)
+        {
+            NodoMatriz *auxcol = aux->siguiente;
+            while(auxcol!=NULL)
+            {
+                std::string ca = DatoEnNiveN(auxcol, nivel);
+                if(ca.compare("")!=0 && ca.compare("PISO")!=0)
+                {
+                    NodoLinealizacion *n = new NodoLinealizacion(ca);
+                    this->linea->agregar(n);
+                }
+                auxcol = auxcol->siguiente;
+            }
+            aux = aux->abajo;
+        }
+        //this->linea->verLista();
+    }
+}
+
+//PINTA LOS LABELS DE LAS MATRICES
+void MatrizOrtogonal::pintaMatrizLabels(QLabel *mat[8][8], int nivel)
+{
+    NodoMatriz *fil = this->raiz->abajo;
+    while(fil!=NULL)
+    {
+        NodoMatriz *col = fil->siguiente;
+        while(col!=NULL)
+        {
+            NodoMatriz *auxiliar = nodoEnNivelN(nivel, col);
+            if(auxiliar!=NULL)
+            {
+                if(!auxiliar->EsPiso)
+                {
+                    QPixmap img(QString::fromStdString(auxiliar->pieza->PATH));
+                    mat[col->y-1][col->x-1]->setPixmap(img);
+                }
+            }
+            col = col->siguiente;
+        }
+        fil = fil->abajo;
+    }
+}
+
+//ME DEVUELVE EL NODO EN NIVEL N
+NodoMatriz *MatrizOrtogonal::nodoEnNivelN(int nivel, NodoMatriz *inicio)
+{
+    NodoMatriz *aux = inicio;
+    bool bandera = false;
+    while(aux!=NULL)
+    {
+        if(aux->z == nivel)
+        {
+            bandera = true;
+            break;
+        }
+        aux = aux->adelante;
+    }
+    if(!bandera)
+    {
+        return NULL;
+    }
+    return aux;
 }

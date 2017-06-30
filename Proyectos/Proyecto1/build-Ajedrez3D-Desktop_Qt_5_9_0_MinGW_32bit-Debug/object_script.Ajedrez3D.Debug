@@ -11,6 +11,8 @@ INPUT(
 ./debug\nodomatriz.o
 ./debug\matrizortogonal.o
 ./debug\configuracion.o
+./debug\listalinealizacion.o
+./debug\nodolinealizacion.o
 ./debug\qrc_resources.o
 ./debug\moc_mainwindow.o
 );

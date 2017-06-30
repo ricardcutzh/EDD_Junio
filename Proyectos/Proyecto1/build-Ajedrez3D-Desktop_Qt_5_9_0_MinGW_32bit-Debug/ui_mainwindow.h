@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -75,12 +76,22 @@ public:
     QLabel *CurrentPlayer;
     QLabel *label_12;
     QLineEdit *Move;
-    QPushButton *pushButton_7;
-    QTextEdit *textEdit;
+    QPushButton *BotonMover;
+    QTextEdit *Console;
     QLabel *label_13;
     QWidget *tab_3;
     QTabWidget *tabWidget_2;
     QWidget *tab_4;
+    QGroupBox *groupBox_7;
+    QLabel *label_14;
+    QComboBox *ComboLevel;
+    QGroupBox *groupBox_8;
+    QPushButton *pushButton_8;
+    QLabel *label_15;
+    QComboBox *ComboLinea;
+    QPushButton *pushButton_9;
+    QScrollArea *MatrizView;
+    QWidget *scrollAreaWidgetContents_2;
     QWidget *tab_5;
     QScrollArea *TreeViewArea;
     QWidget *scrollAreaWidgetContents;
@@ -226,12 +237,12 @@ public:
         Move = new QLineEdit(groupBox_6);
         Move->setObjectName(QStringLiteral("Move"));
         Move->setGeometry(QRect(90, 80, 141, 20));
-        pushButton_7 = new QPushButton(groupBox_6);
-        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
-        pushButton_7->setGeometry(QRect(250, 80, 111, 23));
-        textEdit = new QTextEdit(groupBox_6);
-        textEdit->setObjectName(QStringLiteral("textEdit"));
-        textEdit->setGeometry(QRect(20, 130, 361, 181));
+        BotonMover = new QPushButton(groupBox_6);
+        BotonMover->setObjectName(QStringLiteral("BotonMover"));
+        BotonMover->setGeometry(QRect(250, 80, 111, 23));
+        Console = new QTextEdit(groupBox_6);
+        Console->setObjectName(QStringLiteral("Console"));
+        Console->setGeometry(QRect(20, 130, 361, 181));
         label_13 = new QLabel(groupBox_6);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setGeometry(QRect(20, 105, 71, 21));
@@ -245,6 +256,38 @@ public:
         tabWidget_2->setGeometry(QRect(10, 10, 841, 421));
         tab_4 = new QWidget();
         tab_4->setObjectName(QStringLiteral("tab_4"));
+        groupBox_7 = new QGroupBox(tab_4);
+        groupBox_7->setObjectName(QStringLiteral("groupBox_7"));
+        groupBox_7->setGeometry(QRect(10, 10, 181, 80));
+        label_14 = new QLabel(groupBox_7);
+        label_14->setObjectName(QStringLiteral("label_14"));
+        label_14->setGeometry(QRect(30, 30, 47, 20));
+        ComboLevel = new QComboBox(groupBox_7);
+        ComboLevel->setObjectName(QStringLiteral("ComboLevel"));
+        ComboLevel->setGeometry(QRect(80, 30, 81, 22));
+        groupBox_8 = new QGroupBox(tab_4);
+        groupBox_8->setObjectName(QStringLiteral("groupBox_8"));
+        groupBox_8->setGeometry(QRect(210, 10, 611, 80));
+        pushButton_8 = new QPushButton(groupBox_8);
+        pushButton_8->setObjectName(QStringLiteral("pushButton_8"));
+        pushButton_8->setGeometry(QRect(40, 30, 121, 23));
+        label_15 = new QLabel(groupBox_8);
+        label_15->setObjectName(QStringLiteral("label_15"));
+        label_15->setGeometry(QRect(210, 30, 81, 21));
+        ComboLinea = new QComboBox(groupBox_8);
+        ComboLinea->setObjectName(QStringLiteral("ComboLinea"));
+        ComboLinea->setGeometry(QRect(290, 30, 111, 22));
+        pushButton_9 = new QPushButton(groupBox_8);
+        pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
+        pushButton_9->setGeometry(QRect(420, 30, 151, 23));
+        MatrizView = new QScrollArea(tab_4);
+        MatrizView->setObjectName(QStringLiteral("MatrizView"));
+        MatrizView->setGeometry(QRect(10, 100, 811, 281));
+        MatrizView->setWidgetResizable(true);
+        scrollAreaWidgetContents_2 = new QWidget();
+        scrollAreaWidgetContents_2->setObjectName(QStringLiteral("scrollAreaWidgetContents_2"));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 809, 279));
+        MatrizView->setWidget(scrollAreaWidgetContents_2);
         QIcon icon3;
         icon3.addFile(QStringLiteral(":/rec/Img/1497937279__m.png"), QSize(), QIcon::Normal, QIcon::Off);
         tabWidget_2->addTab(tab_4, icon3, QString());
@@ -291,8 +334,8 @@ public:
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(1);
-        tabWidget_3->setCurrentIndex(2);
-        tabWidget_2->setCurrentIndex(1);
+        tabWidget_3->setCurrentIndex(0);
+        tabWidget_2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -334,9 +377,26 @@ public:
         label_11->setText(QApplication::translate("MainWindow", "Turno:", Q_NULLPTR));
         CurrentPlayer->setText(QApplication::translate("MainWindow", "Current Player", Q_NULLPTR));
         label_12->setText(QApplication::translate("MainWindow", "Movimiento:", Q_NULLPTR));
-        pushButton_7->setText(QApplication::translate("MainWindow", "Mover", Q_NULLPTR));
+        BotonMover->setText(QApplication::translate("MainWindow", "Mover", Q_NULLPTR));
         label_13->setText(QApplication::translate("MainWindow", "Consola:", Q_NULLPTR));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "Tablero", Q_NULLPTR));
+        groupBox_7->setTitle(QApplication::translate("MainWindow", "Elegir Nivel:", Q_NULLPTR));
+        label_14->setText(QApplication::translate("MainWindow", "Nivel:", Q_NULLPTR));
+        ComboLevel->clear();
+        ComboLevel->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "0", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "1", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "2", Q_NULLPTR)
+        );
+        groupBox_8->setTitle(QApplication::translate("MainWindow", "Generar Reporte:", Q_NULLPTR));
+        pushButton_8->setText(QApplication::translate("MainWindow", "Ver Tablero", Q_NULLPTR));
+        label_15->setText(QApplication::translate("MainWindow", "Linealizaci\303\263n:", Q_NULLPTR));
+        ComboLinea->clear();
+        ComboLinea->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "Filas", Q_NULLPTR)
+         << QApplication::translate("MainWindow", "Columnas", Q_NULLPTR)
+        );
+        pushButton_9->setText(QApplication::translate("MainWindow", "Ver Linealizaci\303\263n", Q_NULLPTR));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_4), QApplication::translate("MainWindow", "Matriz Ortogonal", Q_NULLPTR));
         pushButton_4->setText(QApplication::translate("MainWindow", "Ver \303\201rbol de Jugadores", Q_NULLPTR));
         pushButton_5->setText(QApplication::translate("MainWindow", "Ver Top 10 Jugadores", Q_NULLPTR));

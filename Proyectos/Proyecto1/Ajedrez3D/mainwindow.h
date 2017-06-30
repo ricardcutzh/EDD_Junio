@@ -27,6 +27,18 @@ private slots:
     void on_pushButton_3_clicked();
 
     void on_pushButton_6_clicked();
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_9_clicked();
+
+    void ponLabels();
+
+    void PintaTableros();
+
+    void ManejaTurnos();
+
+    void on_BotonMover_clicked();
+
 public slots:
     void updateGameTime();
 private:
