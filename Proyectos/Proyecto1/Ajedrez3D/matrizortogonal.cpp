@@ -71,6 +71,7 @@ NodoMatriz *MatrizOrtogonal::crearCabeceraColumnas(int x)
 {
     NodoMatriz *aux = this->raiz->siguiente;//NODO PARA RECORRER
     Pieza *n = new Pieza(std::to_string(x),std::to_string(x));
+    n->typePieza = "CABECERA";
     NodoMatriz *nuevo = new NodoMatriz(x,x,0, n,false);//NODO DE CABECERA
     if(matrizVacia())
     {   //SI LA MATRIZ ESTA VACIA LO COLOCO ALA PAR DE LA RAIZ ES LA PRIMER CABECERA
@@ -118,6 +119,7 @@ NodoMatriz *MatrizOrtogonal::crearCabecerasFilas(int y)
 {
     NodoMatriz *aux = this->raiz->abajo;//PARA RECORRER
     Pieza *n = new Pieza(letras[y],std::to_string(y));
+    n->typePieza = "CABECERA";
     NodoMatriz *nuevo = new NodoMatriz(y,y,0,n,false);//PARA CABECERA..
     if(matrizVacia())
     {//SI ESTA VACIA LO PONGO ABAJO DE LA RAIZ
@@ -248,7 +250,7 @@ NodoMatriz *MatrizOrtogonal::recorreColumna(NodoMatriz *nodoB, NodoMatriz *nuevo
     {
         if(nuevo->y < aux->abajo->y)
         {
-            bandera = 1;//SI VA DESPUES
+            bandera = 1;//SI VA ANTES
             break;
         }
         if(aux->abajo!=NULL)
@@ -729,7 +731,7 @@ void MatrizOrtogonal::escribeMatrizSegunNiveles(std::ofstream &archivo, NodoMatr
                     NodoMatriz *down = encuentraElAbajoQueNoEsPiso(aux->abajo);
                     if(down!=NULL)
                     {
-                        Destino = DatoEnNiveN(aux, nivel);
+                        Destino = DatoEnNiveN(down, nivel);
                     }
                     else
                     {
@@ -756,7 +758,7 @@ void MatrizOrtogonal::escribeMatrizSegunNiveles(std::ofstream &archivo, NodoMatr
                 Original = DatoEnNiveN(aux, nivel);
                 if(aux->arriba->EsPiso)
                 {
-                    NodoMatriz *up = encuentraElArribaQueNoEsPiso(aux);
+                    NodoMatriz *up = encuentraElArribaQueNoEsPiso(aux->arriba);
                     if(up!=NULL)
                     {
                         Destino = DatoEnNiveN(up, nivel);
@@ -1042,6 +1044,8 @@ bool MatrizOrtogonal::EliminarDeMatriz(int x, int y, int z)
             {
                 elim->pieza->PATH = "PISO";
                 elim->pieza->tipo = "PISO";
+                elim->pieza->typePieza = "PISO";
+                elim->pieza->color = "PISO";
                 elim->EsPiso = true;//VUELVO PISO LA PIEZA
             }
             else
@@ -1068,6 +1072,8 @@ bool MatrizOrtogonal::EliminarDeMatriz(int x, int y, int z)
             {
                 elim->pieza->PATH = "PISO";
                 elim->pieza->tipo = "PISO";
+                elim->pieza->typePieza = "PISO";
+                elim->pieza->color = "PISO";
                 elim->EsPiso = true;//VUELVO PISO LA PIEZA
             }
             else
@@ -1093,6 +1099,8 @@ bool MatrizOrtogonal::EliminarDeMatriz(int x, int y, int z)
             {
                 elim->pieza->PATH = "PISO";
                 elim->pieza->tipo = "PISO";
+                elim->pieza->typePieza = "PISO";
+                elim->pieza->color = "PISO";
                 elim->EsPiso = true;//VUELVO PISO LA PIEZA
             }
             else
@@ -1118,6 +1126,8 @@ bool MatrizOrtogonal::EliminarDeMatriz(int x, int y, int z)
             {
                 elim->pieza->PATH = "PISO";
                 elim->pieza->tipo = "PISO";
+                elim->pieza->typePieza = "PISO";
+                elim->pieza->color = "PISO";
                 elim->EsPiso = true;//VUELVO PISO LA PIEZA
             }
             else
@@ -1141,6 +1151,7 @@ bool MatrizOrtogonal::EliminarDeMatriz(int x, int y, int z)
     {
         return false;
     }
+    return false;
 }
 
 //ELIMINADO DE MATRIZ EN EL NIVEL N
@@ -1268,6 +1279,13 @@ void MatrizOrtogonal::pintaMatrizLabels(QLabel *mat[8][8], int nivel)
                 {
                     QPixmap img(QString::fromStdString(auxiliar->pieza->PATH));
                     mat[col->y-1][col->x-1]->setPixmap(img);
+                    mat[col->y-1][col->x-1]->repaint();
+                }
+                else
+                {
+                    QPixmap img("");
+                    mat[col->y-1][col->x-1]->setPixmap(img);
+                    mat[col->y-1][col->x-1]->repaint();
                 }
             }
             col = col->siguiente;
@@ -1295,4 +1313,522 @@ NodoMatriz *MatrizOrtogonal::nodoEnNivelN(int nivel, NodoMatriz *inicio)
         return NULL;
     }
     return aux;
+}
+
+//BUSCA EL NODO QUE COINCIDA
+NodoMatriz *MatrizOrtogonal::buscaNodo(string tipoPieza, string color)
+{
+    if(!matrizVacia())
+    {
+        //NODO QUE ME SIRVE PARA MOVERSE EN FILAS
+        NodoMatriz *fil = this->raiz->abajo;
+        while(fil!=NULL)
+        {
+            //NODO QUE ME SIRVE PARA MOVERSE POR COLUMNAS
+            NodoMatriz *col = fil->siguiente;
+            while(col!=NULL)
+            {
+                if(col->pieza->color.compare(color)==0 && col->pieza->typePieza.compare(tipoPieza)==0)
+                {//SI ENCUENTRO UNA PIEZA DE IGUAL COLOR Y DE IGUAL TIPO...
+                    //CREO UN NODO REORNTO QUE SERA UNA COPIA DE LA INFORMACIÓN QUE TIENE EL NODO QUE ENCONTRE
+                    Pieza *copia = new Pieza(col->pieza->tipo, col->pieza->PATH);
+                    copia->color = color;
+                    copia->typePieza = tipoPieza;
+                    NodoMatriz *retorno = new NodoMatriz(col->x,col->y,col->z ,copia, false);
+                    std::cout << "encontre el nodo en x: " << retorno->x << " y: " << retorno->y << " z: " << retorno->z << std::endl;
+                    return retorno;
+                }
+                col = col->siguiente;
+            }
+            fil = fil->abajo;
+        }
+        return NULL;
+    }
+    return NULL;
+}
+
+//ES EL NODO QUE SE PUEDE BUSCAR
+bool MatrizOrtogonal::buscaPeonValido(string tipopieza, string color, int xdes, int ydes, int zdes)
+{
+    if(!matrizVacia())
+    {
+        NodoMatriz *fil = this->raiz->abajo;
+        while(fil!=NULL)
+        {
+            NodoMatriz *col = fil->siguiente;
+            while(col!=NULL)
+            {
+                if(col->pieza->typePieza.compare(tipopieza)==0 && col->pieza->color.compare(color)==0)
+                {
+                    int codigo = validaPeon(col, xdes, ydes, zdes, color);
+                    if(codigo!=0)
+                    {
+                        return muevePeon(col, xdes, ydes, zdes, color, codigo);
+                    }
+                }
+                col = col->siguiente;
+            }
+            fil = fil->abajo;
+        }
+    }
+    return false;
+}
+
+//ES EL NODO ALFIL QUE PUEDE MOVERSE
+bool MatrizOrtogonal::bucaAlfilValido(string tipopieza, string color, int xdest, int ydest, int zdest)
+{
+    if(!matrizVacia())
+    {
+        NodoMatriz *fil = this->raiz->abajo;
+        while(fil!=NULL)
+        {
+            NodoMatriz *col = fil->siguiente;
+            while(col!=NULL)
+            {
+                if(col->pieza->typePieza.compare(tipopieza)==0 && col->pieza->color.compare(color)==0)
+                {
+                    int si = validaAlfil(col, xdest, ydest, zdest, color);
+                    if(si==1)
+                    {
+                        Pieza *p = new Pieza(col->pieza->tipo, col->pieza->PATH);
+                        p->color = col->pieza->color;
+                        p->typePieza = col->pieza->typePieza;
+                        NodoMatriz *copia = new NodoMatriz(col->x, col->y, col->z, p, false);
+                        return mueveCualquierPieza(copia, xdest, ydest, zdest);
+
+                    }
+                }
+                col = col->siguiente;
+            }
+            fil = fil->abajo;
+        }
+    }
+    return false;
+}
+
+//SE ENCARGA DE VALIDAR EL ALFILA
+int MatrizOrtogonal::validaAlfil(NodoMatriz *ori, int xdest, int ydest, int zdest, string color)
+{
+    if(xdest == ori->x && ydest!= ori->y)
+    {
+        if(ydest < ori->y)
+        {
+            //BUSCAR ARRIBA
+            if(ori->arriba==NULL)
+            {
+                return 1;
+            }
+            NodoMatriz *ar = encuentraElArribaQueNoEsPiso(ori->arriba);
+            if(ar==NULL)
+            {
+                //MOVER
+                return 1;
+            }
+            if(ar->pieza->typePieza.compare("CABECERA")==0)
+            {
+                return 1;
+            }
+            if(ar->y < ydest)
+            {
+                //MUEVE
+                return 1;
+            }
+            else if(ar->y == ydest)
+            {
+                if(EsDelColorContrario(color, ar->x, ar->y, ar->z))
+                {
+                    //MOVER
+                    return 1;
+                }
+            }
+        }
+        else
+        {
+            //BUSCAR ABAJO
+            if(ori->abajo==NULL)
+            {
+                return 1;
+            }
+            NodoMatriz *ab = encuentraElAbajoQueNoEsPiso(ori->abajo);
+            if(ab==NULL)
+            {
+                //MOVER
+                return 1;
+            }
+            if(ydest < ab->y )
+            {
+                //MUEVE
+                return 1;
+            }
+            else if(ab->y == ydest)
+            {
+                if(EsDelColorContrario(color, ab->x, ab->y, ab->z))
+                {
+                    //MOVER
+                    return 1;
+                }
+            }
+        }
+    }
+    else if(xdest!= ori->x && ydest== ori->y)
+    {
+        if(xdest < ori->x)
+        {
+            //BUSCAR ANTERIOR
+            if(ori->anterior==NULL)
+            {
+                return 1;
+            }
+            NodoMatriz *ant = encuentraElAnteriorQueNoEsPiso(ori->anterior);
+            if(ant==NULL)
+            {
+                //MUEVE
+                return 1;
+            }
+            if(ant->pieza->typePieza.compare("CABECERA")==0)
+            {
+                return 1;
+            }
+            if(xdest > ant->x)
+            {
+                //MUEVE
+                return 1;
+            }
+            else if(xdest == ant->x)
+            {
+                if(EsDelColorContrario(color, ant->x,ant->y, ant->z))
+                {
+                    //MUEVE
+                    return 1;
+                }
+            }
+        }
+        else
+        {
+            //BUSCAR SIGUIENTE
+            if(ori->siguiente==NULL)
+            {
+                return 1;
+            }
+            NodoMatriz *sig = encuentraElSiguienteQueNoEsPiso(ori->siguiente);
+            if(sig==NULL)
+            {
+                //MOVER
+                return 1;
+            }
+            if(xdest < sig->x)
+            {
+                //MUEVE
+                return 1;
+            }
+            else if(xdest == sig->x )
+            {
+                if(EsDelColorContrario(color, sig->x, sig->y, sig->z))
+                {
+                    //MUEVE
+                    return 1;
+                }
+            }
+        }
+    }
+    return 0;
+}
+
+bool MatrizOrtogonal::buscaCaballo(string tipopieza, string color, int xdest, int ydest, int zdest)
+{
+    if(!matrizVacia())
+    {
+        NodoMatriz *fil = this->raiz->abajo;
+        while(fil!=NULL)
+        {
+            NodoMatriz *col = fil->siguiente;
+            while(col!=NULL)
+            {
+                if(col->pieza->typePieza.compare(tipopieza)==0 && col->pieza->color.compare(color)==0)
+                {
+                    //VALIDAR
+                    Pieza *p = new Pieza(col->pieza->tipo, col->pieza->PATH);
+                    p->color = col->pieza->color;
+                    p->typePieza = col->pieza->typePieza;
+                    NodoMatriz *copia = new NodoMatriz(col->x, col->y, col->z, p, false);
+                    return mueveCualquierPieza(copia, xdest, ydest, zdest);
+                }
+                col = col->siguiente;
+            }
+            fil = fil->abajo;
+        }
+    }
+    return false;
+}
+
+bool MatrizOrtogonal::validaCaballo(NodoMatriz *ori, string color, int xdest, int ydest, int zdest)
+{
+    if(xdest != ori->x && ydest != ori->y)
+    {
+        if( xdest < ori->x && ydest < ori->y )// anterior | arriba
+        {
+
+        }
+        if( xdest > ori->x && ydest < ori->y)//  arriba /
+        {
+
+        }
+
+    }
+}
+
+//MUVEL CUALQUIER PIEZA
+bool MatrizOrtogonal::mueveCualquierPieza(NodoMatriz *ori, int xdest, int ydest, int zdest)
+{
+    Pieza *nueva = new Pieza(ori->pieza->tipo, ori->pieza->PATH);
+    nueva->color = ori->pieza->color;
+    nueva->typePieza = ori->pieza->typePieza;
+    insertarEnMatriz(xdest, ydest, zdest, nueva);
+    EliminarGeneral(ori->x, ori->y, ori->z);
+    return true;
+}
+
+//ENCARGADOS DE MOVER LOS PEONES
+bool MatrizOrtogonal::muevePeon(NodoMatriz *origen, int xDest, int yDest, int zDest, string color, int codigo)
+{
+    std::cout << codigo << std::endl;
+    if(codigo == 11)
+    {
+        Pieza *nueva = new Pieza(origen->pieza->tipo, origen->pieza->PATH);
+        nueva->color = origen->pieza->color;
+        nueva->typePieza = origen->pieza->typePieza;
+        insertarEnMatriz(xDest, yDest, zDest, nueva);
+        EliminarGeneral(origen->x, origen->y, origen->z);
+        return true;
+    }
+    if(codigo == 21)
+    {
+        Pieza *nueva = new Pieza(origen->pieza->tipo, origen->pieza->PATH);
+        nueva->color = origen->pieza->color;
+        nueva->typePieza = origen->pieza->typePieza;
+        insertarEnMatriz(xDest,yDest,zDest,nueva);
+        EliminarGeneral(origen->x, origen->y,origen->z);
+        return true;
+    }
+    if(codigo == 13)
+    {
+        Pieza *nueva = new Pieza(origen->pieza->tipo, origen->pieza->PATH);
+        nueva->color = origen->pieza->color;
+        nueva->typePieza = origen->pieza->typePieza;
+        int xori = origen->x;
+        int yori = origen->y;
+        int zori = origen->z;
+        EliminarGeneral(xori,yori,zori);
+        insertarEnMatriz(xDest,yDest,zDest,nueva);
+        return true;
+    }
+    return false;
+}
+
+int MatrizOrtogonal::validaPeon(NodoMatriz *ori, int xDest, int yDest, int zDest, string color)
+{
+    if(color.compare("Negro")==0)
+    {
+        //CASO DE MOVIEMIENTO 1: CASILLA ADELANTE SI ES NEGRO
+        if(ori->x==xDest && ori->y+1==yDest)
+        {
+            if(!existeElNodoDestino(xDest, yDest, zDest))
+            {
+                //CODIGO QUE LA PIEZA DESTINO NO EXISTE: 11
+                return 11;
+            }
+            else
+            {
+                //CODIGO DE QUE NO SE REALIZO EL MOVIMIENTO PORQUE NO EXISTE
+                return 12;
+            }
+        }//CASO 2 :DESEA COMER
+        if( (xDest==ori->x-1 && yDest == ori->y-1) || (xDest==ori->x+1 && yDest == ori->y-1 ) )
+        {
+            if(existeElNodoDestino(xDest,yDest,zDest)==true && EsDelColorContrario(color,xDest,yDest,zDest)==true)
+            {//SI EL NODO QUE EXISTE ES DEL COLOR CONTRARIO
+                return 13;
+            }
+            else
+            {
+                return 23;
+            }
+        }
+        return 0;
+    }
+    else
+    {//SI ES BLANCO: CASO 1 MOVER HACIA ADELANTE
+        if(ori->x==xDest && ori->y-1==yDest)
+        {
+            if(!existeElNodoDestino(xDest,yDest,zDest))
+            {
+                return 21;
+            }
+            else
+            {
+                return 22;
+            }
+        }//CASO QUE DESEA COMER LA BLANCA
+        if((xDest==ori->x-1 && yDest == ori->y+1 ) && (xDest==ori->x+1 && yDest == ori->y+1 ))
+        {
+            if(existeElNodoDestino(xDest,yDest,zDest)==true && EsDelColorContrario(color, xDest, yDest, zDest)==true)
+            {
+                return 13;
+            }
+            else
+            {
+                return 23;
+            }
+        }
+
+    }
+    return 0;
+}
+
+bool MatrizOrtogonal::existeElNodoDestino(int x, int y, int z)
+{
+    NodoMatriz *fil = this->raiz->abajo;
+    while(fil!=NULL)
+    {
+        NodoMatriz *col = fil->siguiente;
+        while(col!=NULL)
+        {
+            if(col->x == x && col->y == y)
+            {
+                NodoMatriz *aux = nodoEnNivelN(z,col);
+                if(aux!=NULL && !aux->EsPiso)
+                {
+                    return true;
+                }
+            }
+            col = col->siguiente;
+        }
+        fil = fil->abajo;
+    }
+    return false;
+}
+
+//VERIFICA SI ES DEL COLOR CONTRARIO
+bool MatrizOrtogonal::EsDelColorContrario(string color, int x, int y, int z)
+{
+    NodoMatriz *fil = encuentraFila(y)->siguiente;
+    while(fil!=NULL)
+    {
+        if(fil->x == x && fil->y == y && fil->z == z)
+        {
+            NodoMatriz *aux = nodoEnNivelN(z,fil);
+            if(aux->pieza->color.compare(color)!=0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        fil = fil->siguiente;
+    }
+    return false;
+}
+
+//BUSCA ALA TORRE
+bool MatrizOrtogonal::buscaTorre(string tipopieza, string color, int xdest, int ydest, int zdest)
+{
+    if(!matrizVacia())
+    {
+        NodoMatriz *fil = this->raiz->abajo;
+        while(fil!=NULL)
+        {
+            NodoMatriz *col = fil->siguiente;
+            while(col!=NULL)
+            {
+                if(col->pieza->typePieza.compare(tipopieza)==0 && col->pieza->color.compare(color)==0)
+                {
+                    Pieza *p = new Pieza(col->pieza->tipo, col->pieza->PATH);
+                    p->color = col->pieza->color;
+                    p->typePieza = col->pieza->typePieza;
+                    NodoMatriz *copia = new NodoMatriz(col->x, col->y, col->z, p, false);
+                    return mueveCualquierPieza(copia, xdest, ydest, zdest);
+                }
+                col = col->siguiente;
+            }
+            fil = fil->abajo;
+        }
+    }
+}
+
+//BUSCA AL REY
+bool MatrizOrtogonal::buscaRey(string tipopieza, string color, int xdest, int ydest, int zdest)
+{
+    if(!matrizVacia())
+    {
+        NodoMatriz *fil = this->raiz->abajo;
+        while(fil!=NULL)
+        {
+            NodoMatriz *col = fil->siguiente;
+            while(col!=NULL)
+            {
+                if(col->pieza->typePieza.compare(tipopieza)==0 && col->pieza->color.compare(color)==0)
+                {
+                    Pieza *p = new Pieza(col->pieza->tipo, col->pieza->PATH);
+                    p->color = col->pieza->color;
+                    p->typePieza = col->pieza->typePieza;
+                    NodoMatriz *copia = new NodoMatriz(col->x, col->y, col->z, p, false);
+                    return mueveCualquierPieza(copia, xdest, ydest, zdest);
+                }
+                col = col->siguiente;
+            }
+            fil = fil->abajo;
+        }
+    }
+}
+
+//BUSCA ALA REYNA
+bool MatrizOrtogonal::buscaReyna(string tipopieza, string color, int xdest, int ydest, int zdest)
+{
+    NodoMatriz *fil = this->raiz->abajo;
+    while(fil!=NULL)
+    {
+        NodoMatriz *col = fil->siguiente;
+        while(col!=NULL)
+        {
+            if(col->pieza->typePieza.compare(tipopieza)==0 && col->pieza->color.compare(color)==0)
+            {
+                Pieza *p = new Pieza(col->pieza->tipo, col->pieza->PATH);
+                p->color = col->pieza->color;
+                p->typePieza = col->pieza->typePieza;
+                NodoMatriz *copia = new NodoMatriz(col->x, col->y, col->z, p, false);
+                return mueveCualquierPieza(copia, xdest, ydest, zdest);
+            }
+            col = col->siguiente;
+        }
+        fil = fil->abajo;
+    }
+}
+
+void MatrizOrtogonal::calculaGanador()
+{
+    this->negros = 0;
+    this->blancos = 0;
+    if(!matrizVacia())
+    {
+        NodoMatriz *fil = this->raiz->abajo;
+        while(fil!=NULL)
+        {
+            NodoMatriz *col = fil->siguiente;
+            while(col!=NULL)
+            {
+                if(col->pieza->color.compare("Negro")==0)
+                {
+                    this->negros = this->negros + 1;
+                }
+                if(col->pieza->color.compare("Blanco")==0)
+                {
+                    this->blancos = this->blancos + 1;
+                }
+                col = col->siguiente;
+            }
+            fil = fil->abajo;
+        }
+    }
 }

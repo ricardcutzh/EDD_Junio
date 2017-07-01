@@ -213,6 +213,7 @@ bool ABBPlayers::graphTree()
     else
     {
         actualizarArbol();
+        this->nodosRama = this->nodosRama-1;
         archivo << "digraph ABB{" << std::endl;
         archivo << "label=\"Nodos Hoja: " <<this->nodosHoja << " Nodos Rama: " << this->nodosRama << "\";" << std::endl;
         graphTreeP(archivo,this->root);

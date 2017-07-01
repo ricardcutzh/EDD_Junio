@@ -14,6 +14,8 @@ class MatrizOrtogonal
 {
 public:
     ListaLinealizacion *linea;
+    int negros;
+    int blancos;
     NodoMatriz *raiz;
     std::string letras[9] = {"root","H","G","F","E","D","C","B","A"};
     MatrizOrtogonal();
@@ -62,6 +64,29 @@ public:
     //REPINTAR MATRIZ DE LABELS
     NodoMatriz *nodoEnNivelN(int nivel, NodoMatriz *inicio);
     void pintaMatrizLabels(QLabel *mat[8][8], int nivel);
+    //ME DEVUELVE EL PRIMER NODO QUE COINCIDE CON LA ENTRADA DEL MOVIMIENTO
+    NodoMatriz *buscaNodo(std::string tipoPieza, std::string color);
+    //MOVIMIENTO DE PIEZAS
+    bool muevePeon(NodoMatriz *origen, int xDest, int yDest, int zDest, string color, int codigo);
+    int validaPeon(NodoMatriz *ori, int xDest, int yDest, int zDest, string color);
+    bool existeElNodoDestino(int x, int y, int z);
+    bool enCasillaDestinoHayPiezaColor(int x, int y, int z, std::string color);
+    bool buscaPeonValido(std::string tipopieza, std::string color, int xdes, int ydes, int zdes);
+    bool EsDelColorContrario(std::string color, int x, int y, int z);
+    bool mueveCualquierPieza(NodoMatriz *ori, int xdest, int ydest, int zdest);
+    //ALFIL
+    bool bucaAlfilValido(std::string tipopieza, std::string color, int xdest, int ydest, int zdest);
+    int validaAlfil(NodoMatriz *ori, int xdest, int ydest, int zdest, string color);
+    //CABALLO
+    bool buscaCaballo(std::string tipopieza, std::string color, int xdest, int ydest, int zdest);
+    bool validaCaballo(NodoMatriz *ori,std::string color, int xdest, int ydest, int zdest);
+    //TORRE
+    bool buscaTorre(std::string tipopieza, std::string color, int xdest, int ydest, int zdest);
+    //REY
+    bool buscaRey(std::string tipopieza, std::string color, int xdest, int ydest, int zdest);
+    //REYNA
+    bool buscaReyna(std::string tipopieza, std::string color, int xdest, int ydest, int zdest);
+    void calculaGanador();
 };
 
 #endif // MATRIZORTOGONAL_H

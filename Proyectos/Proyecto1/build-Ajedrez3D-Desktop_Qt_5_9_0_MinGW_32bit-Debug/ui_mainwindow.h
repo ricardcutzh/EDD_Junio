@@ -243,6 +243,7 @@ public:
         Console = new QTextEdit(groupBox_6);
         Console->setObjectName(QStringLiteral("Console"));
         Console->setGeometry(QRect(20, 130, 361, 181));
+        Console->setReadOnly(true);
         label_13 = new QLabel(groupBox_6);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setGeometry(QRect(20, 105, 71, 21));

@@ -19,7 +19,6 @@
 #include <fstream>
 #include <QLabel>
 #include <QPixmap>
-
 //AQUI DECLARARE MIS PROTOTIPOS DE FUNCIONES
 void inicializaArbol();
 bool leerArchivoDeJugadores(std::string ruta);
@@ -44,5 +43,11 @@ void realizaLinealizacion(int nivel, std::string tipo);
 bool realizaGrafoLinealizacion();
 void limpiaLinealizacion();
 void actualizarTablero(QLabel *l0[8][8], QLabel *l1[8][8], QLabel *l2[8][8]);
-void muevePieza(std::string entrada);
+void despintaTableros(QLabel *mat[8][8]);
+bool muevePieza(std::string entrada, std::string color);
+std::string devuelvemeTipoDePieza(std::string inicial);
+int indice(std::string l);
+void calculaFuncionGanador();
+int cantidadNegros();
+int cantidadBlancos();
 #endif // FUNCIONES_H

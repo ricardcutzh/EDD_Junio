@@ -397,12 +397,16 @@ void limpiaLinealizacion()
 //ACTUALIZA EL TABLERO EN LA INTERFAZ GRAFICA
 void actualizarTablero(QLabel *l0[8][8], QLabel *l1[8][8], QLabel *l2[8][8])
 {
+    despintaTableros(l0);
+    despintaTableros(l1);
+    despintaTableros(l2);
     matriz->pintaMatrizLabels(l0,0);
     matriz->pintaMatrizLabels(l1,1);
     matriz->pintaMatrizLabels(l2,2);
 }
 
-void muevePieza(string entrada)
+//RECIVE LA ENTRADA PARA PODER REALIZAR UN MOVIMIENTO
+bool muevePieza(string entrada, string color)
 {
     std::string inicial;
     std::string nivel;
@@ -410,8 +414,115 @@ void muevePieza(string entrada)
     std::stringstream ent(entrada);
     std::getline(ent,inicial,'-');
     std::getline(ent, nivel, '-');
-    std::getline(ent, casillas, '-');
-    std::cout << inicial << std::endl;
-    std::cout << nivel << std::endl;
-    std::cout << casillas << std::endl;
+    std::getline(ent, casillas, '\n');
+    inicial = devuelvemeTipoDePieza(inicial);
+    int lev = std::stoi(nivel);
+    std::string sy = casillas.substr(0,1);
+    int x = std::stoi(casillas.substr(1,1));
+    int y = indice(sy);
+    if(x<=8 && x>0 && y>0 && y<=8 && inicial.compare("")!=0 && lev <=2)
+    {
+        if(inicial.compare("peon")==0)
+        {
+            return matriz->buscaPeonValido(inicial, color, x, y, lev);
+        }
+        if(inicial.compare("alfil")==0)
+        {
+            return matriz->bucaAlfilValido(inicial, color, x, y, lev);
+        }
+        if(inicial.compare("caballo")==0)
+        {
+            return matriz->buscaCaballo(inicial, color, x, y, lev);
+        }
+        if(inicial.compare("torre")==0)
+        {
+            return matriz->buscaTorre(inicial, color, x, y, lev);
+        }
+        if(inicial.compare("rey")==0)
+        {
+            return matriz->buscaRey(inicial, color, x, y, lev);
+        }
+        if(inicial.compare("dama")==0)
+        {
+            return matriz->buscaReyna(inicial, color, x, y, lev);
+        }
+    }
+    else
+    {
+        return false;
+    }
+
+}
+
+//CONVIERTE LA INICIAL AL TIPO DE PIEZA QUE DEBE DE PROCESAR
+string devuelvemeTipoDePieza(string inicial)
+{
+    if(inicial.compare("P")==0)
+    {
+        return "peon";
+    }
+    if(inicial.compare("T")==0)
+    {
+        return "torre";
+    }
+    if(inicial.compare("A")==0)
+    {
+        return "alfil";
+    }
+    if(inicial.compare("C")==0)
+    {
+        return "caballo";
+    }
+    if(inicial.compare("R")==0)
+    {
+        return "rey";
+    }
+    if(inicial.compare("D")==0)
+    {
+        return "dama";
+    }
+    return "";
+}
+
+//DEVUELVE EL INDICE QUE TIENE PARA PODER UBICARLO EN EL LA MATRIZ
+int indice(string l)
+{
+    std::string auxiliarArray[9] = {"root","H","G","F","E","D","C","B","A"};
+    for(int i = 0; i < 9; i++)
+    {
+        if(auxiliarArray[i].compare(l)==0)
+        {
+            return i;
+        }
+    }
+    return 0;
+}
+
+//DESPINTA TODO TABLEROS PARA EVITAR QUE QUEDEN LABELS PINTADOS
+void despintaTableros(QLabel *mat[8][8])
+{
+    for(int i=0; i<8; i++)
+    {
+        for(int j = 0; j<8 ;j++)
+        {
+            QPixmap img("");
+            mat[i][j]->setPixmap(img);
+            mat[i][j]->repaint();
+        }
+    }
+}
+
+void calculaFuncionGanador()
+{
+    matriz->calculaGanador();
+}
+
+int cantidadBlancos()
+{
+    return matriz->blancos;
+}
+
+int cantidadNegros()
+{
+    return matriz->negros;
 }

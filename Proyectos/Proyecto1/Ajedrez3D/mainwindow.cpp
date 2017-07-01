@@ -13,6 +13,8 @@ QLabel *d;
 QLabel *b;
 Jugador *player1;
 Jugador *player2;
+bool turnoPl1;
+bool turnoPl2;
 QVBoxLayout* layMatrix = new QVBoxLayout();
 QVBoxLayout* layTree = new QVBoxLayout();
 //LAYOUTSTABLEROS//
@@ -189,7 +191,12 @@ void MainWindow::on_pushButton_6_clicked()
     {
         ui->pl1Name->setText(QString::fromStdString(config->pl1));
         ui->pl2Name->setText(QString::fromStdString(config->pl2));
-
+        player1 = new Jugador(ui->pl1Name->text().toStdString(),0,0);
+        turnoPl1 = true;
+        ui->CurrentPlayer->setText(QString::fromStdString(player1->nombre));
+        ui->Console->append("Turno: "+QString::fromStdString(player1->nombre));
+        player2 = new Jugador(ui->pl2Name->text().toStdString(),0,0);
+        turnoPl2 = false;
         if(config->Tiempo)
         {
             ui->GameType->setText("Tiempo");
@@ -207,6 +214,7 @@ void MainWindow::on_pushButton_6_clicked()
         ui->Move->setEnabled(true);
         ui->Console->setEnabled(true);
         ui->BotonMover->setEnabled(true);
+        ui->Console->setText("");
     }
     else
     {
@@ -235,7 +243,21 @@ void MainWindow::updateGameTime()
            ui->Move->setEnabled(false);
            ui->Console->setEnabled(false);
            ui->BotonMover->setEnabled(false);
-           QMessageBox::warning(this,"Game Over","Fin de Partida!");
+           calculaFuncionGanador();
+           int n = cantidadNegros();
+           int b = cantidadBlancos();
+           if(b > n)
+           {
+               QMessageBox::warning(this,"Game Over","Fin de Partida Gana Jugador 2: "+QString::fromStdString(player2->nombre));
+           }
+           else if(b < n)
+           {
+                QMessageBox::warning(this,"Game Over","Fin de Partida Gana Jugador 1: "+QString::fromStdString(player1->nombre));
+           }
+           else
+           {
+               QMessageBox::warning(this,"Game Over","Fin de Partida en Empate!");
+           }
        }
        else
        {
@@ -421,10 +443,60 @@ void MainWindow::PintaTableros()
 void MainWindow::on_BotonMover_clicked()
 {
     std::string entrada = ui->Move->text().toStdString();
-    muevePieza(entrada);
+    if(entrada.compare("")!=0)
+    {
+        if(turnoPl1)
+        {
+            if(muevePieza(entrada,"Negro"))
+            {
+                actualizarTablero(l0,l1,l2);
+                ui->Console->append("--------------------");
+                ui->Console->append(ui->Move->text());
+                ui->Console->append("--------------------");
+                ManejaTurnos();
+            }
+            else
+            {
+                QMessageBox::warning(this,"Error","Movimiento No Valido");
+            }
+        }
+        else
+        {
+            if(muevePieza(entrada,"Blanco"))
+            {
+                actualizarTablero(l0,l1,l2);
+                ui->Console->append("--------------------");
+                ui->Console->append(ui->Move->text());
+                ui->Console->append("--------------------");
+                ManejaTurnos();
+            }
+            else
+            {
+                QMessageBox::warning(this,"Error","Movimiento No Valido");
+            }
+        }
+    }
+    else
+    {
+        QMessageBox::warning(this, "Error:","No ha ingresado un movimiento");
+    }
 }
 
+//SOLO SE ENCARGA DE CAMBIAR QUIEN ES EL JUGADOR EN TURNO
 void MainWindow::ManejaTurnos()
 {
-
+    if(turnoPl1)
+    {
+        turnoPl1 = false;
+        ui->CurrentPlayer->setText(QString::fromStdString(player2->nombre));
+        ui->Console->append("Turno: "+QString::fromStdString(player2->nombre));
+        turnoPl2 = true;
+    }
+    else
+    {
+        turnoPl2 = false;
+        ui->CurrentPlayer->setText(QString::fromStdString(player1->nombre));
+        ui->Console->append("Turno: "+QString::fromStdString(player1->nombre));
+        turnoPl1 = true;
+    }
 }
