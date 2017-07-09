@@ -1,16 +1,22 @@
 digraph ABB{
-label="Nodos Hoja: 3 Nodos Rama: 4";
-"H";
-"H"->"CH";
-"H"->"Z";
-"CH";
-"CH"->"A";
-"CH"->"D";
-"A";
-"A"->"B";
-"B";
-"D";
-"Z";
-"Z"->"J";
-"J";
+label="Nodos Hoja: 3 Nodos Rama: 6";
+"Kristel";
+"Kristel"->"Calificacion";
+"Kristel"->"Zoe";
+"Calificacion";
+"Calificacion"->"Bianca";
+"Calificacion"->"Joseph";
+"Bianca";
+"Bianca"->"Andres";
+"Andres";
+"Andres"->"Beto";
+"Beto";
+"Joseph";
+"Joseph"->"Jorge";
+"Jorge";
+"Jorge"->"Dani";
+"Dani";
+"Zoe";
+"Zoe"->"Uziel";
+"Uziel";
 }

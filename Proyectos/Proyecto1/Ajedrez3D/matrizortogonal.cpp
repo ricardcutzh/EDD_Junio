@@ -1832,3 +1832,26 @@ void MatrizOrtogonal::calculaGanador()
         }
     }
 }
+
+int MatrizOrtogonal::cuentaReinas()
+{
+    int n = 0;
+    if(!matrizVacia())
+    {
+        NodoMatriz *fil = this->raiz->abajo;
+        while(fil!=NULL)
+        {
+            NodoMatriz *col = fil->siguiente;
+            while(col!=NULL)
+            {
+                if(col->pieza->typePieza.compare("dama")==0)
+                {
+                    n = n+1;
+                }
+                col = col->siguiente;
+            }
+            fil = fil->abajo;
+        }
+    }
+    return n;
+}

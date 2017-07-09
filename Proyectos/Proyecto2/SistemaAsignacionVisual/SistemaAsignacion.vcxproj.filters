@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacion\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacion\sistemaasignacion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\Usuario.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\NodoUsuario.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\ListaUsuarios.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacion\sistemaasignacion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacion\ui_sistemaasignacion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\Usuario.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\NodoUsuario.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\ListaUsuarios.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacion\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{78E7B600-0432-3DB1-964E-8435E533FA75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{1EB799B4-08FF-392E-998F-C0DF1DE57AF7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -454,6 +454,11 @@ bool muevePieza(string entrada, string color)
 
 }
 
+int cantidadDeDamas()
+{
+    return matriz->cuentaReinas();
+}
+
 //CONVIERTE LA INICIAL AL TIPO DE PIEZA QUE DEBE DE PROCESAR
 string devuelvemeTipoDePieza(string inicial)
 {

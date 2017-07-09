@@ -1,12 +1,15 @@
 digraph top{
 node [shape=box];
 label="Top 10 Players ";
-"Nombre: D | Vic: 7"->"Nombre: H | Vic: 5";
-"Nombre: H | Vic: 5"->"Nombre: B | Vic: 4";
-"Nombre: B | Vic: 4"->"Nombre: Z | Vic: 4";
-"Nombre: Z | Vic: 4"->"Nombre: CH | Vic: 2";
-"Nombre: CH | Vic: 2"->"Nombre: J | Vic: 2";
-"Nombre: J | Vic: 2"->"Nombre: A | Vic: 1";
-"Nombre: A | Vic: 1";
-{rank=same;"Nombre: D | Vic: 7";"Nombre: H | Vic: 5";"Nombre: B | Vic: 4";"Nombre: Z | Vic: 4";"Nombre: CH | Vic: 2";"Nombre: J | Vic: 2";"Nombre: A | Vic: 1";}
+"Nombre: Calificacion | Vic: 100"->"Nombre: Kristel | Vic: 8";
+"Nombre: Kristel | Vic: 8"->"Nombre: Joseph | Vic: 7";
+"Nombre: Joseph | Vic: 7"->"Nombre: Dani | Vic: 7";
+"Nombre: Dani | Vic: 7"->"Nombre: Jorge | Vic: 5";
+"Nombre: Jorge | Vic: 5"->"Nombre: Andres | Vic: 4";
+"Nombre: Andres | Vic: 4"->"Nombre: Beto | Vic: 4";
+"Nombre: Beto | Vic: 4"->"Nombre: Zoe | Vic: 4";
+"Nombre: Zoe | Vic: 4"->"Nombre: Bianca | Vic: 2";
+"Nombre: Bianca | Vic: 2"->"Nombre: Uziel | Vic: 0";
+"Nombre: Uziel | Vic: 0";
+{rank=same;"Nombre: Calificacion | Vic: 100";"Nombre: Kristel | Vic: 8";"Nombre: Joseph | Vic: 7";"Nombre: Dani | Vic: 7";"Nombre: Jorge | Vic: 5";"Nombre: Andres | Vic: 4";"Nombre: Beto | Vic: 4";"Nombre: Zoe | Vic: 4";"Nombre: Bianca | Vic: 2";"Nombre: Uziel | Vic: 0";}
 }

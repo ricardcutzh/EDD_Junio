@@ -1,0 +1,710 @@
+﻿  sistemaasignacion.cpp
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WStringStream(210): warning C4251: 'Wt::WStringStream::bufs_': class 'std::vector<std::pair<char *,int>,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WStringStream'
+          with
+          [
+              _Ty=std::pair<char *,int>
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WStringStream(210): note: vea la declaración de 'std::vector<std::pair<char *,int>,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=std::pair<char *,int>
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/Http/Message(70): warning C4251: 'Wt::Http::Message::Header::name_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::Http::Message::Header'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/Http/Message(70): warning C4251: 'Wt::Http::Message::Header::value_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::Http::Message::Header'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/Http/Message(148): warning C4251: 'Wt::Http::Message::headers_': class 'std::vector<Wt::Http::Message::Header,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::Http::Message'
+          with
+          [
+              _Ty=Wt::Http::Message::Header
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/Http/Message(85): note: vea la declaración de 'std::vector<Wt::Http::Message::Header,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::Http::Message::Header
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/Http/Request(110): warning C4251: 'Wt::Http::UploadedFile::fileInfo_': class 'boost::shared_ptr<Wt::Http::UploadedFile::Impl>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::Http::UploadedFile'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/Http/Request(110): note: vea la declaración de 'boost::shared_ptr<Wt::Http::UploadedFile::Impl>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/Http/Request(183): warning C4251: 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>::_Mypair': class 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<Wt::Http::Request::ByteRange>>,true>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'std::_Vector_alloc<std::_Vec_base_types<_Ty,_Alloc>>'
+          with
+          [
+              _Ty=Wt::Http::Request::ByteRange,
+              _Alloc=std::allocator<Wt::Http::Request::ByteRange>
+          ]
+          and
+          [
+              _Ty=Wt::Http::Request::ByteRange
+          ]
+          and
+          [
+              _Ty=Wt::Http::Request::ByteRange,
+              _Alloc=std::allocator<Wt::Http::Request::ByteRange>
+          ]
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vector(672): note: vea la declaración de 'std::_Compressed_pair<std::_Wrap_alloc<std::allocator<_Ty>>,std::_Vector_val<std::_Simple_types<Wt::Http::Request::ByteRange>>,true>'
+          with
+          [
+              _Ty=Wt::Http::Request::ByteRange
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/Http/Request(450): warning C4251: 'Wt::Http::Request::cookies_': class 'std::map<std::string,std::string,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::Http::Request'
+          with
+          [
+              _Kty=std::string,
+              _Ty=std::string
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/Http/Request(216): note: vea la declaración de 'std::map<std::string,std::string,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=std::string
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WObject(242): warning C4275: se ha utilizado una interfaz no de DLL class 'boost::signals2::trackable' como base para la interfaz DLL class 'Wt::WObject'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/trackable.hpp(38): note: vea la declaración de 'boost::signals2::trackable'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WObject(241): note: vea la declaración de 'Wt::WObject'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WObject(527): warning C4251: 'Wt::WObject::statelessSlots_': class 'std::vector<Wt::WStatelessSlot *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WObject'
+          with
+          [
+              _Ty=Wt::WStatelessSlot *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WObject(527): note: vea la declaración de 'std::vector<Wt::WStatelessSlot *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WStatelessSlot *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WObject(533): warning C4251: 'Wt::WObject::name_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WObject'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WObject(544): warning C4251: 'Wt::WObject::emptyObjectList_': class 'std::vector<Wt::WObject *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WObject'
+          with
+          [
+              _Ty=Wt::WObject *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WObject(442): note: vea la declaración de 'std::vector<Wt::WObject *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WObject *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WObject(553): warning C4251: 'Wt::WObject::trackable_ptr_': class 'boost::shared_ptr<T>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WObject'
+          with
+          [
+              T=int
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/smart_ptr/weak_ptr.hpp(176): note: vea la declaración de 'boost::shared_ptr<T>'
+          with
+          [
+              T=int
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WString(532): warning C4251: 'Wt::WString::utf8_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WString'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WString(546): warning C4251: 'Wt::WString::stArguments_': class 'std::vector<Wt::WString,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WString'
+          with
+          [
+              _Ty=Wt::WString
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WString(492): note: vea la declaración de 'std::vector<Wt::WString,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WString
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAnimation(173): warning C4251: 'Wt::WAnimation::effects_': class 'Wt::WFlags<Wt::WAnimation::AnimationEffect>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WAnimation'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAnimation(77): note: vea la declaración de 'Wt::WFlags<Wt::WAnimation::AnimationEffect>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WSignal(572): warning C4251: 'Wt::EventSignalBase::connections_': class 'std::vector<Wt::EventSignalBase::StatelessConnection,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::EventSignalBase'
+          with
+          [
+              _Ty=Wt::EventSignalBase::StatelessConnection
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WSignal(572): note: vea la declaración de 'std::vector<Wt::EventSignalBase::StatelessConnection,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::EventSignalBase::StatelessConnection
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WSignal(573): warning C4251: 'Wt::EventSignalBase::flags_': class 'std::bitset<7>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::EventSignalBase'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WSignal(573): note: vea la declaración de 'std::bitset<7>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WSignal(580): warning C4251: 'Wt::EventSignalBase::dummy_': class 'boost::signals2::signal<void (void),boost::signals2::optional_last_value<void>,int,std::less<int>,boost::function<Signature>,boost::function<R (const boost::signals2::connection &)>,boost::signals2::mutex>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::EventSignalBase'
+          with
+          [
+              Signature=void (void),
+              R=void
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WSignal(580): note: vea la declaración de 'boost::signals2::signal<void (void),boost::signals2::optional_last_value<void>,int,std::less<int>,boost::function<Signature>,boost::function<R (const boost::signals2::connection &)>,boost::signals2::mutex>'
+          with
+          [
+              Signature=void (void),
+              R=void
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WEvent(89): warning C4251: 'Wt::JavaScriptEvent::modifiers': class 'Wt::WFlags<Wt::KeyboardModifier>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::JavaScriptEvent'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WGlobal(758): note: vea la declaración de 'Wt::WFlags<Wt::KeyboardModifier>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WEvent(92): warning C4251: 'Wt::JavaScriptEvent::touches': class 'std::vector<Wt::Touch,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::JavaScriptEvent'
+          with
+          [
+              _Ty=Wt::Touch
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WEvent(92): note: vea la declaración de 'std::vector<Wt::Touch,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::Touch
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WEvent(92): warning C4251: 'Wt::JavaScriptEvent::targetTouches': class 'std::vector<Wt::Touch,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::JavaScriptEvent'
+          with
+          [
+              _Ty=Wt::Touch
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WEvent(92): note: vea la declaración de 'std::vector<Wt::Touch,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::Touch
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WEvent(92): warning C4251: 'Wt::JavaScriptEvent::changedTouches': class 'std::vector<Wt::Touch,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::JavaScriptEvent'
+          with
+          [
+              _Ty=Wt::Touch
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WEvent(92): note: vea la declaración de 'std::vector<Wt::Touch,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::Touch
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WEvent(101): warning C4251: 'Wt::JavaScriptEvent::type': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::JavaScriptEvent'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WEvent(104): warning C4251: 'Wt::JavaScriptEvent::tid': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::JavaScriptEvent'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WEvent(106): warning C4251: 'Wt::JavaScriptEvent::response': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::JavaScriptEvent'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WEvent(108): warning C4251: 'Wt::JavaScriptEvent::userEventArgs': class 'std::vector<std::string,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::JavaScriptEvent'
+          with
+          [
+              _Ty=std::string
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/Http/Request(119): note: vea la declaración de 'std::vector<std::string,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=std::string
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WEvent(467): warning C4251: 'Wt::WDropEvent::dropMimeType_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WDropEvent'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WException(19): warning C4275: se ha utilizado una interfaz no de DLL class 'std::exception' como base para la interfaz DLL class 'Wt::WException'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\vcruntime_exception.h(43): note: vea la declaración de 'std::exception'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WException(18): note: vea la declaración de 'Wt::WException'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WException(42): warning C4251: 'Wt::WException::what_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WException'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLogger(227): warning C4251: 'Wt::WLogger::fields_': class 'std::vector<Wt::WLogger::Field,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLogger'
+          with
+          [
+              _Ty=Wt::WLogger::Field
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLogger(182): note: vea la declaración de 'std::vector<Wt::WLogger::Field,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WLogger::Field
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLogger(235): warning C4251: 'Wt::WLogger::rules_': class 'std::vector<Wt::WLogger::Rule,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLogger'
+          with
+          [
+              _Ty=Wt::WLogger::Rule
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLogger(235): note: vea la declaración de 'std::vector<Wt::WLogger::Rule,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WLogger::Rule
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WJavaScript(386): warning C4251: 'Wt::JSignal<Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>::name_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::JSignal<Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WJavaScript(386): warning C4251: 'Wt::JSignal<Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>::senderId_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::JSignal<Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWidget(1356): warning C4251: 'Wt::WWidget::flags_': class 'std::bitset<7>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WWidget'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WSignal(573): note: vea la declaración de 'std::bitset<7>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWidget(1358): warning C4251: 'Wt::WWidget::eventSignals_': class 'std::list<Wt::EventSignalBase *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WWidget'
+          with
+          [
+              _Ty=Wt::EventSignalBase *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWidget(1321): note: vea la declaración de 'std::list<Wt::EventSignalBase *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::EventSignalBase *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWidget(1359): warning C4251: 'Wt::WWidget::jsignals_': class 'std::vector<Wt::EventSignalBase *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WWidget'
+          with
+          [
+              _Ty=Wt::EventSignalBase *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWidget(1359): note: vea la declaración de 'std::vector<Wt::EventSignalBase *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::EventSignalBase *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(407): warning C4251: 'Wt::WWebWidget::elementTagName_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WWebWidget'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(410): warning C4251: 'Wt::WWebWidget::AllChangeFlags': class 'std::bitset<36>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WWebWidget'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(410): note: vea la declaración de 'std::bitset<36>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(418): warning C4251: 'Wt::WWebWidget::flags_': class 'std::bitset<36>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WWebWidget'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(410): note: vea la declaración de 'std::bitset<36>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(529): warning C4251: 'Wt::WWebWidget::emptyWidgetList_': class 'std::vector<Wt::WWidget *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WWebWidget'
+          with
+          [
+              _Ty=Wt::WWidget *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(278): note: vea la declaración de 'std::vector<Wt::WWidget *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WWidget *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLink(186): warning C4251: 'Wt::WLink::value_': class 'boost::variant<std::string,Wt::WResource *,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLink'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLink(186): note: vea la declaración de 'boost::variant<std::string,Wt::WResource *,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssDecorationStyle(220): warning C4251: 'Wt::WCssDecorationStyle::cursorImage_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WCssDecorationStyle'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssDecorationStyle(226): warning C4251: 'Wt::WCssDecorationStyle::backgroundImageLocation_': class 'Wt::WFlags<Wt::Side>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WCssDecorationStyle'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WGlobal(403): note: vea la declaración de 'Wt::WFlags<Wt::Side>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssDecorationStyle(228): warning C4251: 'Wt::WCssDecorationStyle::textDecoration_': class 'Wt::WFlags<Wt::WCssDecorationStyle::TextDecoration>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WCssDecorationStyle'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssDecorationStyle(206): note: vea la declaración de 'Wt::WFlags<Wt::WCssDecorationStyle::TextDecoration>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssStyleSheet(78): warning C4251: 'Wt::WCssRule::selector_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WCssRule'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssStyleSheet(286): warning C4251: 'Wt::WCssStyleSheet::media_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WCssStyleSheet'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssStyleSheet(288): warning C4251: 'Wt::WCssStyleSheet::rules_': class 'std::vector<Wt::WCssRule *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WCssStyleSheet'
+          with
+          [
+              _Ty=Wt::WCssRule *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssStyleSheet(282): note: vea la declaración de 'std::vector<Wt::WCssRule *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WCssRule *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssStyleSheet(289): warning C4251: 'Wt::WCssStyleSheet::rulesAdded_': class 'std::vector<Wt::WCssRule *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WCssStyleSheet'
+          with
+          [
+              _Ty=Wt::WCssRule *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssStyleSheet(282): note: vea la declaración de 'std::vector<Wt::WCssRule *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WCssRule *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssStyleSheet(291): warning C4251: 'Wt::WCssStyleSheet::rulesModified_': class 'std::set<Wt::WCssRule *,std::less<_Kty>,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WCssStyleSheet'
+          with
+          [
+              _Kty=Wt::WCssRule *,
+              _Ty=Wt::WCssRule *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssStyleSheet(283): note: vea la declaración de 'std::set<Wt::WCssRule *,std::less<_Kty>,std::allocator<_Ty>>'
+          with
+          [
+              _Kty=Wt::WCssRule *,
+              _Ty=Wt::WCssRule *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssStyleSheet(292): warning C4251: 'Wt::WCssStyleSheet::rulesRemoved_': class 'std::vector<std::string,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WCssStyleSheet'
+          with
+          [
+              _Ty=std::string
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/Http/Request(119): note: vea la declaración de 'std::vector<std::string,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=std::string
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssStyleSheet(294): warning C4251: 'Wt::WCssStyleSheet::defined_': class 'std::set<std::string,std::less<_Kty>,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WCssStyleSheet'
+          with
+          [
+              _Kty=std::string,
+              _Ty=std::string
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssStyleSheet(294): note: vea la declaración de 'std::set<std::string,std::less<_Kty>,std::allocator<_Ty>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=std::string
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLocale(233): warning C4251: 'Wt::WLocale::name_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLocale'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLocale(234): warning C4251: 'Wt::WLocale::decimalPoint_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLocale'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLocale(234): warning C4251: 'Wt::WLocale::groupSeparator_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLocale'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLocale(237): warning C4251: 'Wt::WLocale::time_zone_': class 'boost::shared_ptr<tz_type>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLocale'
+          with
+          [
+              tz_type=boost::date_time::time_zone_base<boost::posix_time::ptime,char>
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/date_time/local_time/local_date_time.hpp(82): note: vea la declaración de 'boost::shared_ptr<tz_type>'
+          with
+          [
+              tz_type=boost::date_time::time_zone_base<boost::posix_time::ptime,char>
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WMessageResourceBundle(171): warning C4251: 'Wt::WMessageResourceBundle::messageResources_': class 'std::vector<Wt::WMessageResources *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WMessageResourceBundle'
+          with
+          [
+              _Ty=Wt::WMessageResources *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WMessageResourceBundle(171): note: vea la declaración de 'std::vector<Wt::WMessageResources *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WMessageResources *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2183): warning C4251: 'Wt::WApplication::requestTooLarge_': class 'Wt::Signal<int64_t,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(1876): note: vea la declaración de 'Wt::Signal<int64_t,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2225): warning C4251: 'Wt::WApplication::weakSession_': class 'boost::weak_ptr<Wt::WebSession>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2225): note: vea la declaración de 'boost::weak_ptr<Wt::WebSession>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2237): warning C4251: 'Wt::WApplication::renderedInternalPath_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2237): warning C4251: 'Wt::WApplication::newInternalPath_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2238): warning C4251: 'Wt::WApplication::internalPathChanged_': class 'Wt::Signal<std::string,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(954): note: vea la declaración de 'Wt::Signal<std::string,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2238): warning C4251: 'Wt::WApplication::internalPathInvalid_': class 'Wt::Signal<std::string,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(954): note: vea la declaración de 'Wt::Signal<std::string,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2246): warning C4251: 'Wt::WApplication::javaScriptClass_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2256): warning C4251: 'Wt::WApplication::htmlClass_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2256): warning C4251: 'Wt::WApplication::bodyClass_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2262): warning C4251: 'Wt::WApplication::focusId_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2266): warning C4251: 'Wt::WApplication::scriptLibraries_': class 'std::vector<Wt::WApplication::ScriptLibrary,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+          with
+          [
+              _Ty=Wt::WApplication::ScriptLibrary
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2266): note: vea la declaración de 'std::vector<Wt::WApplication::ScriptLibrary,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WApplication::ScriptLibrary
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2270): warning C4251: 'Wt::WApplication::styleSheets_': class 'std::vector<Wt::WCssStyleSheet,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+          with
+          [
+              _Ty=Wt::WCssStyleSheet
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2270): note: vea la declaración de 'std::vector<Wt::WCssStyleSheet,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WCssStyleSheet
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2271): warning C4251: 'Wt::WApplication::styleSheetsToRemove_': class 'std::vector<Wt::WCssStyleSheet,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+          with
+          [
+              _Ty=Wt::WCssStyleSheet
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2270): note: vea la declaración de 'std::vector<Wt::WCssStyleSheet,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WCssStyleSheet
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2275): warning C4251: 'Wt::WApplication::metaHeaders_': class 'std::vector<Wt::MetaHeader,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+          with
+          [
+              _Ty=Wt::MetaHeader
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2275): note: vea la declaración de 'std::vector<Wt::MetaHeader,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::MetaHeader
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2276): warning C4251: 'Wt::WApplication::metaLinks_': class 'std::vector<Wt::WApplication::MetaLink,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+          with
+          [
+              _Ty=Wt::WApplication::MetaLink
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2276): note: vea la declaración de 'std::vector<Wt::WApplication::MetaLink,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WApplication::MetaLink
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2278): warning C4251: 'Wt::WApplication::exposedSignals_': class 'std::map<std::string,Wt::EventSignalBase *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+          with
+          [
+              _Kty=std::string,
+              _Ty=Wt::EventSignalBase *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2212): note: vea la declaración de 'std::map<std::string,Wt::EventSignalBase *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=Wt::EventSignalBase *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2279): warning C4251: 'Wt::WApplication::exposedResources_': class 'std::map<std::string,Wt::WResource *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+          with
+          [
+              _Kty=std::string,
+              _Ty=Wt::WResource *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2213): note: vea la declaración de 'std::map<std::string,Wt::WResource *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=Wt::WResource *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2280): warning C4251: 'Wt::WApplication::encodedObjects_': class 'std::map<std::string,Wt::WObject *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+          with
+          [
+              _Kty=std::string,
+              _Ty=Wt::WObject *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(329): note: vea la declaración de 'std::map<std::string,Wt::WObject *,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=Wt::WObject *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2282): warning C4251: 'Wt::WApplication::justRemovedSignals_': class 'std::set<std::string,std::less<_Kty>,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+          with
+          [
+              _Kty=std::string,
+              _Ty=std::string
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WCssStyleSheet(294): note: vea la declaración de 'std::set<std::string,std::less<_Kty>,std::allocator<_Ty>>'
+          with
+          [
+              _Kty=std::string,
+              _Ty=std::string
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2287): warning C4251: 'Wt::WApplication::afterLoadJavaScript_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2287): warning C4251: 'Wt::WApplication::beforeLoadJavaScript_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2289): warning C4251: 'Wt::WApplication::autoJavaScript_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2293): warning C4251: 'Wt::WApplication::javaScriptPreamble_': class 'std::vector<Wt::WJavaScriptPreamble,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+          with
+          [
+              _Ty=Wt::WJavaScriptPreamble
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2293): note: vea la declaración de 'std::vector<Wt::WJavaScriptPreamble,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WJavaScriptPreamble
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2298): warning C4251: 'Wt::WApplication::javaScriptLoaded_': class 'std::set<const char *,std::less<_Kty>,std::allocator<_Kty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+          with
+          [
+              _Kty=const char *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2298): note: vea la declaración de 'std::set<const char *,std::less<_Kty>,std::allocator<_Kty>>'
+          with
+          [
+              _Kty=const char *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2301): warning C4251: 'Wt::WApplication::showLoadingIndicator_': class 'Wt::EventSignal<Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(306): note: vea la declaración de 'Wt::EventSignal<Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2301): warning C4251: 'Wt::WApplication::hideLoadingIndicator_': class 'Wt::EventSignal<Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(306): note: vea la declaración de 'Wt::EventSignal<Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2304): warning C4251: 'Wt::WApplication::objectStore_': class 'std::map<const char *,boost::any,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WApplication'
+          with
+          [
+              _Kty=const char *,
+              _Ty=boost::any
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WApplication(2304): note: vea la declaración de 'std::map<const char *,boost::any,std::less<_Kty>,std::allocator<std::pair<const _Kty,_Ty>>>'
+          with
+          [
+              _Kty=const char *,
+              _Ty=boost::any
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WResource(417): warning C4251: 'Wt::WResource::mutex_': class 'boost::shared_ptr<boost::recursive_mutex>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WResource'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WResource(417): note: vea la declaración de 'boost::shared_ptr<boost::recursive_mutex>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WResource(420): warning C4251: 'Wt::WResource::useDone_': class 'boost::condition_variable_any' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WResource'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/thread/win32/condition_variable.hpp(441): note: vea la declaración de 'boost::condition_variable_any'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WResource(424): warning C4251: 'Wt::WResource::dataReceived_': class 'Wt::Signal<uint64_t,uint64_t,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WResource'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WResource(329): note: vea la declaración de 'Wt::Signal<uint64_t,uint64_t,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WResource(425): warning C4251: 'Wt::WResource::dataExceeded_': class 'Wt::Signal<uint64_t,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WResource'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WResource(331): note: vea la declaración de 'Wt::Signal<uint64_t,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WResource(429): warning C4251: 'Wt::WResource::continuations_': class 'std::vector<Wt::Http::ResponseContinuationPtr,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WResource'
+          with
+          [
+              _Ty=Wt::Http::ResponseContinuationPtr
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WResource(429): note: vea la declaración de 'std::vector<Wt::Http::ResponseContinuationPtr,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::Http::ResponseContinuationPtr
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WResource(440): warning C4251: 'Wt::WResource::currentUrl_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WResource'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WResource(441): warning C4251: 'Wt::WResource::internalPath_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WResource'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WStreamResource(108): warning C4251: 'Wt::WStreamResource::mimeType_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WStreamResource'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WFileResource(105): warning C4251: 'Wt::WFileResource::fileName_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WFileResource'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WContainerWidget(388): warning C4251: 'Wt::WContainerWidget::flags_': class 'std::bitset<8>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WContainerWidget'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WContainerWidget(388): note: vea la declaración de 'std::bitset<8>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WContainerWidget(389): warning C4251: 'Wt::WContainerWidget::contentAlignment_': class 'Wt::WFlags<Wt::AlignmentFlag>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WContainerWidget'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WGlobal(479): note: vea la declaración de 'Wt::WFlags<Wt::AlignmentFlag>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WPanel(203): warning C4251: 'Wt::WPanel::collapsedSS_': class 'Wt::Signal<bool,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WPanel'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWidget(1100): note: vea la declaración de 'Wt::Signal<bool,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WPanel(203): warning C4251: 'Wt::WPanel::expandedSS_': class 'Wt::Signal<bool,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WPanel'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWidget(1100): note: vea la declaración de 'Wt::Signal<bool,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WTabWidget(260): warning C4251: 'Wt::WTabWidget::currentChanged_': class 'Wt::Signal<int,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WTabWidget'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WTabWidget(216): note: vea la declaración de 'Wt::Signal<int,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WTabWidget(261): warning C4251: 'Wt::WTabWidget::tabClosed_': class 'Wt::Signal<int,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WTabWidget'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WTabWidget(216): note: vea la declaración de 'Wt::Signal<int,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WTabWidget(265): warning C4251: 'Wt::WTabWidget::contentsWidgets_': class 'std::vector<Wt::WWidget *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WTabWidget'
+          with
+          [
+              _Ty=Wt::WWidget *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(278): note: vea la declaración de 'std::vector<Wt::WWidget *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WWidget *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WText(268): warning C4251: 'Wt::WText::text_': struct 'Wt::WText::RichText' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WText'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WText(256): note: vea la declaración de 'Wt::WText::RichText'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WText(280): warning C4251: 'Wt::WText::flags_': class 'std::bitset<9>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WText'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WText(280): note: vea la declaración de 'std::bitset<9>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WValidator(202): warning C4251: 'Wt::WValidator::formWidgets_': class 'std::vector<Wt::WFormWidget *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WValidator'
+          with
+          [
+              _Ty=Wt::WFormWidget *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WValidator(202): note: vea la declaración de 'std::vector<Wt::WFormWidget *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WFormWidget *
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WFormWidget(202): warning C4251: 'Wt::WFormWidget::flags_': class 'std::bitset<6>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WFormWidget'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WFormWidget(202): note: vea la declaración de 'std::bitset<6>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WFormWidget(203): warning C4251: 'Wt::WFormWidget::validated_': class 'Wt::Signal<Wt::WValidator::Result,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WFormWidget'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WFormWidget(169): note: vea la declaración de 'Wt::Signal<Wt::WValidator::Result,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLineEdit(329): warning C4251: 'Wt::WLineEdit::flags_': class 'std::bitset<5>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLineEdit'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLineEdit(329): note: vea la declaración de 'std::bitset<5>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLineEdit(331): warning C4251: 'Wt::WLineEdit::SKIPPABLE_MASK_CHARS': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLineEdit'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLineEdit(334): warning C4251: 'Wt::WLineEdit::mask_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLineEdit'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLineEdit(336): warning C4251: 'Wt::WLineEdit::inputMask_': class 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLineEdit'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2635): note: vea la declaración de 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLineEdit(337): warning C4251: 'Wt::WLineEdit::raw_': class 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLineEdit'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2635): note: vea la declaración de 'std::basic_string<wchar_t,std::char_traits<wchar_t>,std::allocator<wchar_t>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLineEdit(344): warning C4251: 'Wt::WLineEdit::inputMaskFlags_': class 'Wt::WFlags<Wt::WLineEdit::InputMaskFlag>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLineEdit'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLineEdit(297): note: vea la declaración de 'Wt::WFlags<Wt::WLineEdit::InputMaskFlag>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WLineEdit(345): warning C4251: 'Wt::WLineEdit::case_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WLineEdit'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAnchor(346): warning C4251: 'Wt::WAnchor::flags_': class 'std::bitset<2>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WAnchor'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAnchor(346): note: vea la declaración de 'std::bitset<2>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WPushButton(334): warning C4251: 'Wt::WPushButton::text_': struct 'Wt::WText::RichText' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WPushButton'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WText(256): note: vea la declaración de 'Wt::WText::RichText'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WPushButton(337): warning C4251: 'Wt::WPushButton::flags_': class 'std::bitset<8>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WPushButton'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WContainerWidget(388): note: vea la declaración de 'std::bitset<8>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WFileUpload(328): warning C4251: 'Wt::WFileUpload::flags_': class 'std::bitset<6>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WFileUpload'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WFormWidget(202): note: vea la declaración de 'std::bitset<6>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WFileUpload(332): warning C4251: 'Wt::WFileUpload::uploadedFiles_': class 'std::vector<Wt::Http::UploadedFile,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WFileUpload'
+          with
+          [
+              _Ty=Wt::Http::UploadedFile
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WObject(497): note: vea la declaración de 'std::vector<Wt::Http::UploadedFile,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::Http::UploadedFile
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WFileUpload(334): warning C4251: 'Wt::WFileUpload::fileTooLarge_': class 'Wt::JSignal<int64_t,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WFileUpload'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WFileUpload(240): note: vea la declaración de 'Wt::JSignal<int64_t,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WFileUpload(336): warning C4251: 'Wt::WFileUpload::dataReceived_': class 'Wt::Signal<uint64_t,uint64_t,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WFileUpload'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WResource(329): note: vea la declaración de 'Wt::Signal<uint64_t,uint64_t,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WFileUpload(341): warning C4251: 'Wt::WFileUpload::acceptAttributes_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WFileUpload'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(884): warning C4251: 'Wt::WAbstractItemModel::columnsAboutToBeInserted_': class 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WAbstractItemModel'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(656): note: vea la declaración de 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(885): warning C4251: 'Wt::WAbstractItemModel::columnsAboutToBeRemoved_': class 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WAbstractItemModel'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(656): note: vea la declaración de 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(886): warning C4251: 'Wt::WAbstractItemModel::columnsInserted_': class 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WAbstractItemModel'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(656): note: vea la declaración de 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(887): warning C4251: 'Wt::WAbstractItemModel::columnsRemoved_': class 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WAbstractItemModel'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(656): note: vea la declaración de 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(888): warning C4251: 'Wt::WAbstractItemModel::rowsAboutToBeInserted_': class 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WAbstractItemModel'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(656): note: vea la declaración de 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(889): warning C4251: 'Wt::WAbstractItemModel::rowsAboutToBeRemoved_': class 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WAbstractItemModel'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(656): note: vea la declaración de 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(890): warning C4251: 'Wt::WAbstractItemModel::rowsInserted_': class 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WAbstractItemModel'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(656): note: vea la declaración de 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(891): warning C4251: 'Wt::WAbstractItemModel::rowsRemoved_': class 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WAbstractItemModel'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(656): note: vea la declaración de 'Wt::Signal<Wt::WModelIndex,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(892): warning C4251: 'Wt::WAbstractItemModel::dataChanged_': class 'Wt::Signal<Wt::WModelIndex,Wt::WModelIndex,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WAbstractItemModel'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(740): note: vea la declaración de 'Wt::Signal<Wt::WModelIndex,Wt::WModelIndex,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(893): warning C4251: 'Wt::WAbstractItemModel::headerDataChanged_': class 'Wt::Signal<Wt::Orientation,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WAbstractItemModel'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WAbstractItemModel(751): note: vea la declaración de 'Wt::Signal<Wt::Orientation,int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WComboBox(250): warning C4251: 'Wt::WComboBox::modelConnections_': class 'std::vector<boost::signals2::connection,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WComboBox'
+          with
+          [
+              _Ty=boost::signals2::connection
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WComboBox(250): note: vea la declaración de 'std::vector<boost::signals2::connection,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=boost::signals2::connection
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WComboBox(252): warning C4251: 'Wt::WComboBox::activated_': class 'Wt::Signal<int,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WComboBox'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WTabWidget(216): note: vea la declaración de 'Wt::Signal<int,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WComboBox(253): warning C4251: 'Wt::WComboBox::sactivated_': class 'Wt::Signal<Wt::WString,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WComboBox'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WComboBox(219): note: vea la declaración de 'Wt::Signal<Wt::WString,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory(102): warning C4996: 'std::uninitialized_copy::_Unchecked_iterators::_Deprecate': Call to 'std::uninitialized_copy' with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory(102): note: vea la declaración de 'std::uninitialized_copy::_Unchecked_iterators::_Deprecate'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/detail/auto_buffer.hpp(191): note: vea la referencia a la creación de instancias de plantilla de función '_FwdIt *std::uninitialized_copy<I,boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_>*>(_InIt,_InIt,_FwdIt)' que se está compilando
+          with
+          [
+              _FwdIt=boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *,
+              I=boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *,
+              _InIt=boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/detail/auto_buffer.hpp(178): note: vea la referencia a la creación de instancias de plantilla de función 'void boost::signals2::detail::auto_buffer<boost::signals2::detail::void_shared_ptr_variant,boost::signals2::detail::store_n_objects<10>,boost::signals2::detail::default_grow_policy,std::allocator<_Ty>>::copy_rai<I,false>(I,I,boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *,const boost::integral_constant<bool,false> &)' que se está compilando
+          with
+          [
+              _Ty=boost::signals2::detail::void_shared_ptr_variant,
+              I=boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/detail/auto_buffer.hpp(178): note: vea la referencia a la creación de instancias de plantilla de función 'void boost::signals2::detail::auto_buffer<boost::signals2::detail::void_shared_ptr_variant,boost::signals2::detail::store_n_objects<10>,boost::signals2::detail::default_grow_policy,std::allocator<_Ty>>::copy_rai<I,false>(I,I,boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *,const boost::integral_constant<bool,false> &)' que se está compilando
+          with
+          [
+              _Ty=boost::signals2::detail::void_shared_ptr_variant,
+              I=boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/detail/auto_buffer.hpp(204): note: vea la referencia a la creación de instancias de plantilla de función 'void boost::signals2::detail::auto_buffer<boost::signals2::detail::void_shared_ptr_variant,boost::signals2::detail::store_n_objects<10>,boost::signals2::detail::default_grow_policy,std::allocator<_Ty>>::copy_impl<I>(I,I,boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *,std::random_access_iterator_tag)' que se está compilando
+          with
+          [
+              _Ty=boost::signals2::detail::void_shared_ptr_variant,
+              I=boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/detail/auto_buffer.hpp(203): note: vea la referencia a la creación de instancias de plantilla de función 'void boost::signals2::detail::auto_buffer<boost::signals2::detail::void_shared_ptr_variant,boost::signals2::detail::store_n_objects<10>,boost::signals2::detail::default_grow_policy,std::allocator<_Ty>>::copy_impl<I>(I,I,boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *,std::random_access_iterator_tag)' que se está compilando
+          with
+          [
+              _Ty=boost::signals2::detail::void_shared_ptr_variant,
+              I=boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/detail/auto_buffer.hpp(288): note: vea la referencia a la creación de instancias de plantilla de función 'void boost::signals2::detail::auto_buffer<boost::signals2::detail::void_shared_ptr_variant,boost::signals2::detail::store_n_objects<10>,boost::signals2::detail::default_grow_policy,std::allocator<_Ty>>::copy_impl<boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_>*>(I,I,boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *)' que se está compilando
+          with
+          [
+              _Ty=boost::signals2::detail::void_shared_ptr_variant,
+              I=boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/detail/auto_buffer.hpp(288): note: vea la referencia a la creación de instancias de plantilla de función 'void boost::signals2::detail::auto_buffer<boost::signals2::detail::void_shared_ptr_variant,boost::signals2::detail::store_n_objects<10>,boost::signals2::detail::default_grow_policy,std::allocator<_Ty>>::copy_impl<boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_>*>(I,I,boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *)' que se está compilando
+          with
+          [
+              _Ty=boost::signals2::detail::void_shared_ptr_variant,
+              I=boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/detail/auto_buffer.hpp(281): note: durante la compilación de la función miembro de plantilla de clase 'boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *boost::signals2::detail::auto_buffer<boost::signals2::detail::void_shared_ptr_variant,boost::signals2::detail::store_n_objects<10>,boost::signals2::detail::default_grow_policy,std::allocator<_Ty>>::move_to_new_buffer(unsigned __int64,const boost::false_type &)'
+          with
+          [
+              _Ty=boost::signals2::detail::void_shared_ptr_variant
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/detail/auto_buffer.hpp(302): note: vea la referencia a la creación de instancias de plantilla de función 'boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_> *boost::signals2::detail::auto_buffer<boost::signals2::detail::void_shared_ptr_variant,boost::signals2::detail::store_n_objects<10>,boost::signals2::detail::default_grow_policy,std::allocator<_Ty>>::move_to_new_buffer(unsigned __int64,const boost::false_type &)' que se está compilando
+          with
+          [
+              _Ty=boost::signals2::detail::void_shared_ptr_variant
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/detail/slot_call_iterator.hpp(65): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::signals2::detail::auto_buffer<boost::signals2::detail::void_shared_ptr_variant,boost::signals2::detail::store_n_objects<10>,boost::signals2::detail::default_grow_policy,std::allocator<_Ty>>' que se está compilando
+          with
+          [
+              _Ty=boost::signals2::detail::void_shared_ptr_variant
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/detail/slot_call_iterator.hpp(70): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::signals2::detail::slot_call_iterator_cache<ResultType,Function>' que se está compilando
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/bind/placeholders.hpp(54): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::arg<9>' que se está compilando
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/bind/placeholders.hpp(53): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::arg<8>' que se está compilando
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/bind/placeholders.hpp(52): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::arg<7>' que se está compilando
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/bind/placeholders.hpp(51): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::arg<6>' que se está compilando
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/bind/placeholders.hpp(50): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::arg<5>' que se está compilando
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/bind/placeholders.hpp(49): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::arg<4>' que se está compilando
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/bind/placeholders.hpp(48): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::arg<3>' que se está compilando
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/bind/placeholders.hpp(47): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::arg<2>' que se está compilando
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/bind/placeholders.hpp(46): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::arg<1>' que se está compilando
+  SistemaAsignacion.vcxproj -> C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacionVisual\Debug\SistemaAsignacion.exe

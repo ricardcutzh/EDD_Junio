@@ -50,4 +50,5 @@ int indice(std::string l);
 void calculaFuncionGanador();
 int cantidadNegros();
 int cantidadBlancos();
+int cantidadDeDamas();
 #endif // FUNCIONES_H

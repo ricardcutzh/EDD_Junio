@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacionVisual\CMakeFiles\6de2194d5aef0740f33567653c190179\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{594297B6-4769-3878-A8C2-D311AA2F66D7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

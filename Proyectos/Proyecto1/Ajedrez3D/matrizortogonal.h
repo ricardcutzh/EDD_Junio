@@ -87,6 +87,7 @@ public:
     //REYNA
     bool buscaReyna(std::string tipopieza, std::string color, int xdest, int ydest, int zdest);
     void calculaGanador();
+    int cuentaReinas();
 };
 
 #endif // MATRIZORTOGONAL_H

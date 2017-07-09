@@ -454,6 +454,14 @@ void MainWindow::on_BotonMover_clicked()
                 ui->Console->append(ui->Move->text());
                 ui->Console->append("--------------------");
                 ManejaTurnos();
+                int n = cantidadDeDamas();
+                if(n<2)
+                {
+                    ui->Console->setEnabled(false);
+                    ui->Move->setEnabled(false);
+                    ui->BotonMover->setEnabled(false);
+                    QMessageBox::warning(this,"Juego Finalizado!","Ganador: P1");
+                }
             }
             else
             {
@@ -469,6 +477,14 @@ void MainWindow::on_BotonMover_clicked()
                 ui->Console->append(ui->Move->text());
                 ui->Console->append("--------------------");
                 ManejaTurnos();
+                int n = cantidadDeDamas();
+                if(n<2)
+                {
+                    ui->Console->setEnabled(false);
+                    ui->Move->setEnabled(false);
+                    ui->BotonMover->setEnabled(false);
+                    QMessageBox::warning(this,"Juego Finalizado!","Ganador: P2");
+                }
             }
             else
             {
