@@ -16,6 +16,63 @@
     <ClCompile Include="..\SistemaAsignacion\Clases\ListaUsuarios.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\NodoEdificio.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\ListaEdificios.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\Salon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\NodoSalon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\ListaSalones.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\Curso.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\ListaCursos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\NodoCurso.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\AVLTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\NodoAVL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\BTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\Horario.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\Pagina.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\NodoAsignacion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\TablaHash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\NodoHash.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\ListadoAsignacion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\Catedratico.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SistemaAsignacion\Clases\Estudiante.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacion\sistemaasignacion.h">
@@ -31,6 +88,63 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\SistemaAsignacion\Clases\ListaUsuarios.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\NodoEdificio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\ListaEdificios.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\Salon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\NodoSalon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\ListaSalones.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\Curso.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\ListaCursos.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\NodoCurso.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\AVLTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\Catedratico.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\NodoAVL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\BTree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\Horario.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\Pagina.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\ListadoAsignacion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\NodoAsignacion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\TablaHash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\NodoHash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SistemaAsignacion\Clases\Estudiante.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

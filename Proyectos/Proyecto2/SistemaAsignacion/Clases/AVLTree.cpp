@@ -107,8 +107,9 @@ NodoAVL *AVLTree::insertarNodo(NodoAVL *raiz, Catedratico *catedratico)
 
 void AVLTree::graphTree()
 {
+	this->contador = this->contador++;
     std::ofstream archivo;
-    archivo.open("AVL.dot");
+    archivo.open(generaNombreImagen()+".dot");
     if(archivo.fail())
     {
         return;
@@ -274,4 +275,9 @@ Catedratico *AVLTree::searchCatedratico(int id, NodoAVL *raiz)
         }
     }
     return NULL;
+}
+
+std::string AVLTree::generaNombreImagen()
+{
+	return "Catedraticos\\Catedraticos_" + std::to_string(this->contador);
 }

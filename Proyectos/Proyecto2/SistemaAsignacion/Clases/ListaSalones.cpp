@@ -25,8 +25,8 @@ void ListaSalones::addToList(Salon * n)
 	else
 	{
 		int tipo = 0;
-		NodoSalon *aux = this->root;
-		while (aux->siguiente!=NULL)
+		NodoSalon *aux = this->root->siguiente;
+		/*while (aux->siguiente!=NULL)
 		{
 			if (nuevo->salon->numSalon < aux->siguiente->salon->numSalon)
 			{
@@ -45,13 +45,20 @@ void ListaSalones::addToList(Salon * n)
 		{
 			aux->siguiente = nuevo;
 			this->elementos++;
+		}*/
+		while (aux->siguiente!=NULL)
+		{
+			aux = aux->siguiente;
 		}
+		aux->siguiente = nuevo;
+		this->elementos++;
 	}
 
 }
 
+
 //ACTUALIZA LA INFORMACIÓN DE UN SALON EN ESPECÍFICO
-bool ListaSalones::updateClassroom(int numSalon, int capacidad)
+bool ListaSalones::updateClassroom(int numSalon, int capacidad, int nuNumero)
 {
 	if (!estaVacia())
 	{
@@ -60,6 +67,7 @@ bool ListaSalones::updateClassroom(int numSalon, int capacidad)
 		{
 			if (aux->salon->numSalon == numSalon)
 			{
+				aux->salon->numSalon = nuNumero;
 				aux->salon->capacidad = capacidad;
 				return true;
 			}
@@ -93,6 +101,7 @@ bool ListaSalones::deleteClassroom(int numSalon)
 		{
 			aux->siguiente = elim->siguiente;
 			delete elim;
+			this->elementos--;
 			return true;
 		}
 		else
@@ -136,10 +145,10 @@ void ListaSalones::graficaSalon(std::ofstream & archivo, std::string edificio)
 		NodoSalon *aux = this->root->siguiente;
 		while (aux!=NULL)
 		{
-			archivo << "\"" << edificio << ": " << aux->salon->numSalon << "\";" << std::endl;
+			//archivo << "\"" << edificio << ": " << aux->salon->numSalon << " | Cap: " << aux->salon->capacidad << "\";" << std::endl;
 			if (aux->siguiente != NULL)
 			{
-				archivo << "\"" << edificio << ": " << aux->salon->numSalon << "\"->\"" << edificio << ": "  << aux->siguiente->salon->numSalon << "\";" << std::endl;
+				archivo << "\"" << edificio << ": " << aux->salon->numSalon << " | Cap: " << aux->salon->capacidad << "\"->\"" << edificio << ": "  << aux->siguiente->salon->numSalon << " | Cap: " << aux->siguiente->salon->capacidad << "\";" << std::endl;
 			}
 			aux = aux->siguiente;
 		}

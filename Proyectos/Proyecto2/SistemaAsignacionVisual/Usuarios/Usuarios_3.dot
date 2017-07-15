@@ -1,0 +1,29 @@
+digraph g{
+node [shape=box];
+label="Usuarios en Sistema";
+"Usuario: Control | Id: 2 | Tipo: Colaborador";
+"Usuario: Control | Id: 2 | Tipo: Colaborador"->"Usuario: FMarroquín | Id: 3 | Tipo: Estudiante";
+"Usuario: FMarroquín | Id: 3 | Tipo: Estudiante";
+"Usuario: FMarroquín | Id: 3 | Tipo: Estudiante"->"Usuario: CarlosLopez123 | Id: 4 | Tipo: Estudiante";
+"Usuario: FMarroquín | Id: 3 | Tipo: Estudiante"->"Usuario: Control | Id: 2 | Tipo: Colaborador";
+"Usuario: CarlosLopez123 | Id: 4 | Tipo: Estudiante";
+"Usuario: CarlosLopez123 | Id: 4 | Tipo: Estudiante"->"Usuario: Amaya123f | Id: 5 | Tipo: Colaborador";
+"Usuario: CarlosLopez123 | Id: 4 | Tipo: Estudiante"->"Usuario: FMarroquín | Id: 3 | Tipo: Estudiante";
+"Usuario: Amaya123f | Id: 5 | Tipo: Colaborador";
+"Usuario: Amaya123f | Id: 5 | Tipo: Colaborador"->"Usuario: cmoino | Id: 6 | Tipo: Colaborador";
+"Usuario: Amaya123f | Id: 5 | Tipo: Colaborador"->"Usuario: CarlosLopez123 | Id: 4 | Tipo: Estudiante";
+"Usuario: cmoino | Id: 6 | Tipo: Colaborador";
+"Usuario: cmoino | Id: 6 | Tipo: Colaborador"->"Usuario: dtejeda27 | Id: 7 | Tipo: Colaborador";
+"Usuario: cmoino | Id: 6 | Tipo: Colaborador"->"Usuario: Amaya123f | Id: 5 | Tipo: Colaborador";
+"Usuario: dtejeda27 | Id: 7 | Tipo: Colaborador";
+"Usuario: dtejeda27 | Id: 7 | Tipo: Colaborador"->"Usuario: jjlopez45 | Id: 10 | Tipo: Estudiante";
+"Usuario: dtejeda27 | Id: 7 | Tipo: Colaborador"->"Usuario: cmoino | Id: 6 | Tipo: Colaborador";
+"Usuario: jjlopez45 | Id: 10 | Tipo: Estudiante";
+"Usuario: jjlopez45 | Id: 10 | Tipo: Estudiante"->"Usuario: oscmorales | Id: 11 | Tipo: Colaborador";
+"Usuario: jjlopez45 | Id: 10 | Tipo: Estudiante"->"Usuario: dtejeda27 | Id: 7 | Tipo: Colaborador";
+"Usuario: oscmorales | Id: 11 | Tipo: Colaborador";
+"Usuario: oscmorales | Id: 11 | Tipo: Colaborador"->"Usuario: Calificacion | Id: 100 | Tipo: Colaborador";
+"Usuario: oscmorales | Id: 11 | Tipo: Colaborador"->"Usuario: jjlopez45 | Id: 10 | Tipo: Estudiante";
+"Usuario: Calificacion | Id: 100 | Tipo: Colaborador";
+"Usuario: Calificacion | Id: 100 | Tipo: Colaborador"->"Usuario: oscmorales | Id: 11 | Tipo: Colaborador";
+}

@@ -1,12 +1,13 @@
 //#include "stdafx.h"
 #include "ListaUsuarios.h"
 #include <ostream>
+#include <iostream>
 #include <fstream>
 
 //CONSTRUCTOR
 ListaUsuarios::ListaUsuarios()
 {
-	Usuario *super = new Usuario(0, "root", "root", "sudo");
+	Usuario *super = new Usuario(0, "Admin", "Admin", "sudo");
 	this->root = new NodoUsuario(super);
 	this->elementos = 0;
 }
@@ -121,11 +122,33 @@ NodoUsuario * ListaUsuarios::buscarUsuario(int id)
 	}
 }
 
+Usuario * ListaUsuarios::buscarUsuarioNom(std::string nombre, std::string password)
+{
+	if (!estaVacia())
+	{
+		NodoUsuario *aux = this->root->siguiente;
+		while (aux != NULL)
+		{
+			if (aux->user->nombre == nombre && aux->user->password == password)
+			{
+				return aux->user;
+			}
+			aux = aux->siguiente;
+		}
+		return NULL;
+	}
+	else
+	{
+		return NULL;
+	}
+}
+
 //METODO ENCARGADO DE GRAFICAR LA LISTA DE USUARIOS
 bool ListaUsuarios::writeGraph()
 {
+	this->contador = this->contador + 1;
 	std::ofstream archivo;
-	archivo.open("Usuarios.dot");
+	archivo.open(generaNombreImagen()+".dot");
 	if (archivo.fail())
 	{
 		return false;
@@ -180,8 +203,29 @@ bool ListaUsuarios::updateUser(int id, std::string nombre, std::string password,
 	}
 }
 
+//METODO ENCARGADO DE HACERME EL LOGIN
+bool ListaUsuarios::autentica(std::string nombre, std::string password)
+{
+	NodoUsuario *aux = this->root;
+	while (aux!=NULL)
+	{
+		if (aux->user->nombre.compare(nombre) == 0 && aux->user->password.compare(password) == 0)
+		{
+			return true;
+		}
+		aux = aux->siguiente;
+	}
+	return false;
+}
+
 //VERIFICA SI LA LISTA ESTA VACÍA
 bool ListaUsuarios::estaVacia()
 {
 	return this->elementos == 0 ? true : false;
+}
+
+//GENERA EL NOMBRE DIFERENTE A CADA IMAGEN
+std::string ListaUsuarios::generaNombreImagen()
+{
+	return "Usuarios\\Usuarios_" + std::to_string(this->contador);
 }

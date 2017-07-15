@@ -94,8 +94,9 @@ NodoEdificio * ListaEdificios::buscarEdificio(std::string nombre)
 //GRAFICA LA ESTRUCTURA QUE ALMACENA LOS EDIFICIOS EN MEMORIA
 bool ListaEdificios::GraficarEdificios()
 {
+	this->contador = this->contador + 1;
     std::ofstream archivo;
-    archivo.open("Edificios.dot");
+    archivo.open(generaNombreDeImagen()+".dot");
     if(archivo.fail())
     {
         return false;
@@ -128,7 +129,7 @@ bool ListaEdificios::GraficarEdificios()
             }
             if(aux->salones->elementos>0)
             {
-                archivo << "\"Edificio: " << aux->nombre << "\"->\"" << aux->nombre << ": " << aux->salones->root->siguiente->salon->numSalon << "\"" << std::endl;
+				archivo << "\"Edificio: " << aux->nombre << "\"->\"" << aux->nombre << ": " << aux->salones->root->siguiente->salon->numSalon << " | Cap: " << aux->salones->root->siguiente->salon->capacidad << "\";" << std::endl;
                 archivo << "subgraph cluster_" << contador << "{" << std::endl;
                 archivo << "rank=same;" << std::endl;
                 archivo << "label=\"Salones\"" << std::endl;
@@ -142,6 +143,33 @@ bool ListaEdificios::GraficarEdificios()
         archivo.close();
         return true;
     }
+}
+
+bool ListaEdificios::modificarEdificio(std::string nombreviejo, std::string nombreNuevo)
+{
+	if (!estaVacia())
+	{
+		NodoEdificio *aux = this->root->siguiente;
+		while (aux != this->root)
+		{
+			if (aux->nombre.compare(nombreviejo) == 0)
+			{
+				aux->nombre = nombreNuevo;
+				return true;
+			}
+			aux = aux->siguiente;
+		}
+		return false;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+std::string ListaEdificios::generaNombreDeImagen()
+{
+	return "Edificios\\Edificios_" + std::to_string(this->contador);
 }
 
 //VERIFICA SI LA LISTA ESTA VACÍA

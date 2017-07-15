@@ -1,4 +1,6 @@
-﻿  sistemaasignacion.cpp
+﻿  TablaHash.cpp
+..\SistemaAsignacion\Clases\TablaHash.cpp(19): warning C4244: 'inicializando': conversión de 'int' a 'float'; posible pérdida de datos
+  sistemaasignacion.cpp
 C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WStringStream(210): warning C4251: 'Wt::WStringStream::bufs_': class 'std::vector<std::pair<char *,int>,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WStringStream'
           with
           [
@@ -637,6 +639,57 @@ C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WComboBox(252): warning C4251:
   C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WTabWidget(216): note: vea la declaración de 'Wt::Signal<int,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
 C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WComboBox(253): warning C4251: 'Wt::WComboBox::sactivated_': class 'Wt::Signal<Wt::WString,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WComboBox'
   C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WComboBox(219): note: vea la declaración de 'Wt::Signal<Wt::WString,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WDialog(458): warning C4251: 'Wt::WDialog::moved_': class 'Wt::JSignal<int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WDialog'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(505): note: vea la declaración de 'Wt::JSignal<int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WDialog(458): warning C4251: 'Wt::WDialog::resized_': class 'Wt::JSignal<int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WDialog'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WWebWidget(505): note: vea la declaración de 'Wt::JSignal<int,int,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WDialog(460): warning C4251: 'Wt::WDialog::finished_': class 'Wt::Signal<Wt::WDialog::DialogCode,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WDialog'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WDialog(281): note: vea la declaración de 'Wt::Signal<Wt::WDialog::DialogCode,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WDialog(464): warning C4251: 'Wt::WDialog::escapeConnection1_': class 'boost::signals2::connection' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WDialog'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/connection.hpp(228): note: vea la declaración de 'boost::signals2::connection'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WDialog(464): warning C4251: 'Wt::WDialog::escapeConnection2_': class 'boost::signals2::connection' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WDialog'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/connection.hpp(228): note: vea la declaración de 'boost::signals2::connection'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WDialog(465): warning C4251: 'Wt::WDialog::enterConnection1_': class 'boost::signals2::connection' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WDialog'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/connection.hpp(228): note: vea la declaración de 'boost::signals2::connection'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WDialog(465): warning C4251: 'Wt::WDialog::enterConnection2_': class 'boost::signals2::connection' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WDialog'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/connection.hpp(228): note: vea la declaración de 'boost::signals2::connection'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WMessageBox(243): warning C4251: 'Wt::WMessageBox::buttons_': class 'std::vector<Wt::WMessageBox::Button,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WMessageBox'
+          with
+          [
+              _Ty=Wt::WMessageBox::Button
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WMessageBox(243): note: vea la declaración de 'std::vector<Wt::WMessageBox::Button,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WMessageBox::Button
+          ]
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WMessageBox(246): warning C4251: 'Wt::WMessageBox::buttonClicked_': class 'Wt::Signal<Wt::StandardButton,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WMessageBox'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WMessageBox(232): note: vea la declaración de 'Wt::Signal<Wt::StandardButton,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass,Wt::NoClass>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WImage(239): warning C4251: 'Wt::WImage::flags_': class 'std::bitset<3>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WImage'
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WImage(239): note: vea la declaración de 'std::bitset<3>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WImage(240): warning C4251: 'Wt::WImage::targetJS_': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WImage'
+  C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xstring(2633): note: vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WImage(257): warning C4251: 'Wt::WImage::noAreas_': class 'std::vector<Wt::WAbstractArea *,std::allocator<_Ty>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Wt::WImage'
+          with
+          [
+              _Ty=Wt::WAbstractArea *
+          ]
+  C:\Program Files\Wt 3.3.7 msvs2015 x64\include\Wt/WImage(219): note: vea la declaración de 'std::vector<Wt::WAbstractArea *,std::allocator<_Ty>>'
+          with
+          [
+              _Ty=Wt::WAbstractArea *
+          ]
+C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacion\sistemaasignacion.cpp(322): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(552): note: vea la declaración de 'strdup'
+C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacion\sistemaasignacion.cpp(463): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(552): note: vea la declaración de 'strdup'
+C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacion\sistemaasignacion.cpp(828): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(552): note: vea la declaración de 'strdup'
+C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacion\sistemaasignacion.cpp(955): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(552): note: vea la declaración de 'strdup'
+C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacion\sistemaasignacion.cpp(1076): warning C4101: 's': variable local sin referencia
+C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacion\sistemaasignacion.cpp(1125): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\string.h(552): note: vea la declaración de 'strdup'
 C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory(102): warning C4996: 'std::uninitialized_copy::_Unchecked_iterators::_Deprecate': Call to 'std::uninitialized_copy' with parameters that may be unsafe - this call relies on the caller to check that the passed values are correct. To disable this warning, use -D_SCL_SECURE_NO_WARNINGS. See documentation on how to use Visual C++ 'Checked Iterators'
   C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory(102): note: vea la declaración de 'std::uninitialized_copy::_Unchecked_iterators::_Deprecate'
   C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/signals2/detail/auto_buffer.hpp(191): note: vea la referencia a la creación de instancias de plantilla de función '_FwdIt *std::uninitialized_copy<I,boost::variant<boost::shared_ptr<void>,boost::signals2::detail::foreign_void_shared_ptr,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_,boost::detail::variant::void_>*>(_InIt,_InIt,_FwdIt)' que se está compilando
@@ -707,4 +760,5 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\include\xmemory(102): war
   C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/bind/placeholders.hpp(48): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::arg<3>' que se está compilando
   C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/bind/placeholders.hpp(47): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::arg<2>' que se está compilando
   C:\Program Files\Wt 3.3.7 msvs2015 x64\include\boost/bind/placeholders.hpp(46): note: vea la referencia a la creación de instancias de plantilla de clase 'boost::arg<1>' que se está compilando
+  Generando código...
   SistemaAsignacion.vcxproj -> C:\Users\ricar\Documents\GitHub\EDD_Junio\Proyectos\Proyecto2\SistemaAsignacionVisual\Debug\SistemaAsignacion.exe

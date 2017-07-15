@@ -1,0 +1,29 @@
+digraph g{
+node [shape=box];
+label="Usuarios en Sistema";
+"Usuario: "Control" | Id: 2 | Tipo: "colaborador"";
+"Usuario: "Control" | Id: 2 | Tipo: "colaborador""->"Usuario: "FMarroquín" | Id: 3 | Tipo: "estudiante"";
+"Usuario: "FMarroquín" | Id: 3 | Tipo: "estudiante"";
+"Usuario: "FMarroquín" | Id: 3 | Tipo: "estudiante""->"Usuario: "CarlosLopez123" | Id: 4 | Tipo: "estudiante"";
+"Usuario: "FMarroquín" | Id: 3 | Tipo: "estudiante""->"Usuario: "Control" | Id: 2 | Tipo: "colaborador"";
+"Usuario: "CarlosLopez123" | Id: 4 | Tipo: "estudiante"";
+"Usuario: "CarlosLopez123" | Id: 4 | Tipo: "estudiante""->"Usuario: "Amaya123f" | Id: 5 | Tipo: "colaborador"";
+"Usuario: "CarlosLopez123" | Id: 4 | Tipo: "estudiante""->"Usuario: "FMarroquín" | Id: 3 | Tipo: "estudiante"";
+"Usuario: "Amaya123f" | Id: 5 | Tipo: "colaborador"";
+"Usuario: "Amaya123f" | Id: 5 | Tipo: "colaborador""->"Usuario: "cmoino" | Id: 6 | Tipo: "colaborador"";
+"Usuario: "Amaya123f" | Id: 5 | Tipo: "colaborador""->"Usuario: "CarlosLopez123" | Id: 4 | Tipo: "estudiante"";
+"Usuario: "cmoino" | Id: 6 | Tipo: "colaborador"";
+"Usuario: "cmoino" | Id: 6 | Tipo: "colaborador""->"Usuario: "dtejeda27" | Id: 7 | Tipo: "colaborador"";
+"Usuario: "cmoino" | Id: 6 | Tipo: "colaborador""->"Usuario: "Amaya123f" | Id: 5 | Tipo: "colaborador"";
+"Usuario: "dtejeda27" | Id: 7 | Tipo: "colaborador"";
+"Usuario: "dtejeda27" | Id: 7 | Tipo: "colaborador""->"Usuario: "lbarrera13" | Id: 9 | Tipo: "estudiante"";
+"Usuario: "dtejeda27" | Id: 7 | Tipo: "colaborador""->"Usuario: "cmoino" | Id: 6 | Tipo: "colaborador"";
+"Usuario: "lbarrera13" | Id: 9 | Tipo: "estudiante"";
+"Usuario: "lbarrera13" | Id: 9 | Tipo: "estudiante""->"Usuario: "jjlopez45" | Id: 10 | Tipo: "estudiante"";
+"Usuario: "lbarrera13" | Id: 9 | Tipo: "estudiante""->"Usuario: "dtejeda27" | Id: 7 | Tipo: "colaborador"";
+"Usuario: "jjlopez45" | Id: 10 | Tipo: "estudiante"";
+"Usuario: "jjlopez45" | Id: 10 | Tipo: "estudiante""->"Usuario: "oscmorales" | Id: 11 | Tipo: "colaborador"";
+"Usuario: "jjlopez45" | Id: 10 | Tipo: "estudiante""->"Usuario: "lbarrera13" | Id: 9 | Tipo: "estudiante"";
+"Usuario: "oscmorales" | Id: 11 | Tipo: "colaborador"";
+"Usuario: "oscmorales" | Id: 11 | Tipo: "colaborador""->"Usuario: "jjlopez45" | Id: 10 | Tipo: "estudiante"";
+}

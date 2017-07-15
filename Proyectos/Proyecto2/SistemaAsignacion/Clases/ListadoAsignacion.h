@@ -13,6 +13,11 @@ class ListadoAsignacion
         bool cupoLleno();
         bool desasignarEstudianteDecurso(int carnet);
         void graficarAsignacion(std::ofstream &archivo, std::string nombre);
+		NodoAsignacion *buscarAsignacion(int idAlumno);
+		std::string htmlAsignacion();
+		std::string cursosAsignadosPorEstudiante(int carnet, std::string curso);
+		std::string AsignadosACurso(int curs);
+		std::string aproRepro(std::string curso);
     protected:
 
     private:

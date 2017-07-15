@@ -7,6 +7,8 @@
 class BTree
 {
     public:
+		std::string cadena;
+		int contador = 0;
         Pagina *p;
         Pagina *xder;
         Pagina *xizq;
@@ -22,9 +24,18 @@ class BTree
         void graficarArbol();
         bool editarHorario(int codigo, Horario *nuevo);
         Horario *buscarHorario(int codigo);
+		std::string generaNombreImagen();
+		std::string reporteDeCursosPorEstudiante(int carnet);
+		std::string reporteDeAlAsignadosCurso(int codCurso, int year, int semes);
+		std::string reporteDeCursosEnSalon(int salon, int semestre, int year);
+		std::string reporteDeAprobReprob(int semestre, int year);
     protected:
 
     private:
+		void recorreReporteDeAprobadoReprob(int semestre, int year, Pagina *raiz);
+		void recorreReporteDeCursosEnSalon(int salon, int semestr, int year, Pagina *raiz);
+		void recorreReporteDeAsignados(int codCurso, int year, int semes, Pagina *raiz);
+		void recorreReporteCursosEstudiante(int carnet, Pagina *raiz);
         void buscarPrivado(int codigo, Pagina *raiz);
         void editarHorarioPrivado(int codigo, Horario *nuevo, Pagina *raiz);
         void insertaPrivado(Horario *clave, Pagina *raiz);

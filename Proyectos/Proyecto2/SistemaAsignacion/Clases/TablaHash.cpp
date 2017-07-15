@@ -49,6 +49,21 @@ void TablaHash::insertarEnTablaHash(Estudiante *estudiante)
     }
 }
 
+Estudiante * TablaHash::buscarEnTablaHash(int index)
+{
+	for (int i = 0; i < this->m; i++)
+	{
+		if (this->nodos[i]->Ocupado)
+		{
+			if (this->nodos[i]->estudiante->carnet == index)
+			{
+				return this->nodos[i]->estudiante;
+			}
+		}
+	}
+	return NULL;
+}
+
 
 int TablaHash::dispersionDoble(int carnet, int i, int iteracion)
 {
@@ -80,7 +95,7 @@ void TablaHash::rehashTabla()
     int mAnterior = this->m;
     calculaNuevaM();
     int sizeNewArray = (this->m*55)/100;
-    NodoHash *ayuda[sizeNewArray];
+    NodoHash **ayuda = new NodoHash*[sizeNewArray];
     for(int k = 0; k < sizeNewArray; k++)
     {
         ayuda[k] = new NodoHash();
@@ -171,13 +186,34 @@ void TablaHash::verTabla()
     }
 }
 
+std::string TablaHash::cadenaHTML()
+{
+	std::string cadena = "<table class='table table-bordered table-striped'> \n";
+	cadena = cadena + "<tr> \n <th> Indice </th> \n <th> Carnet </th> \n <th> Nombre </th> \n <th> Direccion </th> \n </tr>";
+	for (int i = 0; i < this->m; i++)
+	{
+		if (this->nodos[i]->Ocupado)
+		{
+			cadena = cadena + "<tr>\n";
+			cadena = cadena + "<td>" + std::to_string(i) + "</td> <td>" + std::to_string(this->nodos[i]->estudiante->carnet) + "</td> <td>" + this->nodos[i]->estudiante->nombre + "</td> <td>" + this->nodos[i]->estudiante->direccion + "</td>\n";
+			cadena = cadena + "</tr>";
+		}
+	}
+	cadena = cadena + "</table>";
+	return cadena;
+}
+
 
 NodoHash *TablaHash::buscarEstudiante(int carnet)
 {
     if(this->totalDatos>0)
     {
         int index = funcionDeDispersion(carnet);
-        if(this->nodos[index]->estudiante->carnet == carnet)
+		if (this->nodos[index]->estudiante == NULL)
+		{
+			return NULL;
+		}
+        else if(this->nodos[index]->estudiante->carnet == carnet)
         {
             return this->nodos[index];
         }

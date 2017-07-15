@@ -9,11 +9,13 @@ class AVLTree
     public:
         NodoAVL *root;
         AVLTree();
+		int contador = 0;
         void addToTree(Catedratico *catedratico);
         void graphTree();
         void deleteFromTree(int id);
         void updateCatedratico(int id, std::string nombre, std::string direccion);
         Catedratico *buscarCatedratico(int id);
+		std::string generaNombreImagen();
     private:
         Catedratico *searchCatedratico(int id, NodoAVL *raiz);
         void graficaRamas(std::ofstream &archivo, NodoAVL *raiz);

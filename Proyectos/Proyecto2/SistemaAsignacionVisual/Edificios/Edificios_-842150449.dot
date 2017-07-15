@@ -1,0 +1,83 @@
+digraph g {
+label="Edificios";
+node [shape=box];
+"Edificio: T1";
+"Edificio: T1"->"Edificio: T5";
+"Edificio: T1"->"Edificio: S11";
+"Edificio: T1"->"T1: 104 | Cap: 45";
+subgraph cluster_0{
+rank=same;
+label="Salones"
+}
+"Edificio: T5";
+"Edificio: T5"->"Edificio: T80";
+"Edificio: T5"->"Edificio: T1";
+"Edificio: T5"->"T5: 305 | Cap: 25";
+subgraph cluster_1{
+rank=same;
+label="Salones"
+}
+"Edificio: T80";
+"Edificio: T80"->"Edificio: T7";
+"Edificio: T80"->"Edificio: T5";
+"Edificio: T80"->"T80: 110 | Cap: 75";
+subgraph cluster_2{
+rank=same;
+label="Salones"
+"T80: 110 | Cap: 75"->"T80: 310 | Cap: 125";
+"T80: 310 | Cap: 125"->"T80: 112 | Cap: 40";
+"T80: 112 | Cap: 40"->"T80: 404 | Cap: 150";
+"T80: 404 | Cap: 150"->"T80: 105 | Cap: 65";
+"T80: 105 | Cap: 65"->"T80: 407 | Cap: 100";
+"T80: 407 | Cap: 100"->"T80: 408 | Cap: 100";
+"T80: 408 | Cap: 100"->"T80: 208 | Cap: 100";
+"T80: 208 | Cap: 100"->"T80: 209 | Cap: 100";
+"T80: 209 | Cap: 100"->"T80: 210 | Cap: 100";
+"T80: 210 | Cap: 100"->"T80: 211 | Cap: 100";
+"T80: 211 | Cap: 100"->"T80: 216 | Cap: 100";
+"T80: 216 | Cap: 100"->"T80: 214 | Cap: 100";
+"T80: 214 | Cap: 100"->"T80: 401 | Cap: 100";
+}
+"Edificio: T7";
+"Edificio: T7"->"Edificio: S12";
+"Edificio: T7"->"Edificio: T80";
+"Edificio: T7"->"T7: 202 | Cap: 75";
+subgraph cluster_3{
+rank=same;
+label="Salones"
+"T7: 202 | Cap: 75"->"T7: 203 | Cap: 25";
+"T7: 203 | Cap: 25"->"T7: 200 | Cap: 125";
+}
+"Edificio: S12";
+"Edificio: S12"->"Edificio: S11";
+"Edificio: S12"->"Edificio: T7";
+"Edificio: S12"->"S12: 304 | Cap: 75";
+subgraph cluster_4{
+rank=same;
+label="Salones"
+"S12: 304 | Cap: 75"->"S12: 107 | Cap: 100";
+"S12: 107 | Cap: 100"->"S12: 406 | Cap: 130";
+"S12: 406 | Cap: 130"->"S12: 305 | Cap: 75";
+"S12: 305 | Cap: 75"->"S12: 105 | Cap: 100";
+"S12: 105 | Cap: 100"->"S12: 405 | Cap: 130";
+"S12: 405 | Cap: 130"->"S12: 303 | Cap: 75";
+"S12: 303 | Cap: 75"->"S12: 103 | Cap: 100";
+"S12: 103 | Cap: 100"->"S12: 403 | Cap: 130";
+}
+"Edificio: S11";
+"Edificio: S11"->"Edificio: T1";
+"Edificio: S11"->"Edificio: S12";
+"Edificio: S11"->"S11: 304 | Cap: 75";
+subgraph cluster_5{
+rank=same;
+label="Salones"
+"S11: 304 | Cap: 75"->"S11: 107 | Cap: 100";
+"S11: 107 | Cap: 100"->"S11: 406 | Cap: 130";
+"S11: 406 | Cap: 130"->"S11: 305 | Cap: 75";
+"S11: 305 | Cap: 75"->"S11: 105 | Cap: 100";
+"S11: 105 | Cap: 100"->"S11: 405 | Cap: 130";
+"S11: 405 | Cap: 130"->"S11: 303 | Cap: 75";
+"S11: 303 | Cap: 75"->"S11: 103 | Cap: 100";
+"S11: 103 | Cap: 100"->"S11: 403 | Cap: 130";
+}
+}

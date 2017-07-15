@@ -1,6 +1,5 @@
 #include "BTree.h"
 #include <exception>
-
 BTree::BTree()
 {
     this->p = new Pagina();
@@ -312,11 +311,11 @@ void BTree::elimarRegistro(Pagina *raiz, Horario *clave)
     }
 }
 
-
 void BTree::graficarArbol()
 {
+	this->contador = this->contador + 1;
     std::ofstream archivo;
-    archivo.open("BTree.dot");
+    archivo.open(generaNombreImagen()+".dot");
     if(archivo.fail())
     {
         std::cout << "falla al abrir el archivo de arbol b" << std::endl;
@@ -358,6 +357,10 @@ void BTree::enlazarRamas(Pagina *p, std::ofstream &archivo)
 bool BTree::editarHorario(int codigo, Horario *nuevo)
 {
     this->editado = false;
+	if (this->p->editarHorario(codigo, nuevo))
+	{
+		return true;
+	}
     editarHorarioPrivado(codigo,nuevo, this->p);
     return this->editado;
 }
@@ -387,8 +390,180 @@ void BTree::editarHorarioPrivado(int codigo, Horario *nuevo, Pagina *raiz)
 Horario *BTree::buscarHorario(int codigo)
 {
     this->buscado = NULL;
+	for (int i = 0; i <= this->p->cuentas; i++)
+	{
+		if (this->p->claves[i] != NULL)
+		{
+			if (this->p->claves[i]->codigo == codigo)
+			{
+				this->buscado = this->p->claves[i];
+				return this->buscado;
+			}
+		}
+	}
     buscarPrivado(codigo, this->p);
     return this->buscado;
+}
+
+std::string BTree::generaNombreImagen()
+{
+	return "Horarios\\Horarios_" + std::to_string(this->contador);
+}
+
+std::string BTree::reporteDeCursosPorEstudiante(int carnet)
+{
+	this->cadena = "";
+	this->cadena = this->cadena + "<center> <h1> Reporte de Cursos de Estudiante: "+std::to_string(carnet)+" </h1> </center>\n";
+	this->cadena = this->cadena + "<table class='table table-striped table-bordered'>";
+	this->cadena = this->cadena + "<tr> <th>Curso</th> <th>Zona</th> <th>Final</th> <th>Nota Final</th> </tr>";
+	if (this->p != NULL)
+	{
+		for (int i = 0; i <= this->p->cuentas; i++)
+		{
+			if (this->p->claves[i] != NULL)
+			{
+				this->cadena = this->cadena + this->p->claves[i]->asigandos->cursosAsignadosPorEstudiante(carnet, this->p->claves[i]->refCurso->nombre);
+			}
+		}
+	}
+	recorreReporteCursosEstudiante(carnet, this->p);
+	this->cadena = this->cadena + "</table>\n";
+	return this->cadena;
+}
+
+std::string BTree::reporteDeAlAsignadosCurso(int codCurso, int year, int semes)
+{
+	this->cadena = "";
+	this->cadena = this->cadena + "<center> <h1>Asignados:</h1> </center>\n";
+	this->cadena = this->cadena + "<table class='table table-striped table-bordered'>";
+	this->cadena = this->cadena + "<tr> <th>Carnet</th> <th>Nombre</th> <th>Nota Final</th> </tr>";
+	if (this->p != NULL)
+	{
+		for (int i = 0; i <= this->p->cuentas; i++)
+		{
+			if (this->p->claves[i] != NULL)
+			{
+				if (this->p->claves[i]->refCurso->codigo == codCurso  && this->p->claves[i]->semestre == semes && this->p->claves[i]->year == year)
+				{
+					this->cadena = this->cadena + this->p->claves[i]->asigandos->AsignadosACurso(0);
+				}
+			}
+		}
+	}
+	recorreReporteDeAsignados(codCurso, year, semes, this->p);
+	this->cadena = this->cadena + "</table>\n";
+	return this->cadena;
+}
+
+std::string BTree::reporteDeCursosEnSalon(int salon, int semestre, int year)
+{
+	this->cadena = "";
+	this->cadena = this->cadena + "<center> <h1>Cursos Impartidos en Salon: "+std::to_string(salon)+" </h1> </center>\n";
+	this->cadena = this->cadena + "<table class='table table-striped table-bordered'>";
+	this->cadena = this->cadena + "<tr> <th>Codigo de Curso</th> <th>Nombre de Curso</th> <th>Periodo</th> <th>Dia</th> </tr>";
+	if (this->p != NULL)
+	{
+		for (int i = 0; i <= this->p->cuentas; i++)
+		{
+			if (this->p->claves[i] != NULL)
+			{
+				if (this->p->claves[i]->refSalon->numSalon == salon  && this->p->claves[i]->semestre == semestre && this->p->claves[i]->year == year)
+				{
+					this->cadena = this->cadena + "<tr>\n";
+					this->cadena = this->cadena + "<td>" + std::to_string(this->p->claves[i]->refCurso->codigo) + "</td><td>" + this->p->claves[i]->refCurso->nombre + "</td><td>"+ this->p->claves[i]->rango + "</td><td>"+ this->p->claves[i]->dia + "</td>";
+					this->cadena = this->cadena + "</tr>\n";
+				}
+			}
+		}
+	}
+	recorreReporteDeCursosEnSalon(salon, semestre, year, this->p);
+	this->cadena = this->cadena + "</table>\n";
+	return this->cadena;
+}
+
+std::string BTree::reporteDeAprobReprob(int semestre, int year)
+{
+	this->cadena = "";
+	this->cadena = this->cadena + "<center> <h1>Reporte de Cursos Aprobados y Reprobados  </h1> </center>\n";
+	this->cadena = this->cadena + "<table class='table table-striped table-bordered'>";
+	this->cadena = this->cadena + "<tr> <th>Carnet</th> <th>Estudiante</th> <th>Nombre de Curso</th> <th>Estatus</th> <th>Nota Final</th> </tr>";
+	if (this->p != NULL)
+	{
+		for (int i = 0; i <= this->p->cuentas; i++)
+		{
+			if (this->p->claves[i] != NULL)
+			{
+				this->cadena = this->cadena + this->p->claves[i]->asigandos->aproRepro(this->p->claves[i]->refCurso->nombre);
+			}
+		}
+	}
+	recorreReporteDeAprobadoReprob(semestre, year, this->p);
+	this->cadena = this->cadena + "</table>\n";
+	return this->cadena;
+}
+
+void BTree::recorreReporteDeAprobadoReprob(int semestre, int year, Pagina * raiz)
+{
+	if (raiz->cuentas > 0 && raiz->ramas[0] != NULL)
+	{
+		for (int i = 0; i <= raiz->cuentas; i++)
+		{
+			if (raiz->ramas[i] != NULL)
+			{
+				this->cadena = this->cadena + raiz->ramas[i]->reporteCuatro();
+				recorreReporteDeAprobadoReprob(semestre, year, raiz->ramas[i]);
+			}
+
+		}
+	}
+}
+
+void BTree::recorreReporteDeCursosEnSalon(int salon, int semestr, int year, Pagina * raiz)
+{
+	if (raiz->cuentas > 0 && raiz->ramas[0] != NULL)
+	{
+		for (int i = 0; i <= raiz->cuentas; i++)
+		{
+			if (raiz->ramas[i] != NULL)
+			{
+				this->cadena = this->cadena + raiz->ramas[i]->reporteTres(salon, semestr, year);
+				recorreReporteDeCursosEnSalon(salon, semestr, year, raiz->ramas[i]);
+			}
+
+		}
+	}
+}
+
+void BTree::recorreReporteDeAsignados(int codCurso, int year, int semes, Pagina * raiz)
+{
+	if (raiz->cuentas > 0 && raiz->ramas[0] != NULL)
+	{
+		for (int i = 0; i <= raiz->cuentas; i++)
+		{
+			if (raiz->ramas[i] != NULL)
+			{
+				this->cadena = this->cadena + raiz->ramas[i]->reporteDos(codCurso, year, semes);
+				recorreReporteDeAsignados(codCurso, year, semes, raiz->ramas[i]);
+			}
+
+		}
+	}
+}
+
+void BTree::recorreReporteCursosEstudiante(int carnet, Pagina * raiz)
+{
+	if (raiz->cuentas > 0 && raiz->ramas[0] != NULL)
+	{
+		for (int i = 0; i <= raiz->cuentas; i++)
+		{
+			if (raiz->ramas[i] != NULL)
+			{
+				this->cadena = this->cadena + raiz->ramas[i]->reporteUno(carnet);
+				recorreReporteCursosEstudiante(carnet, raiz->ramas[i]);
+			}
+
+		}
+	}
 }
 
 void BTree::buscarPrivado(int codigo, Pagina *raiz)

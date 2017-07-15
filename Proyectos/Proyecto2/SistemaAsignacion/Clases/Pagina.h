@@ -15,6 +15,10 @@ class Pagina
         std::string convierteNumero(int n);
         Horario *encuentraHorario(int codigo);
         bool editarHorario(int codigo, Horario *nuevo);
+		std::string reporteUno(int carnet);
+		std::string reporteDos(int codCurso, int year, int semes);
+		std::string reporteTres(int cod, int semestre , int year);
+		std::string reporteCuatro();
     protected:
 
     private:

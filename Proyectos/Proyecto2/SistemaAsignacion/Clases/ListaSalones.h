@@ -10,7 +10,7 @@ public:
 	~ListaSalones();
 	//METODOS
 	void addToList(Salon *n);
-	bool updateClassroom(int numSalon, int capacidad);
+	bool updateClassroom(int numSalon, int capacidad, int nuNumero);
 	bool deleteClassroom(int numSalon);
 	Salon *searchClassroom(int numSalon);
 	void graficaSalon(std::ofstream &archivo, std::string edificio);

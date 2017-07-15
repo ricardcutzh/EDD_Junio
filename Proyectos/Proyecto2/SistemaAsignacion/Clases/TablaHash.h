@@ -21,6 +21,7 @@ class TablaHash
         void editarEstudiante(int carnet, std::string nombre, std::string direccion);
         bool eliminar(int carnet);
         void verTabla();
+		std::string cadenaHTML();
     protected:
 
     private:

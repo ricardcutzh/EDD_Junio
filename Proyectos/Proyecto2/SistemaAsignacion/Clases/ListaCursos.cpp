@@ -81,10 +81,29 @@ bool ListaCursos::updateCourse(int codigo, std::string nombre, int semestre, int
     }
 }
 
+Curso * ListaCursos::buscarCurso(int codigo)
+{
+	if (!estaVacia())
+	{
+		NodoCurso *aux = this->root->siguiente;
+		while (aux != NULL)
+		{
+			if (aux->curso->codigo == codigo)
+			{
+				return aux->curso;
+			}
+			aux = aux->siguiente;
+		}
+		return NULL;
+	}
+	return NULL;
+}
+
 bool ListaCursos::graphCourseList()
 {
+	this->contador = this->contador + 1;
     std::ofstream archivo;
-    archivo.open("Cursos.dot");
+    archivo.open(generaNombreImagen()+".dot");
     if(archivo.fail())
     {
         return false;
@@ -107,6 +126,11 @@ bool ListaCursos::graphCourseList()
         archivo.close();
         return true;
     }
+}
+
+std::string ListaCursos::generaNombreImagen()
+{
+	return "Cursos\\Cursos_" + std::to_string(contador);
 }
 
 bool ListaCursos::estaVacia()

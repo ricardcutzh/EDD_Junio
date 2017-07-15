@@ -3,434 +3,454 @@
 <!-- Default Empty Project Configuration -->
 <WtCreator Rev="1.0" Wt_title="FIUSAC | Asignaci?n" Wt_theme="Boostrap 3">
  <WStyleSheet Path="resources/main.css"/>
- <WRoot Wt_className="WContainerWidget" Wt_styleClass="" Wt_id="wt_root" Wt_isInline="0">
-  <WObject Wt_title="Sistema de Asignaci%C3%B3n" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-default panel" Wt_id="panel" Wt_isInline="0">
-   <WObject Wt_className="WTabWidget" Wt_styleClass="" Wt_id="TAB_Principal" Wt_isInline="0">
-    <WObject Wt_tabText="Log In" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="LogInTab" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="row col-md-offset-3 col-md-6" Wt_id="LogInContent" Wt_isInline="0">
-      <WObject Wt_className="WText" Wt_text="Ingreso de Datos" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text" Wt_isInline="0"/>
+ <WRoot Wt_id="wt_root" Wt_isInline="0" Wt_styleClass="" Wt_className="WContainerWidget">
+  <WObject Wt_centralWidget="" Wt_id="panel" Wt_isInline="0" Wt_title="Sistema de Asignaci%C3%B3n" Wt_styleClass="panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+   <WObject Wt_id="TAB_Principal" Wt_isInline="0" Wt_styleClass="" Wt_className="WTabWidget">
+    <WObject Wt_tabText="Log In" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="LogInTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="LogInContent" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-offset-3 row col-md-6" Wt_className="WContainerWidget">
+      <WObject Wt_textFormat="0" Wt_id="text" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Ingreso de Datos" Wt_className="WText"/>
      </WObject>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="row col-md-offset-3 col-md-6" Wt_id="container" Wt_isInline="0">
-      <WObject Wt_title="Log In" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-default panel panel-primary" Wt_id="panel_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="Nombre de Usuario:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t2" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Usuario..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="UserName" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Contrase%C3%B1a" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t3" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Password..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="userPassword" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Ingresar Al Sistema" Wt_styleClass="form-control with-label btn btn-success btn-default" Wt_link="" Wt_id="botonLogIn" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-    </WObject>
-    <WObject Wt_tabText="Carga Masiva" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="cargaTab" Wt_isTabHidden="1" Wt_isInline="0">
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="br" Wt_styleClass="" Wt_id="container_cp" Wt_isInline="0"/>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-md-offset-3 col-md-6" Wt_id="container_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Seleccionar Archivo:" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-default panel" Wt_id="panel_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="Ingrese El Nombre del Archivo o Path:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t4" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Path o Nombre..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="PathText" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Otra Opci%C3%B3n Escojer un Archivo %28.txt%29" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp" Wt_isInline="0"/>
-       <WObject Wt_className="WFileUpload" Wt_styleClass="form-control" Wt_id="fileupload" Wt_isInline="0"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Archivo de Path" Wt_styleClass="form-control with-label btn btn-default" Wt_link="" Wt_id="botonPath" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Upload File" Wt_styleClass="form-control with-label btn btn-default" Wt_link="" Wt_id="upload" Wt_isInline="1"/>
+     <WObject Wt_id="container" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-offset-3 row col-md-6" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp" Wt_isInline="0" Wt_title="Log In" Wt_styleClass="panel-primary panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t2" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Nombre de Usuario:" Wt_className="WText"/>
+       <WObject Wt_id="UserName" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Usuario..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t3" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Contrase%C3%B1a" Wt_className="WText"/>
+       <WObject Wt_id="userPassword" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Password..." Wt_className="WLineEdit"/>
+       <WObject Wt_id="botonLogIn" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-success btn btn-default" Wt_emptyText="" Wt_text="Ingresar Al Sistema" Wt_className="WPushButton"/>
       </WObject>
      </WObject>
     </WObject>
-    <WObject Wt_tabText="Usuarios" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="usuariosTab" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="br" Wt_styleClass="" Wt_id="container_cp_cp_cp" Wt_isInline="0"/>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass=" col-xs-6 col-sm-4" Wt_id="container_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Nuevo Usuario" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-default panel-success panel" Wt_id="nuevoUsuariPanel" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="ID de Usuario" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t5" Wt_isInline="0"/>
-       <WObject Wt_emptyText="ID" Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="usIdInserta" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Nombre" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t6" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Nombre de Usuario..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="usNombreInserta" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Password" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t7" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Password" Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="usPassInserta" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Tipo" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t9" Wt_isInline="0"/>
-       <WObject Wt_emptyText="" Wt_className="WComboBox" Wt_allItems="Estudiante%5CnColaborador%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn" Wt_styleClass="form-control" Wt_id="comboUsTipoInserta" Wt_isInline="0"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Crear Usuario" Wt_styleClass="form-control with-label btn btn-success btn-default" Wt_link="" Wt_id="botInsertaUs" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_id="container_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Modificar Usuario" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-default panel panel-primary" Wt_id="ModificarPanel" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="Id de Usuario:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t10" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Id a Editar..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="usModId" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Buscar" Wt_styleClass="form-control with-label btn-primary btn btn-default" Wt_link="" Wt_id="btnSearchModUs" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Nombre" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t11" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Nombre editar..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="usNomMod" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Password" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t12" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Password" Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="usPassMod" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Modificar" Wt_styleClass="form-control with-label btn-primary btn btn-default" Wt_link="" Wt_id="btnModUs" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_id="container_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Eliminar Usuario" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-default panel-danger panel" Wt_id="ElimUsuaPanel" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="Id de Usuario" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Id A Eliminar..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="usElimID" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Eliminar" Wt_styleClass="form-control with-label btn-danger btn btn-default" Wt_link="" Wt_id="btnElimUs" Wt_isInline="1"/>
+    <WObject Wt_tabText="Carga Masiva" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="cargaTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="container_cp" Wt_isInline="0" Wt_htmlTagName="br" Wt_styleClass="" Wt_className="WContainerWidget"/>
+     <WObject Wt_id="container_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-offset-3 col-md-6" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp" Wt_isInline="0" Wt_title="Seleccionar Archivo:" Wt_styleClass="panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t4" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Ingrese El Nombre del Archivo o Path:" Wt_className="WText"/>
+       <WObject Wt_id="PathText" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Path o Nombre..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Otra Opci%C3%B3n Escojer un Archivo %28.txt%29" Wt_className="WText"/>
+       <WObject Wt_id="fileupload" Wt_isInline="0" Wt_styleClass="form-control" Wt_className="WFileUpload"/>
+       <WObject Wt_id="botonPath" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Archivo de Path" Wt_className="WPushButton"/>
+       <WObject Wt_id="upload" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Upload File" Wt_className="WPushButton"/>
       </WObject>
      </WObject>
     </WObject>
-    <WObject Wt_tabText="Edificios y Salones" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="ediSalTab" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_className="WTabWidget" Wt_styleClass="" Wt_id="InfoSalEdi" Wt_isInline="0">
-      <WObject Wt_tabText="Edificios" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="tabitem1_cp" Wt_isTabHidden="0" Wt_isInline="0">
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="br" Wt_styleClass="" Wt_id="container_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_title="Nuevo Edificio" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-success panel" Wt_id="panel_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_className="WText" Wt_text="Nombre Edificio" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Ingrese Nombre de Edificio..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ediInsertar" Wt_isInline="1"/>
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Crear Nuevo" Wt_styleClass="form-control btn btn-success" Wt_link="" Wt_id="btnNuevoEdif" Wt_isInline="1"/>
-        </WObject>
-       </WObject>
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_title="Modificar" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel panel-primary" Wt_id="panel_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_className="WText" Wt_text="Edificio A Modificar" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Nombre Anterior" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ModEdificioNombre" Wt_isInline="1"/>
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Buscar" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="btnModBuscar" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Nuevo Nombre:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Editar..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="NombreNuevoMod" Wt_isInline="1"/>
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Modificar" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="btnMod" Wt_isInline="1"/>
-        </WObject>
-       </WObject>
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_title="Eliminar Edificio" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-danger panel" Wt_id="panel_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_className="WText" Wt_text="Edificio a Eliminar:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Nombre de Edificio..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ElimEdificio" Wt_isInline="1"/>
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Eliminar" Wt_styleClass="form-control btn-danger btn" Wt_link="" Wt_id="btnElim" Wt_isInline="1"/>
-        </WObject>
-       </WObject>
+    <WObject Wt_tabText="Usuarios" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="usuariosTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="container_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="br" Wt_styleClass="" Wt_className="WContainerWidget"/>
+     <WObject Wt_id="container_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass=" col-xs-6 col-sm-4" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="nuevoUsuariPanel" Wt_isInline="0" Wt_title="Nuevo Usuario" Wt_styleClass="panel-success panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t5" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID de Usuario" Wt_className="WText"/>
+       <WObject Wt_id="usIdInserta" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID" Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t6" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Nombre" Wt_className="WText"/>
+       <WObject Wt_id="usNombreInserta" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Nombre de Usuario..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t7" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Password" Wt_className="WText"/>
+       <WObject Wt_id="usPassInserta" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Password" Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t9" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Tipo" Wt_className="WText"/>
+       <WObject Wt_allItems="Estudiante%5CnColaborador%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn%5Cn" Wt_id="comboUsTipoInserta" Wt_isInline="0" Wt_styleClass="form-control" Wt_emptyText="" Wt_className="WComboBox"/>
+       <WObject Wt_id="botInsertaUs" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-success btn btn-default" Wt_emptyText="" Wt_text="Crear Usuario" Wt_className="WPushButton"/>
       </WObject>
-      <WObject Wt_tabText="Salones" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="tabitem2_cp" Wt_isTabHidden="0" Wt_isInline="0">
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="br" Wt_styleClass="" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="conteNuevo" Wt_isInline="0">
-        <WObject Wt_title="Nuevo Salon:" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-success panel" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_className="WText" Wt_text="Numero de Salon" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Numero de Salon.." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="SalonNuevo" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Capacidad" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Capacidad Maxima de Salon..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="SalonCapacidad" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Edificio Asociado" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Nombre Edificio..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="EdificioSalAsociar" Wt_isInline="1"/>
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Asignar Edificio" Wt_styleClass="form-control btn btn-success" Wt_link="" Wt_id="btnSalonNuevo" Wt_isInline="1"/>
-        </WObject>
-       </WObject>
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_title="Modificar:" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel panel-primary" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_className="WText" Wt_text="Numero de Salon" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Numero de Salon..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ModNumSalon" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Edificio Asociado" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Edificio Asociado..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ModEdiAsociado" Wt_isInline="1"/>
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Buscar Salon" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="btnBuscarEdiSal" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Nuevo Numero" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Ingrese nuevo numero..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="nuevoNumeroMod" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Capacidad Nueva:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Nueva capacidad" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="capacidadNuevaMod" Wt_isInline="1"/>
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Modificar" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="btnModSalon" Wt_isInline="1"/>
-        </WObject>
-       </WObject>
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_title="Eliminar Salon" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-danger panel" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_className="WText" Wt_text="Numero de Salon" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Numero de Salon..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="elimSalonID" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Edificio Asociado" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Edificio donde esta el salon..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ElimEdifAsociado" Wt_isInline="1"/>
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Eliminar" Wt_styleClass="form-control btn-danger btn" Wt_link="" Wt_id="btnElimSalon" Wt_isInline="1"/>
-        </WObject>
-       </WObject>
+     </WObject>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="ModificarPanel" Wt_isInline="0" Wt_title="Modificar Usuario" Wt_styleClass="panel-primary panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t10" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Id de Usuario:" Wt_className="WText"/>
+       <WObject Wt_id="usModId" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Id a Editar..." Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnSearchModUs" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Buscar" Wt_className="WPushButton"/>
+       <WObject Wt_textFormat="0" Wt_id="t11" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Nombre" Wt_className="WText"/>
+       <WObject Wt_id="usNomMod" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Nombre editar..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t12" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Password" Wt_className="WText"/>
+       <WObject Wt_id="usPassMod" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Password" Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnModUs" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Modificar" Wt_className="WPushButton"/>
       </WObject>
-      <WObject Wt_tabText="Cursos y Salones" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="tabitem_cp" Wt_isTabHidden="0" Wt_isInline="0">
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="br" Wt_styleClass="" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-       <WObject Wt_title="Datos de Reporte" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_emptyText="Salon A Buscar" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="Rep3Sal" Wt_isInline="1"/>
-        </WObject>
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_emptyText="A%C3%B1o de Curso..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="Rep3Anio" Wt_isInline="1"/>
-        </WObject>
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_emptyText="Semestre a Filtrar..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="Rep3Sem" Wt_isInline="1"/>
-        </WObject>
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Ver Reporte" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="btnRep3" Wt_isInline="1"/>
-        </WObject>
-       </WObject>
-       <WObject Wt_title="Reporte de Cursos por Salon" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="" Wt_id="Rep3Panel" Wt_isInline="0">
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="Rep3Contenedor" Wt_isInline="0"/>
-       </WObject>
+     </WObject>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="ElimUsuaPanel" Wt_isInline="0" Wt_title="Eliminar Usuario" Wt_styleClass="panel panel-default panel-danger" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Id de Usuario" Wt_className="WText"/>
+       <WObject Wt_id="usElimID" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Id A Eliminar..." Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnElimUs" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-danger btn btn-default" Wt_emptyText="" Wt_text="Eliminar" Wt_className="WPushButton"/>
       </WObject>
      </WObject>
     </WObject>
-    <WObject Wt_tabText="Cursos" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="cursosTab" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_className="WTabWidget" Wt_styleClass="" Wt_id="Reporte2Tab" Wt_isInline="0">
-      <WObject Wt_tabText="Administrar Cursos" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="Reporte2SubTab" Wt_isTabHidden="0" Wt_isInline="0">
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="br" Wt_styleClass="" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_title="Nuevo Curso" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-success panel" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_className="WText" Wt_text="Codigo de Curso" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t13" Wt_isInline="0"/>
-         <WObject Wt_emptyText="ID de curso" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="NuevoCursoID" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Nombre" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t14" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Nombre de Curso" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="NomCursoNuevo" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Semestre:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t15" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Numero de Semestre" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="SemesCursoNuevo" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Creditos: " Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t16" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Numero de Creditos" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="line_edit" Wt_isInline="1"/>
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Crear Curso" Wt_styleClass="form-control btn btn-success" Wt_link="" Wt_id="btnNuevoCurso" Wt_isInline="1"/>
+    <WObject Wt_tabText="Edificios y Salones" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="ediSalTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="InfoSalEdi" Wt_isInline="0" Wt_styleClass="" Wt_className="WTabWidget">
+      <WObject Wt_tabText="Edificios" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="tabitem1_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="br" Wt_styleClass="" Wt_className="WContainerWidget"/>
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_className="WContainerWidget">
+        <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Nuevo Edificio" Wt_styleClass="panel-success panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Nombre Edificio" Wt_className="WText"/>
+         <WObject Wt_id="ediInsertar" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Ingrese Nombre de Edificio..." Wt_className="WLineEdit"/>
+         <WObject Wt_id="btnNuevoEdif" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-success btn btn-default" Wt_emptyText="" Wt_text="Crear Nuevo" Wt_className="WPushButton"/>
         </WObject>
        </WObject>
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_title="Modificar Curso" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel panel-primary" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_className="WText" Wt_text="ID de Curso:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t17" Wt_isInline="0"/>
-         <WObject Wt_emptyText="ID de Curso..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="IDModCurso" Wt_isInline="1"/>
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Buscar" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="btnSrcCursoMod" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Nombre:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t18" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Nuevo Nombre.." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="NomModCurso" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Semestre:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t19" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Semestre" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="SemModCurso" Wt_isInline="1"/>
-         <WObject Wt_className="WText" Wt_text="Creditos" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t1" Wt_isInline="0"/>
-         <WObject Wt_emptyText="Creditos..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="CredModCurso" Wt_isInline="1"/>
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Modificar" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="btnModCurso" Wt_isInline="1"/>
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_className="WContainerWidget">
+        <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Modificar" Wt_styleClass="panel-primary panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Edificio A Modificar" Wt_className="WText"/>
+         <WObject Wt_id="ModEdificioNombre" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Nombre Anterior" Wt_className="WLineEdit"/>
+         <WObject Wt_id="btnModBuscar" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Buscar" Wt_className="WPushButton"/>
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Nuevo Nombre:" Wt_className="WText"/>
+         <WObject Wt_id="NombreNuevoMod" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Editar..." Wt_className="WLineEdit"/>
+         <WObject Wt_id="btnMod" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Modificar" Wt_className="WPushButton"/>
         </WObject>
        </WObject>
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_title="Eliminar" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-danger panel" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_className="WText" Wt_text="ID De Curso A Eliminar" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t21" Wt_isInline="0"/>
-         <WObject Wt_emptyText="ID..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="elimCursoID" Wt_isInline="1"/>
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Eliminar Curso" Wt_styleClass="form-control btn-danger btn" Wt_link="" Wt_id="btnElimCurso" Wt_isInline="1"/>
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_className="WContainerWidget">
+        <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Eliminar Edificio" Wt_styleClass="panel panel-default panel-danger" Wt_isCollapsible="1" Wt_className="WPanel">
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Edificio a Eliminar:" Wt_className="WText"/>
+         <WObject Wt_id="ElimEdificio" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Nombre de Edificio..." Wt_className="WLineEdit"/>
+         <WObject Wt_id="btnElim" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-danger btn btn-default" Wt_emptyText="" Wt_text="Eliminar" Wt_className="WPushButton"/>
         </WObject>
        </WObject>
       </WObject>
-      <WObject Wt_tabText="Estudiantes en un Curso" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="tabitem2_cp_cp" Wt_isTabHidden="0" Wt_isInline="0">
-       <WObject Wt_title="Datos Para Reporte" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="" Wt_id="PanelRep2" Wt_isInline="0">
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass=" col-xs-6 col-sm-3" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_emptyText="Semestre..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="rep2Sem" Wt_isInline="1"/>
-        </WObject>
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass=" col-xs-6 col-sm-3" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_emptyText="A%C3%B1o de Interes" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="rep2Year" Wt_isInline="1"/>
-        </WObject>
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass=" col-xs-6 col-sm-3" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Generar Reporte" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="btnRep2" Wt_isInline="1"/>
+      <WObject Wt_tabText="Salones" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="tabitem2_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget"/>
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="br" Wt_styleClass="" Wt_className="WContainerWidget"/>
+       <WObject Wt_id="conteNuevo" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+        <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Nuevo Salon:" Wt_styleClass="panel-success panel" Wt_isCollapsible="1" Wt_className="WPanel">
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Numero de Salon" Wt_className="WText"/>
+         <WObject Wt_id="SalonNuevo" Wt_isInline="1" Wt_styleClass="" Wt_emptyText="Numero de Salon.." Wt_className="WLineEdit"/>
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Capacidad" Wt_className="WText"/>
+         <WObject Wt_id="SalonCapacidad" Wt_isInline="1" Wt_styleClass="" Wt_emptyText="Capacidad Maxima de Salon..." Wt_className="WLineEdit"/>
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Edificio Asociado" Wt_className="WText"/>
+         <WObject Wt_id="EdificioSalAsociar" Wt_isInline="1" Wt_styleClass="" Wt_emptyText="Nombre Edificio..." Wt_className="WLineEdit"/>
+         <WObject Wt_id="btnSalonNuevo" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control btn-success btn" Wt_emptyText="" Wt_text="Asignar Edificio" Wt_className="WPushButton"/>
         </WObject>
        </WObject>
-       <WObject Wt_title="Visor de Reporte" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="contenedorRep2" Wt_isInline="0"/>
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+        <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Modificar:" Wt_styleClass="panel-primary panel" Wt_isCollapsible="1" Wt_className="WPanel">
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Numero de Salon" Wt_className="WText"/>
+         <WObject Wt_id="ModNumSalon" Wt_isInline="1" Wt_styleClass="" Wt_emptyText="Numero de Salon..." Wt_className="WLineEdit"/>
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Edificio Asociado" Wt_className="WText"/>
+         <WObject Wt_id="ModEdiAsociado" Wt_isInline="1" Wt_styleClass="" Wt_emptyText="Edificio Asociado..." Wt_className="WLineEdit"/>
+         <WObject Wt_id="btnBuscarEdiSal" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control btn" Wt_emptyText="" Wt_text="Buscar Salon" Wt_className="WPushButton"/>
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Nuevo Numero" Wt_className="WText"/>
+         <WObject Wt_id="nuevoNumeroMod" Wt_isInline="1" Wt_styleClass="" Wt_emptyText="Ingrese nuevo numero..." Wt_className="WLineEdit"/>
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Capacidad Nueva:" Wt_className="WText"/>
+         <WObject Wt_id="capacidadNuevaMod" Wt_isInline="1" Wt_styleClass="" Wt_emptyText="Nueva capacidad" Wt_className="WLineEdit"/>
+         <WObject Wt_id="btnModSalon" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control btn" Wt_emptyText="" Wt_text="Modificar" Wt_className="WPushButton"/>
+        </WObject>
+       </WObject>
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+        <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Eliminar Salon" Wt_styleClass="panel panel-danger" Wt_isCollapsible="1" Wt_className="WPanel">
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Numero de Salon" Wt_className="WText"/>
+         <WObject Wt_id="elimSalonID" Wt_isInline="1" Wt_styleClass="" Wt_emptyText="Numero de Salon..." Wt_className="WLineEdit"/>
+         <WObject Wt_textFormat="0" Wt_id="text_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Edificio Asociado" Wt_className="WText"/>
+         <WObject Wt_id="ElimEdifAsociado" Wt_isInline="1" Wt_styleClass="" Wt_emptyText="Edificio donde esta el salon..." Wt_className="WLineEdit"/>
+         <WObject Wt_id="btnElimSalon" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control btn-danger btn" Wt_emptyText="" Wt_text="Eliminar" Wt_className="WPushButton"/>
+        </WObject>
        </WObject>
       </WObject>
-      <WObject Wt_tabText="Reporte de Cursos en Semestre" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="Reporte4SubTab" Wt_isTabHidden="0" Wt_isInline="0">
-       <WObject Wt_title="Datos de Reporte" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass=" col-xs-6 col-sm-3" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_emptyText="Semestre..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="SemRep4" Wt_isInline="1"/>
+      <WObject Wt_tabText="Cursos y Salones" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="tabitem_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="br" Wt_styleClass="" Wt_className="WContainerWidget"/>
+       <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Datos de Reporte" Wt_styleClass="panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+        <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+         <WObject Wt_id="Rep3Sal" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Salon A Buscar" Wt_className="WLineEdit"/>
         </WObject>
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass=" col-xs-6 col-sm-3" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_emptyText="A%C3%B1o..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="yearRep4" Wt_isInline="1"/>
+        <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+         <WObject Wt_id="Rep3Anio" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="A%C3%B1o de Curso..." Wt_className="WLineEdit"/>
         </WObject>
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass=" col-xs-6 col-sm-3" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-         <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Generar Reporte" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="btnRep4" Wt_isInline="1"/>
+        <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+         <WObject Wt_id="Rep3Sem" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Semestre a Filtrar..." Wt_className="WLineEdit"/>
+        </WObject>
+        <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+         <WObject Wt_id="btnRep3" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Ver Reporte" Wt_className="WPushButton"/>
         </WObject>
        </WObject>
-       <WObject Wt_title="Visor de Reporte" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="ConenedorRep4" Wt_isInline="0"/>
+       <WObject Wt_centralWidget="" Wt_id="Rep3Panel" Wt_isInline="0" Wt_title="Reporte de Cursos por Salon" Wt_styleClass="panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+        <WObject Wt_id="Rep3Contenedor" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget"/>
        </WObject>
       </WObject>
      </WObject>
     </WObject>
-    <WObject Wt_tabText="Estudiantes" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="estuTab" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="br" Wt_styleClass="" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="contX" Wt_isInline="0">
-      <WObject Wt_title="Nuevo Estudiante" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-success panel" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="Carnet:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t22" Wt_isInline="0"/>
-       <WObject Wt_emptyText="ID de Estudiante" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="IDEstudianteNuevo" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Nombre" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t23" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Nombre de Estudiante" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="NomEstudNuevo" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Direcci%C3%B3n:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t24" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Direcci%C3%B3n de Residencia..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="DirEstNuevo" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Crear Nuevo Estudiante" Wt_styleClass="form-control btn btn-success" Wt_link="" Wt_id="btnNuevoEstudiante" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Modificar Estudiante" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel panel-primary" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="ID de Estudiante" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t25" Wt_isInline="0"/>
-       <WObject Wt_emptyText="ID.." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="IDModEstudiante" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="" Wt_textFormat="0" Wt_styleClass="" Wt_id="text_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Buscar" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="srcBtnModEstu" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Nombre:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t26" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Nuevo Nombre..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ModNombreEstud" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Direcci%C3%B3n" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t27" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Nueva Direcci%C3%B3n" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ModDirEstud" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Modificar" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="btnModEstud" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Eliminar Estudiante" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-danger panel" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="ID:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t28" Wt_isInline="0"/>
-       <WObject Wt_emptyText="ID de Estudiante Eliminar..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="elimEstudID" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Eliminar" Wt_styleClass="form-control btn-danger btn" Wt_link="" Wt_id="btnElimEstud" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-    </WObject>
-    <WObject Wt_tabText="Catedr%C3%A1ticos" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="cateTab" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="br" Wt_styleClass="" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Nuevo Catedr%C3%A1tico:" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-success panel" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="ID Catedr%C3%A1tico" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t29" Wt_isInline="0"/>
-       <WObject Wt_emptyText="ID de Catedr%C3%A1tico" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="nuevoCatID" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Nombre:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t30" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Nombre..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="nuevoCatNom" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Direcci%C3%B3n:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="text_cp_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Direcci%C3%B3n de residencia" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="nuevoDirCat" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Crear Catedr%C3%A1tico" Wt_styleClass="form-control btn btn-success" Wt_link="" Wt_id="btnNuevoCat" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Modificar" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel panel-primary" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="ID a Modificar" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t31" Wt_isInline="0"/>
-       <WObject Wt_emptyText="ID a Modificar..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ModCatID" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Buscar" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="btnSrcCat" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Nombre:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t32" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Nuevo Nombre..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ModNomCat" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Direcci%C3%B3n" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t33" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Nueva Direcci%C3%B3n" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ModDirCat" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Modificar" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="btnModCat" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Some Title" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-danger panel" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="ID a Eliminar" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t34" Wt_isInline="0"/>
-       <WObject Wt_emptyText="ID de Catedr%C3%A1tico" Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ElimIDCat" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Eliminar Catedr%C3%A1tico" Wt_styleClass="form-control btn-danger btn" Wt_link="" Wt_id="btnElimCat" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-    </WObject>
-    <WObject Wt_tabText="Horarios" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="horarioTab" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="br" Wt_styleClass="" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Nuevo Horario:" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-default panel-success panel" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="ID de Horario:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t35" Wt_isInline="0"/>
-       <WObject Wt_emptyText="ID de Horario.." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="HorarioNuevoID" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Periodo:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t36" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Horario..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="NuPerHor" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="D%C3%ADa:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t37" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Lunes%2C Martes%2C Jueves..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="NuDiaHor" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Codigo de Curso" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t38" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Curso..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="NuCodCursoHor" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Codigo de Salon" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t39" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Numero de Salon..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="CodSalHorarioNu" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Codigo Edificio" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t40" Wt_isInline="0"/>
-       <WObject Wt_emptyText="T3%2C T5%2C T7%2C etc..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="CodEdiHorNu" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Codigo Catedr%C3%A1tico" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t41" Wt_isInline="0"/>
-       <WObject Wt_emptyText="12%2C25%2C023%2Cetc.." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="CodCatHorNu" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Semestre:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t42" Wt_isInline="0"/>
-       <WObject Wt_emptyText="1 o 2" Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="SemHorNu" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="A%C3%B1o:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t43" Wt_isInline="0"/>
-       <WObject Wt_emptyText="2016%2C 2017%2C 2018%2C etc" Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="YearHorNu" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Crear Horario" Wt_styleClass="form-control with-label btn btn-success btn-default" Wt_link="" Wt_id="btnNuHor" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Modifiar" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-default panel panel-primary" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="ID de Horario:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t35_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="ID de Horario.." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="HorarioModID_cp" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Buscar" Wt_styleClass="form-control with-label btn-primary btn btn-default" Wt_link="" Wt_id="btnSrcHor" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Periodo:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t36_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Horario..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="ModPerHor" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="D%C3%ADa:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t37_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Lunes%2C Martes%2C Jueves..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="ModDiaHor" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Codigo de Curso" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t38_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Curso..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="ModCodCursoHor" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Codigo de Salon" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t39_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Numero de Salon..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="CodSalHorarioMod" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Codigo Catedr%C3%A1tico" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t41_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="12%2C25%2C023%2Cetc.." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="CodCatHorMod" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Codigo Edificio" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t40_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="T3%2C T5%2C T7%2C etc..." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="CodEdiHorMod" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Semestre:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t42_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="1 o 2" Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="SemHorMod" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="A%C3%B1o:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t43_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="2016%2C 2017%2C 2018%2C etc" Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="YearHorMod" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Modificar" Wt_styleClass="form-control with-label btn-primary btn btn-default" Wt_link="" Wt_id="btnNuMod" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-md-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Eliminar" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-default panel-danger panel" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="ID de Horario:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t35_cp_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="ID de Horario.." Wt_className="WLineEdit" Wt_styleClass="form-control" Wt_id="HorarioIDElim" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Eliminar" Wt_styleClass="form-control btn-danger btn" Wt_link="" Wt_id="btnSrcHor_cp" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-    </WObject>
-    <WObject Wt_tabText="Asignaci%C3%B3n" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="asignaTab" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="br" Wt_styleClass="" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Asignar Alumno a Horario" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-success panel" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="ID de Alumno:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t46" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Id de alumno..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="NuAsigIDAl" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Id de Horario:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t47" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Id del horario a Asignar..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="NuAsigHorID" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Zona de Curso" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t48" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Ingrese la Zona..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="NuAsigZona" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Examen Final" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t49" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Ingrese examen final..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="NuAsigExFinal" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Asignar Alumno" Wt_styleClass="form-control btn btn-success" Wt_link="" Wt_id="button" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Modificar Asignaci%C3%B3n" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel panel-primary" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="ID de Alumno:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t46_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Id de alumno..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ModAsigIDAl" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Id de Horario:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t47_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Id del horario a Asignar..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ModAsigHorID" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Buscar" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="button_cp" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Zona de Curso" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t48_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Ingrese la Zona..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ModAsigZona" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Examen Final" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t49_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Ingrese examen final..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ModAsignExFinal" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Modificar Asignaci%C3%B3n" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="button_cp_cp" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Eliminar Asignaci%C3%B3n:" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-danger panel" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WText" Wt_text="ID de Alumno:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t46_cp_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Id de alumno..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ElimAsigIDAl" Wt_isInline="1"/>
-       <WObject Wt_className="WText" Wt_text="Id de Horario:" Wt_textFormat="0" Wt_styleClass="text-center" Wt_id="t47_cp_cp" Wt_isInline="0"/>
-       <WObject Wt_emptyText="Id del horario a Asignar..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="ElimAsigHorID" Wt_isInline="1"/>
-       <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Eliminar Asignaci%C3%B3n" Wt_styleClass="form-control btn-danger btn" Wt_link="" Wt_id="button_cp_cp_cp" Wt_isInline="1"/>
-      </WObject>
-     </WObject>
-    </WObject>
-    <WObject Wt_tabText="Reporte de Cursos de Estudiante" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="verCursosTab" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="br" Wt_styleClass="" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0"/>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Cursos Asignados por Estudiante:" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-3" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_emptyText="Ingrese el ID de Estudiante..." Wt_className="WLineEdit" Wt_styleClass="" Wt_id="Rep1IDEstudiante" Wt_isInline="1"/>
+    <WObject Wt_tabText="Cursos" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="cursosTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="Reporte2Tab" Wt_isInline="0" Wt_styleClass="" Wt_className="WTabWidget">
+      <WObject Wt_tabText="Administrar Cursos" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="Reporte2SubTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="br" Wt_styleClass="" Wt_className="WContainerWidget"/>
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+        <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Nuevo Curso" Wt_styleClass="panel-success panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+         <WObject Wt_textFormat="0" Wt_id="t13" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Codigo de Curso" Wt_className="WText"/>
+         <WObject Wt_id="NuevoCursoID" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID de curso" Wt_className="WLineEdit"/>
+         <WObject Wt_textFormat="0" Wt_id="t14" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Nombre" Wt_className="WText"/>
+         <WObject Wt_id="NomCursoNuevo" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Nombre de Curso" Wt_className="WLineEdit"/>
+         <WObject Wt_textFormat="0" Wt_id="t15" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Semestre:" Wt_className="WText"/>
+         <WObject Wt_id="SemesCursoNuevo" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Numero de Semestre" Wt_className="WLineEdit"/>
+         <WObject Wt_textFormat="0" Wt_id="t16" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Creditos: " Wt_className="WText"/>
+         <WObject Wt_id="CreCursNu" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Numero de Creditos" Wt_className="WLineEdit"/>
+         <WObject Wt_id="btnNuevoCurso" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-success btn btn-default" Wt_emptyText="" Wt_text="Crear Curso" Wt_className="WPushButton"/>
+        </WObject>
        </WObject>
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-3" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-        <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Generar Reporte" Wt_styleClass="form-control btn-primary btn" Wt_link="" Wt_id="button_cp_cp_cp_cp" Wt_isInline="1"/>
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+        <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Modificar Curso" Wt_styleClass="panel-primary panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+         <WObject Wt_textFormat="0" Wt_id="t17" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID de Curso:" Wt_className="WText"/>
+         <WObject Wt_id="IDModCurso" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID de Curso..." Wt_className="WLineEdit"/>
+         <WObject Wt_id="btnSrcCursoMod" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Buscar" Wt_className="WPushButton"/>
+         <WObject Wt_textFormat="0" Wt_id="t18" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Nombre:" Wt_className="WText"/>
+         <WObject Wt_id="NomModCurso" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Nuevo Nombre.." Wt_className="WLineEdit"/>
+         <WObject Wt_textFormat="0" Wt_id="t19" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Semestre:" Wt_className="WText"/>
+         <WObject Wt_id="SemModCurso" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Semestre" Wt_className="WLineEdit"/>
+         <WObject Wt_textFormat="0" Wt_id="t1" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Creditos" Wt_className="WText"/>
+         <WObject Wt_id="CredModCurso" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Creditos..." Wt_className="WLineEdit"/>
+         <WObject Wt_id="btnModCurso" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Modificar" Wt_className="WPushButton"/>
+        </WObject>
+       </WObject>
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+        <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Eliminar" Wt_styleClass="panel panel-default panel-danger" Wt_isCollapsible="1" Wt_className="WPanel">
+         <WObject Wt_textFormat="0" Wt_id="t21" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID De Curso A Eliminar" Wt_className="WText"/>
+         <WObject Wt_id="elimCursoID" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID..." Wt_className="WLineEdit"/>
+         <WObject Wt_id="btnElimCurso" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-danger btn btn-default" Wt_emptyText="" Wt_text="Eliminar Curso" Wt_className="WPushButton"/>
+        </WObject>
+       </WObject>
+      </WObject>
+      <WObject Wt_tabText="Estudiantes en un Curso" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="tabitem2_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+       <WObject Wt_centralWidget="" Wt_id="PanelRep2" Wt_isInline="0" Wt_title="Datos Para Reporte" Wt_styleClass="panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+        <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-sm-3  col-xs-6" Wt_className="WContainerWidget">
+         <WObject Wt_id="rep2Sem" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Semestre..." Wt_className="WLineEdit"/>
+        </WObject>
+        <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-sm-3  col-xs-6" Wt_className="WContainerWidget">
+         <WObject Wt_id="rep2Year" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="A%C3%B1o de Interes" Wt_className="WLineEdit"/>
+        </WObject>
+        <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-sm-3  col-xs-6" Wt_className="WContainerWidget">
+         <WObject Wt_id="btnRep2" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Generar Reporte" Wt_className="WPushButton"/>
+        </WObject>
+        <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-sm-3  col-xs-6" Wt_className="WContainerWidget">
+         <WObject Wt_id="codCursoRep2" Wt_isInline="1" Wt_styleClass="" Wt_emptyText="Codigo de Curso" Wt_className="WLineEdit"/>
+        </WObject>
+       </WObject>
+       <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Visor de Reporte" Wt_styleClass="panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+        <WObject Wt_id="contenedorRep2" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget"/>
+       </WObject>
+      </WObject>
+      <WObject Wt_tabText="Reporte de Cursos en Semestre" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="Reporte4SubTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+       <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Datos de Reporte" Wt_styleClass="panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+        <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-sm-3  col-xs-6" Wt_className="WContainerWidget">
+         <WObject Wt_id="SemRep4" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Semestre..." Wt_className="WLineEdit"/>
+        </WObject>
+        <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-sm-3  col-xs-6" Wt_className="WContainerWidget">
+         <WObject Wt_id="yearRep4" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="A%C3%B1o..." Wt_className="WLineEdit"/>
+        </WObject>
+        <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-sm-3  col-xs-6" Wt_className="WContainerWidget">
+         <WObject Wt_id="btnRep4" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Generar Reporte" Wt_className="WPushButton"/>
+        </WObject>
+       </WObject>
+       <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Visor de Reporte" Wt_styleClass="panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+        <WObject Wt_id="ConenedorRep4" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget"/>
        </WObject>
       </WObject>
      </WObject>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-      <WObject Wt_title="Visor de Reporte" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0">
-       <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="ContenedorRep1" Wt_isInline="0"/>
+    </WObject>
+    <WObject Wt_tabText="Estudiantes" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="estuTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="br" Wt_styleClass="" Wt_className="WContainerWidget"/>
+     <WObject Wt_id="contX" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Nuevo Estudiante" Wt_styleClass="panel-success panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t22" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Carnet:" Wt_className="WText"/>
+       <WObject Wt_id="IDEstudianteNuevo" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID de Estudiante" Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t23" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Nombre" Wt_className="WText"/>
+       <WObject Wt_id="NomEstudNuevo" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Nombre de Estudiante" Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t24" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Direccion:" Wt_className="WText"/>
+       <WObject Wt_id="DirEstNuevo" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Direcci%C3%B3n de Residencia..." Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnNuevoEstudiante" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-success btn btn-default" Wt_emptyText="" Wt_text="Crear Nuevo Estudiante" Wt_className="WPushButton"/>
+      </WObject>
+     </WObject>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Modificar Estudiante" Wt_styleClass="panel-primary panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t25" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID de Estudiante" Wt_className="WText"/>
+       <WObject Wt_id="IDModEstudiante" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID.." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="text_cp" Wt_isInline="0" Wt_styleClass="" Wt_text="" Wt_className="WText"/>
+       <WObject Wt_id="srcBtnModEstu" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Buscar" Wt_className="WPushButton"/>
+       <WObject Wt_textFormat="0" Wt_id="t26" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Nombre:" Wt_className="WText"/>
+       <WObject Wt_id="ModNombreEstud" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Nuevo Nombre..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t27" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Direccion" Wt_className="WText"/>
+       <WObject Wt_id="ModDirEstud" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Nueva Direcci%C3%B3n" Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnModEstud" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Modificar" Wt_className="WPushButton"/>
+      </WObject>
+     </WObject>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Eliminar Estudiante" Wt_styleClass="panel panel-default panel-danger" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t28" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID:" Wt_className="WText"/>
+       <WObject Wt_id="elimEstudID" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID de Estudiante Eliminar..." Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnElimEstud" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-danger btn btn-default" Wt_emptyText="" Wt_text="Eliminar" Wt_className="WPushButton"/>
       </WObject>
      </WObject>
     </WObject>
-    <WObject Wt_tabText="Log Out" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="logOutTab" Wt_isTabHidden="0" Wt_isInline="0"/>
+    <WObject Wt_tabText="Catedraticos" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="cateTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="br" Wt_styleClass="" Wt_className="WContainerWidget"/>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Nuevo Catedr%C3%A1tico:" Wt_styleClass="panel-success panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t29" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID Catedratico" Wt_className="WText"/>
+       <WObject Wt_id="nuevoCatID" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID de Catedr%C3%A1tico" Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t30" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Nombre:" Wt_className="WText"/>
+       <WObject Wt_id="nuevoCatNom" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Nombre..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="text_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Direccion:" Wt_className="WText"/>
+       <WObject Wt_id="nuevoDirCat" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Direcci%C3%B3n de residencia" Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnNuevoCat" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-success btn btn-default" Wt_emptyText="" Wt_text="Crear Catedr%C3%A1tico" Wt_className="WPushButton"/>
+      </WObject>
+     </WObject>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Modificar" Wt_styleClass="panel-primary panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t31" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID a Modificar" Wt_className="WText"/>
+       <WObject Wt_id="ModCatID" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID a Modificar..." Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnSrcCat" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Buscar" Wt_className="WPushButton"/>
+       <WObject Wt_textFormat="0" Wt_id="t32" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Nombre:" Wt_className="WText"/>
+       <WObject Wt_id="ModNomCat" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Nuevo Nombre..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t33" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Direccion" Wt_className="WText"/>
+       <WObject Wt_id="ModDirCat" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Nueva Direcci%C3%B3n" Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnModCat" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Modificar" Wt_className="WPushButton"/>
+      </WObject>
+     </WObject>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Some Title" Wt_styleClass="panel panel-default panel-danger" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t34" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID a Eliminar" Wt_className="WText"/>
+       <WObject Wt_id="ElimIDCat" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID de Catedr%C3%A1tico" Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnElimCat" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-danger btn btn-default" Wt_emptyText="" Wt_text="Eliminar Catedr%C3%A1tico" Wt_className="WPushButton"/>
+      </WObject>
+     </WObject>
+    </WObject>
+    <WObject Wt_tabText="Horarios" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="horarioTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="br" Wt_styleClass="" Wt_className="WContainerWidget"/>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Nuevo Horario:" Wt_styleClass="panel-success panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t35" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID de Horario:" Wt_className="WText"/>
+       <WObject Wt_id="HorarioNuevoID" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID de Horario.." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t36" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Periodo:" Wt_className="WText"/>
+       <WObject Wt_id="NuPerHor" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Horario..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t37" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="D%C3%ADa:" Wt_className="WText"/>
+       <WObject Wt_id="NuDiaHor" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Lunes%2C Martes%2C Jueves..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t38" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Codigo de Curso" Wt_className="WText"/>
+       <WObject Wt_id="NuCodCursoHor" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Curso..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t39" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Codigo de Salon" Wt_className="WText"/>
+       <WObject Wt_id="CodSalHorarioNu" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Numero de Salon..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t40" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Codigo Edificio" Wt_className="WText"/>
+       <WObject Wt_id="CodEdiHorNu" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="T3%2C T5%2C T7%2C etc..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t41" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Codigo Catedr%C3%A1tico" Wt_className="WText"/>
+       <WObject Wt_id="CodCatHorNu" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="12%2C25%2C023%2Cetc.." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t42" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Semestre:" Wt_className="WText"/>
+       <WObject Wt_id="SemHorNu" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="1 o 2" Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t43" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="A%C3%B1o:" Wt_className="WText"/>
+       <WObject Wt_id="YearHorNu" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="2016%2C 2017%2C 2018%2C etc" Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnNuHor" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-success btn btn-default" Wt_emptyText="" Wt_text="Crear Horario" Wt_className="WPushButton"/>
+      </WObject>
+     </WObject>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Modifiar" Wt_styleClass="panel-primary panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t35_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID de Horario:" Wt_className="WText"/>
+       <WObject Wt_id="HorarioModID_cp" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID de Horario.." Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnSrcHor" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Buscar" Wt_className="WPushButton"/>
+       <WObject Wt_textFormat="0" Wt_id="t36_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Periodo:" Wt_className="WText"/>
+       <WObject Wt_id="ModPerHor" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Horario..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t37_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="D%C3%ADa:" Wt_className="WText"/>
+       <WObject Wt_id="ModDiaHor" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Lunes%2C Martes%2C Jueves..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t38_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Codigo de Curso" Wt_className="WText"/>
+       <WObject Wt_id="ModCodCursoHor" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Curso..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t39_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Codigo de Salon" Wt_className="WText"/>
+       <WObject Wt_id="CodSalHorarioMod" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Numero de Salon..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t41_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Codigo Catedr%C3%A1tico" Wt_className="WText"/>
+       <WObject Wt_id="CodCatHorMod" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="12%2C25%2C023%2Cetc.." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t40_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Codigo Edificio" Wt_className="WText"/>
+       <WObject Wt_id="CodEdiHorMod" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="T3%2C T5%2C T7%2C etc..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t42_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Semestre:" Wt_className="WText"/>
+       <WObject Wt_id="SemHorMod" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="1 o 2" Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t43_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="A%C3%B1o:" Wt_className="WText"/>
+       <WObject Wt_id="YearHorMod" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="2016%2C 2017%2C 2018%2C etc" Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnNuMod" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Modificar" Wt_className="WPushButton"/>
+      </WObject>
+     </WObject>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-md-4 col-xs-6" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Eliminar" Wt_styleClass="panel panel-default panel-danger" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t35_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID de Horario:" Wt_className="WText"/>
+       <WObject Wt_id="HorarioIDElim" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="ID de Horario.." Wt_className="WLineEdit"/>
+       <WObject Wt_id="btnSrcHor_cp" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-danger btn btn-default" Wt_emptyText="" Wt_text="Eliminar" Wt_className="WPushButton"/>
+      </WObject>
+     </WObject>
+    </WObject>
+    <WObject Wt_tabText="Asignacion" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="asignaTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="br" Wt_styleClass="" Wt_className="WContainerWidget"/>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Asignar Alumno a Horario" Wt_styleClass="panel-success panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t46" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID de Alumno:" Wt_className="WText"/>
+       <WObject Wt_id="NuAsigIDAl" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Id de alumno..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t47" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Id de Horario:" Wt_className="WText"/>
+       <WObject Wt_id="NuAsigHorID" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Id del horario a Asignar..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t48" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Zona de Curso" Wt_className="WText"/>
+       <WObject Wt_id="NuAsigZona" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Ingrese la Zona..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t49" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Examen Final" Wt_className="WText"/>
+       <WObject Wt_id="NuAsigExFinal" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Ingrese examen final..." Wt_className="WLineEdit"/>
+       <WObject Wt_id="button" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-success btn btn-default" Wt_emptyText="" Wt_text="Asignar Alumno" Wt_className="WPushButton"/>
+      </WObject>
+     </WObject>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Modificar Asignaci%C3%B3n" Wt_styleClass="panel-primary panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t46_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID de Alumno:" Wt_className="WText"/>
+       <WObject Wt_id="ModAsigIDAl" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Id de alumno..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t47_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Id de Horario:" Wt_className="WText"/>
+       <WObject Wt_id="ModAsigHorID" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Id del horario a Asignar..." Wt_className="WLineEdit"/>
+       <WObject Wt_id="button_cp" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Buscar" Wt_className="WPushButton"/>
+       <WObject Wt_textFormat="0" Wt_id="t48_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Zona de Curso" Wt_className="WText"/>
+       <WObject Wt_id="ModAsigZona" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Ingrese la Zona..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t49_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Examen Final" Wt_className="WText"/>
+       <WObject Wt_id="ModAsignExFinal" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Ingrese examen final..." Wt_className="WLineEdit"/>
+       <WObject Wt_id="button_cp_cp" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Modificar Asignaci%C3%B3n" Wt_className="WPushButton"/>
+      </WObject>
+     </WObject>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-xs-6 col-sm-4" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Eliminar Asignaci%C3%B3n:" Wt_styleClass="panel panel-default panel-danger" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_textFormat="0" Wt_id="t46_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="ID de Alumno:" Wt_className="WText"/>
+       <WObject Wt_id="ElimAsigIDAl" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Id de alumno..." Wt_className="WLineEdit"/>
+       <WObject Wt_textFormat="0" Wt_id="t47_cp_cp" Wt_isInline="0" Wt_styleClass="text-center" Wt_text="Id de Horario:" Wt_className="WText"/>
+       <WObject Wt_id="ElimAsigHorID" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Id del horario a Asignar..." Wt_className="WLineEdit"/>
+       <WObject Wt_id="button_cp_cp_cp" Wt_isInline="1" Wt_link="" Wt_styleClass="form-control with-label btn-danger btn btn-default" Wt_emptyText="" Wt_text="Eliminar Asignaci%C3%B3n" Wt_className="WPushButton"/>
+      </WObject>
+     </WObject>
+    </WObject>
+    <WObject Wt_tabText="Reporte de Cursos de Estudiante" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="verCursosTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="br" Wt_styleClass="" Wt_className="WContainerWidget"/>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Cursos Asignados por Estudiante:" Wt_styleClass="panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-sm-3 col-xs-6" Wt_className="WContainerWidget">
+        <WObject Wt_id="Rep1IDEstudiante" Wt_isInline="1" Wt_styleClass="form-control" Wt_emptyText="Ingrese el ID de Estudiante..." Wt_className="WLineEdit"/>
+       </WObject>
+       <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="col-sm-3 col-xs-6" Wt_className="WContainerWidget">
+        <WObject Wt_id="button_cp_cp_cp_cp" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control with-label btn btn-default" Wt_emptyText="" Wt_text="Generar Reporte" Wt_className="WPushButton"/>
+       </WObject>
+      </WObject>
+     </WObject>
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget">
+      <WObject Wt_centralWidget="" Wt_id="panel_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_title="Visor de Reporte" Wt_styleClass="panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+       <WObject Wt_id="ContenedorRep1" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget"/>
+      </WObject>
+     </WObject>
+    </WObject>
+    <WObject Wt_tabText="Log Out" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="logOutTab" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="container_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget">
+      <WObject Wt_id="logOutBtn" Wt_isInline="1" Wt_link="" Wt_styleClass="btn-primary form-control btn" Wt_text="Cerrar Sesion" Wt_emptyText="" Wt_className="WPushButton"/>
+     </WObject>
+    </WObject>
    </WObject>
   </WObject>
-  <WObject Wt_title="Reportes Graphviz" Wt_className="WPanel" Wt_isCollapsible="1" Wt_centralWidget="" Wt_styleClass="panel-default panel" Wt_id="panel_cp" Wt_isInline="0">
-   <WObject Wt_className="WTabWidget" Wt_styleClass="" Wt_id="tabwidget" Wt_isInline="0">
-    <WObject Wt_tabText="Usuarios" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="tabitem1" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Ver Reporte de Usuarios" Wt_styleClass="with-label btn btn-default" Wt_link="" Wt_id="RepUsuarios" Wt_isInline="1"/>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="conteUsuarios" Wt_isInline="0"/>
+  <WObject Wt_centralWidget="" Wt_id="panel_cp" Wt_isInline="0" Wt_title="Reportes Graphviz" Wt_styleClass="panel panel-default" Wt_isCollapsible="1" Wt_className="WPanel">
+   <WObject Wt_id="tabwidget" Wt_isInline="0" Wt_styleClass="" Wt_className="WTabWidget">
+    <WObject Wt_tabText="Usuarios" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="tabitem1" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="RepUsuarios" Wt_isInline="1" Wt_link="" Wt_styleClass="with-label btn btn-default" Wt_emptyText="" Wt_text="Ver Reporte de Usuarios" Wt_className="WPushButton"/>
+     <WObject Wt_id="conteUsuarios" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget"/>
     </WObject>
-    <WObject Wt_tabText="Edificios Y Salones" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="tabitem2" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Ver Reporte Edificios y Salones" Wt_styleClass="" Wt_link="" Wt_id="RepEdiSa" Wt_isInline="1"/>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="conteEdiSa" Wt_isInline="0"/>
+    <WObject Wt_tabText="Edificios Y Salones" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="tabitem2" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="RepEdiSa" Wt_isInline="1" Wt_link="" Wt_styleClass="" Wt_emptyText="" Wt_text="Ver Reporte Edificios y Salones" Wt_className="WPushButton"/>
+     <WObject Wt_id="conteEdiSa" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget"/>
     </WObject>
-    <WObject Wt_tabText="Asignaci%C3%B3n" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="tabitem3" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Ver Reporte Asignaci%C3%B3n" Wt_styleClass="" Wt_link="" Wt_id="RepAsigna" Wt_isInline="1"/>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="conteAsigna" Wt_isInline="0"/>
+    <WObject Wt_tabText="Asignacion" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="tabitem3" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="RepAsigna" Wt_isInline="1" Wt_link="" Wt_styleClass="" Wt_emptyText="" Wt_text="Ver Reporte Asignaci%C3%B3n" Wt_className="WPushButton"/>
+     <WObject Wt_id="idHorarioRepAsignacion" Wt_isInline="1" Wt_styleClass="" Wt_emptyText="ID de Horario a Visualizar" Wt_className="WLineEdit"/>
+     <WObject Wt_id="tablaHorario" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget"/>
     </WObject>
-    <WObject Wt_tabText="Horarios" Wt_className="WTabItem" Wt_isTabEnabled="1" Wt_isTabCloseable="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="tabitem" Wt_isTabHidden="0" Wt_isInline="0">
-     <WObject Wt_emptyText="" Wt_className="WPushButton" Wt_text="Ver Reporte de Horario" Wt_styleClass="" Wt_link="" Wt_id="RepHorario" Wt_isInline="1"/>
-     <WObject Wt_className="WContainerWidget" Wt_htmlTagName="div" Wt_styleClass="" Wt_id="conteHorario" Wt_isInline="0"/>
+    <WObject Wt_tabText="Horarios" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="tabitem" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="RepHorario" Wt_isInline="1" Wt_link="" Wt_styleClass="" Wt_emptyText="" Wt_text="Ver Reporte de Horario" Wt_className="WPushButton"/>
+     <WObject Wt_id="conteHorario" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget"/>
+    </WObject>
+    <WObject Wt_tabText="Cursos" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="tabitem_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="btnRepCurso" Wt_isInline="1" Wt_link="" Wt_styleClass="" Wt_emptyText="" Wt_text="Ver Cursos" Wt_className="WPushButton"/>
+     <WObject Wt_id="cursoContenedorImg" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget"/>
+    </WObject>
+    <WObject Wt_tabText="Catedraticos" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="tabitem_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="verCat" Wt_isInline="1" Wt_link="" Wt_styleClass="" Wt_emptyText="" Wt_text="Ver Catedraticos" Wt_className="WPushButton"/>
+     <WObject Wt_id="catRepoConte" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget"/>
+    </WObject>
+    <WObject Wt_tabText="Estudiantes" Wt_isTabHidden="0" Wt_isTabCloseable="0" Wt_id="tabitem_cp_cp_cp_cp" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_isTabEnabled="1" Wt_className="WTabItem">
+     <WObject Wt_id="btnVerHasEst" Wt_isInline="1" Wt_link="" Wt_styleClass="with-label btn btn-default" Wt_emptyText="" Wt_text="Ver Estudiantes" Wt_className="WPushButton"/>
+     <WObject Wt_id="EstContenedor" Wt_isInline="0" Wt_htmlTagName="div" Wt_styleClass="" Wt_className="WContainerWidget"/>
     </WObject>
    </WObject>
   </WObject>

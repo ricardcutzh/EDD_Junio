@@ -90,3 +90,97 @@ void ListadoAsignacion::graficarAsignacion(std::ofstream &archivo, std::string n
         }
     }
 }
+
+NodoAsignacion * ListadoAsignacion::buscarAsignacion(int idAlumno)
+{
+	if (!estaVacia())
+	{
+		NodoAsignacion *aux = this->root->siguiente;
+		while (aux != NULL)
+		{
+			if (aux->estudiante->carnet == idAlumno)
+			{
+				return aux;
+			}
+			aux = aux->siguiente;
+		}
+		return NULL;
+	}
+	return NULL;
+}
+
+std::string ListadoAsignacion::htmlAsignacion()
+{
+	int cont = 1;
+	std::string cadena = "<center> <h1> Reporte de Asignacion: </h1> </center>\n";
+	cadena = cadena + "<table class='table table-striped table-bordered'> \n";
+	cadena = cadena + "<tr> <th> No. </th> <th> Carnet </th> <th> Nombre </th> <th> Zona </th> <th> Final </th> </tr>";
+	NodoAsignacion *aux = this->root->siguiente;
+	while (aux!=NULL)
+	{
+		cadena = cadena + "<tr>\n";
+		cadena = cadena + "<td>" + std::to_string(cont) + "</td><td>" + std::to_string(aux->estudiante->carnet) + "</td><td>" + aux->estudiante->nombre + "</td> <td>" + std::to_string(aux->zona) + "</td><td>" + std::to_string(aux->exFinal) + "</td>";
+		cadena = cadena + "</tr>\n";
+		aux = aux->siguiente;
+	}
+	cadena = cadena + "</table>\n";
+	return cadena;
+}
+
+std::string ListadoAsignacion::cursosAsignadosPorEstudiante(int carnet, std::string curso)
+{
+	std::string cadena = "";
+	NodoAsignacion *aux = this->root->siguiente;
+	while (aux != NULL)
+	{
+		if (carnet == aux->estudiante->carnet)
+		{
+			int notafinal = aux->exFinal + aux->zona;
+			cadena = cadena + "<tr>\n";
+			cadena = cadena + "<td>" + curso + "</td> <td>" + std::to_string(aux->zona) + "</td><td>" + std::to_string(aux->exFinal) + "</td><td>" + std::to_string(notafinal) + "</td>\n";
+			cadena = cadena + "</tr>\n";
+		}
+		aux = aux->siguiente;
+	}
+	return cadena;
+}
+
+std::string ListadoAsignacion::AsignadosACurso(int curs)
+{
+	std::string cadena = "";
+	NodoAsignacion *aux = this->root->siguiente;
+	while (aux != NULL)
+	{
+		int notafinal = aux->exFinal + aux->zona;
+		cadena = cadena + "<tr>\n";
+		cadena = cadena + "<td>" + std::to_string(aux->estudiante->carnet) + "</td><td>"+ aux->estudiante->nombre + "</td> <td>" + std::to_string(notafinal) + "</td>";
+		cadena = cadena + "</tr>\n";
+		aux = aux->siguiente;
+	}
+	return cadena;
+}
+
+std::string ListadoAsignacion::aproRepro(std::string curso)
+{
+	std::string cadena = "";
+	NodoAsignacion *aux = this->root->siguiente;
+	while (aux != NULL)
+	{
+		int notafinal = aux->exFinal + aux->zona;
+		if (notafinal < 61)
+		{
+			cadena = cadena + "<tr class='danger'>\n";
+			cadena = cadena + "<td>" + std::to_string(aux->estudiante->carnet) + "</td><td>" + aux->estudiante->nombre + "</td><td>" + curso + "</td><td>" + "Reprobado" + "</td><td>" + std::to_string(notafinal) + "</td>";
+			cadena = cadena + "</tr>\n";
+		}
+		else
+		{
+			cadena = cadena + "<tr class='success'>\n";
+			cadena = cadena + "<td>" + std::to_string(aux->estudiante->carnet) + "</td><td>" + aux->estudiante->nombre  + "</td><td>" + curso + "</td><td>" + "Aprobado" + "</td><td>" + std::to_string(notafinal)+ "</td>";
+			cadena = cadena + "</tr>\n";
+		}
+		
+		aux = aux->siguiente;
+	}
+	return cadena;
+}

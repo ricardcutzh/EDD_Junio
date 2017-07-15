@@ -1,0 +1,32 @@
+digraph g {
+label="Cursos"
+"Cod: 777 | Curso: Compiladores1";
+"Cod: 777 | Curso: Compiladores1"->"Cod: 771 | Curso: Programacion2";
+"Cod: 771 | Curso: Programacion2";
+"Cod: 771 | Curso: Programacion2"->"Cod: 779 | Curso: Arquitectura de Computadoras y Ensambladores 2";
+"Cod: 779 | Curso: Arquitectura de Computadoras y Ensambladores 2";
+"Cod: 779 | Curso: Arquitectura de Computadoras y Ensambladores 2"->"Cod: 732 | Curso: Estadistica1";
+"Cod: 732 | Curso: Estadistica1";
+"Cod: 732 | Curso: Estadistica1"->"Cod: 795 | Curso: Leguajes Formales";
+"Cod: 795 | Curso: Leguajes Formales";
+"Cod: 795 | Curso: Leguajes Formales"->"Cod: 772 | Curso: Estructuras de Datos";
+"Cod: 772 | Curso: Estructuras de Datos";
+"Cod: 772 | Curso: Estructuras de Datos"->"Cod: 770 | Curso: Programacion1";
+"Cod: 770 | Curso: Programacion1";
+"Cod: 770 | Curso: Programacion1"->"Cod: 781 | Curso: Compiladores 3";
+"Cod: 781 | Curso: Compiladores 3";
+"Cod: 781 | Curso: Compiladores 3"->"Cod: 773 | Curso: Manejo e Implementación de Archivos";
+"Cod: 773 | Curso: Manejo e Implementación de Archivos";
+"Cod: 773 | Curso: Manejo e Implementación de Archivos"->"Cod: 281 | Curso: Sistemas Operativos 1";
+"Cod: 281 | Curso: Sistemas Operativos 1";
+"Cod: 281 | Curso: Sistemas Operativos 1"->"Cod: 964 | Curso: Organización Computacional";
+"Cod: 964 | Curso: Organización Computacional";
+"Cod: 964 | Curso: Organización Computacional"->"Cod: 970 | Curso: Redes de Computadoras 1";
+"Cod: 970 | Curso: Redes de Computadoras 1";
+"Cod: 970 | Curso: Redes de Computadoras 1"->"Cod: 780 | Curso: Software Avanzado";
+"Cod: 780 | Curso: Software Avanzado";
+"Cod: 780 | Curso: Software Avanzado"->"Cod: 775 | Curso: Bases de Datos 2";
+"Cod: 775 | Curso: Bases de Datos 2";
+"Cod: 775 | Curso: Bases de Datos 2"->"Cod: 785 | Curso: Analisis y Diseño de Sistemas 2";
+"Cod: 785 | Curso: Analisis y Diseño de Sistemas 2";
+}

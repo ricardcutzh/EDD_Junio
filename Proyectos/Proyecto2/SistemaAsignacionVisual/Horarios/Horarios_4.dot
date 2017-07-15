@@ -1,0 +1,8 @@
+digraph Btree{
+node [shape=box, color=grey87];
+"[ codigo: 3 rango: 7:10am-8:00am dia: viernes ] [ codigo: 6 rango: 8:00am-8:50am dia: martes ] [ codigo: 9 rango: 9:10am-10:00am dia: martes ] "->"[ codigo: 1 rango: 7:10am-8:00am dia: lunes ] [ codigo: 2 rango: 8:00am-8:50am dia: lunes ] ";
+"[ codigo: 1 rango: 7:10am-8:00am dia: lunes ] [ codigo: 2 rango: 8:00am-8:50am dia: lunes ] ";
+"[ codigo: 3 rango: 7:10am-8:00am dia: viernes ] [ codigo: 6 rango: 8:00am-8:50am dia: martes ] [ codigo: 9 rango: 9:10am-10:00am dia: martes ] "->"[ codigo: 4 rango: 8:00am-8:50am dia: viernes ] [ codigo: 5 rango: 7:10am-8:00am dia: martes ] ";
+"[ codigo: 3 rango: 7:10am-8:00am dia: viernes ] [ codigo: 6 rango: 8:00am-8:50am dia: martes ] [ codigo: 9 rango: 9:10am-10:00am dia: martes ] "->"[ codigo: 7 rango: 7:10am-8:00am dia: jueves ] [ codigo: 8 rango: 8:00am-8:50am dia: jueves ] ";
+"[ codigo: 3 rango: 7:10am-8:00am dia: viernes ] [ codigo: 6 rango: 8:00am-8:50am dia: martes ] [ codigo: 9 rango: 9:10am-10:00am dia: martes ] "->"[ codigo: 10 rango: 10:00am-10:50am dia: martes ] [ codigo: 11 rango: 9:10am-10:00am dia: jueves ] [ codigo: 12 rango: 10:00am-10:50am dia: jueves ] ";
+}

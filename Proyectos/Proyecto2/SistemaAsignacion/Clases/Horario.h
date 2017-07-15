@@ -15,8 +15,11 @@ class Horario
         Salon *refSalon;
         Curso *refCurso;
         Catedratico *refCatedra;
+		int semestre;
+		int year;
+		std::string edif;
         ListadoAsignacion *asigandos;
-        Horario(int codigo, std::string rango, std::string dia, Salon *refSalon, Catedratico *refCatedra, Curso *refCurso);
+        Horario(int codigo, std::string rango, std::string dia, Salon *refSalon, Catedratico *refCatedra, Curso *refCurso, int semestre, int year, std::string edif);
     protected:
 
     private:
